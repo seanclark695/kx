@@ -1,0 +1,174 @@
+### Hungarian Ideas
+
+ideas = {
+##############
+# Country ideas
+##############
+	country = {
+	
+		#### Starting ideas ####
+		
+		GAL_looming_famine = {
+			picture = GFX_idea_chi_war_of_resistance3
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.01
+				stability_factor = -0.025
+				MONTHLY_POPULATION = -0.25
+			}
+			removal_cost = -1
+		}
+		
+		GAL_GLF_rearmament = {
+			picture = GFX_idea_chi_war_of_resistance3
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.1
+			}
+			removal_cost = -1
+		}
+		
+		GAL_ethnic_split = {
+			picture = GFX_idea_chi_war_of_resistance3
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.1
+			}
+			removal_cost = -1
+		}
+
+		GAL_famine = {
+			picture = GFX_idea_chi_war_of_resistance3
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.025
+				stability_factor = -0.05
+				MONTHLY_POPULATION = -0.5
+			}
+			removal_cost = -1
+		}
+		
+		GAL_famine_2 = {
+			picture = GFX_idea_chi_war_of_resistance3
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+				stability_factor = -0.1
+				MONTHLY_POPULATION = -0.65
+			}
+			removal_cost = -1
+		}
+		
+		GAL_famine_3 = {
+			picture = GFX_idea_chi_war_of_resistance3
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.075
+				stability_factor = -0.15
+				MONTHLY_POPULATION = -0.70
+			}
+			removal_cost = -1
+		}
+		
+		GAL_famine_4 = {
+			picture = GFX_idea_chi_war_of_resistance3
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = -0.2
+				MONTHLY_POPULATION = -0.75
+			}
+			removal_cost = -1
+		}
+		
+		GAL_famine_5 = {
+			picture = GFX_idea_chi_war_of_resistance3
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.125
+				stability_factor = -0.25
+				MONTHLY_POPULATION = -0.80
+			}
+			removal_cost = -1
+		}
+		
+		GAL_famine_6 = {
+			picture = GFX_idea_chi_war_of_resistance3
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.15
+				stability_factor = -0.30
+				MONTHLY_POPULATION = -0.85
+			}
+			removal_cost = -1
+		}
+		
+		GAL_legends_of_war = {
+			picture = GFX_idea_chi_war_of_resistance3
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				offence = 0.2
+				defence = 0.2
+				army_morale_factor = 0.25
+				partisan_effect = 0.5
+				training_time_factor = -0.25
+				army_core_defence_factor = 0.3
+				conscription = 0.1
+				supply_consumption_factor = -0.5
+				out_of_supply_factor = -0.75
+				attrition = -0.25
+				max_dig_in = 2
+				dig_in_speed_factor = 0.33
+			}
+			removal_cost = -1
+		}
+		
+		no_call_for_ai = {
+			picture = GFX_idea_chi_war_of_resistance3
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				ai_call_ally_desire_factor = -1500
+				ai_join_ally_desire_factor = -1500
+			}
+			removal_cost = -1
+		}
+
+	}
+
+}
+
+hidden_ideas = {
+	GAL_counter_modifier = {
+		modifier = {
+			attrition = -0.1
+			army_speed_factor = 0.15
+			army_org_factor = 0.2
+			supply_consumption_factor = -0.25
+		}
+		removal_cost = -1
+	}
+}

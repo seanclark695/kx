@@ -1,34 +1,5 @@
 ideas = {
 	country = {
-		AUS_ethnic_warfare = {
-			picture = GFX_idea_chi_war_of_resistance3
-			allowed = {
-				always = yes
-			}
-			modifier = {
-				stability_factor = -0.15
-				war_support_factor = -0.1
-				political_power_factor = -0.2
-				enemy_partisan_effect = 0.5
-				consumer_goods_factor = 0.02
-			}
-			removal_cost = -1
-		}
-		
-		AUS_sick_man = {
-			picture = GFX_idea_chi_war_of_resistance3
-			allowed = {
-				always = yes
-			}
-			modifier = {
-				stability_factor = -0.1
-				army_org_factor = -0.1
-				political_power_factor = -0.1
-				research_speed_factor = -0.1
-				consumer_goods_factor = 0.03
-			}
-			removal_cost = -1
-		}
 		
 		AUS_karl_habsburg = {
 			picture = AUS_kaiser_karl
@@ -42,85 +13,6 @@ ideas = {
 			removal_cost = -1
 		}
 		
-		AUS_otto_habsburg = {
-			picture = AUS_kaiser_otto
-			allowed = {
-				always = yes
-			}
-			modifier = {
-				stability_factor = 0.15
-				political_power_gain = 0.12
-			}
-			removal_cost = -1
-		}
-		
-		AUS_immeasurable_debt = {
-			picture = GFX_idea_chi_war_of_resistance3
-			allowed = {
-				always = yes
-			}
-			modifier = {
-				stability_factor = -0.15
-				political_power_gain = -0.1
-				consumer_goods_factor = 0.1
-			}
-			removal_cost = -1
-		}
-		
-		AUS_shellshocked_population = {
-			picture = GFX_idea_chi_war_of_resistance3
-			allowed = {
-				always = yes
-			}
-			modifier = {
-				add_tech_bonus = {
-					name = AUS_landdoctrine
-					bonus = -1
-					uses = 1
-					category = land_doctrine
-				}
-				stability_factor = -0.1
-				war_support_factor = -0.15
-			}
-			removal_cost = -1
-		}
-		
-		AUS_lingering_german_influence = {
-			picture = GFX_idea_chi_war_of_resistance3
-			allowed = {
-				always = yes
-			}
-			targeted_modifier = {
-				tag = GER
-				attack_bonus_against = -0.1
-				defense_bonus_against = -0.1
-			}
-			modifier = {
-				stability_factor = -0.08
-				consumer_goods_factor = 0.03
-				
-			}
-			removal_cost = -1
-		}
-		
-		AUS_lingering_german_influence_2 = {
-			picture = GFX_idea_chi_war_of_resistance3
-			allowed = {
-				always = yes
-			}
-			targeted_modifier = {
-				tag = GER
-				attack_bonus_against = -0.05
-				defense_bonus_against = -0.05
-			}
-			modifier = {
-				stability_factor = -0.04
-				consumer_goods_factor = 0.015
-				
-			}
-			removal_cost = -1
-		}
-		
 		AUS_fatherland_front = {
 			picture = AUS_fatherland_front
 			allowed = {
@@ -130,6 +22,7 @@ ideas = {
 				stability_factor = -0.1
 				war_support_factor = 0.12
 				conscription_factor = 0.1
+				conscription = 0.015
 			}
 			removal_cost = -1
 		}
@@ -276,7 +169,7 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				stability_factor = -0.05
+				stability_factor = 0.05
 				industrial_capacity_factory = 0.075
 				production_speed_buildings_factor = 0.075
 			}
@@ -289,7 +182,7 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				stability_factor = -0.1
+				stability_factor = 0.1
 				industrial_capacity_factory = 0.15
 				production_speed_buildings_factor = 0.15
 			}
@@ -344,6 +237,171 @@ ideas = {
 				army_morale_factor = 0.15
 				army_org_factor = 0.1
 				conscription = 0.05
+			}
+			removal_cost = -1
+		}
+		
+		#### Bones of the Double Eagle Update ####
+		
+		BOTDE_strike = {
+			picture = chi_war_of_resistance
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_buildings_factor = -0.2
+				industrial_capacity_factory = -0.2
+			}
+			removal_cost = -1
+		}
+		
+		BOTDE_mutiny = {
+			picture = chi_war_of_resistance
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				army_morale_factor = -0.25
+				army_org_factor = -0.33
+				offence = -0.1
+				defence = -0.1
+				army_speed_factor = -0.1
+				conscription = -0.05
+			}
+			removal_cost = -1
+		}
+		
+		BOTDE_bickering = {
+			picture = chi_war_of_resistance
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.15
+				war_support_factor = -0.15
+			}
+			removal_cost = -1
+		}
+		
+		AUS_legacy_of_galician_war = {
+			picture = AUS_legacy_galician_war
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.25
+				army_morale_factor = -0.3
+				conscription = -0.05
+				conscription_factor = -0.15
+			}
+			research_bonus = {
+				land_doctrine = -0.5
+				air_doctrine = -0.5
+			}
+			removal_cost = -1
+		}
+		
+		AUS_inefficient_army = {
+			picture = ENG_the_war_to_end_all_wars
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				offence = -0.15
+				defence = -0.15
+			}
+			removal_cost = -1
+		}
+		
+		AUS_ethnic_warfare = {
+			picture = AUS_widespread_conflict
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				political_power_factor = -0.2
+				enemy_partisan_effect = 0.5
+				consumer_goods_factor = 0.02
+			}
+			removal_cost = -1
+		}
+		
+		AUS_sick_man = {
+			picture = AUS_austrian_decline
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = -0.1
+				army_org_factor = -0.1
+				political_power_factor = -0.1
+				research_speed_factor = -0.1
+				consumer_goods_factor = 0.03
+			}
+			removal_cost = -1
+		}
+		
+		AUS_immeasurable_debt = {
+			picture = AUS_immeasurable_debt
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = -0.1
+				consumer_goods_factor = 0.1
+			}
+			removal_cost = -1
+		}
+		
+		AUS_lingering_german_influence = {
+			picture = AUS_lingering_german_influence
+			allowed = {
+				always = yes
+			}
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+			}
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = 0.05
+			}
+			removal_cost = -1
+		}
+		
+		AUS_lingering_german_influence_2 = {
+			picture = AUS_lingering_german_influence
+			allowed = {
+				always = yes
+			}
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = -0.05
+				defense_bonus_against = -0.05
+			}
+			modifier = {
+				consumer_goods_factor = 0.025
+				
+			}
+			removal_cost = -1
+		}
+		
+		AUS_fighting_for_the_people_backer = {
+			picture = chi_war_of_resistance
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				offence = 0.2
+				defence = 0.1
+				army_speed_factor = 0.1
+				army_morale_factor = 0.1
+				army_org_factor = 0.05
 			}
 			removal_cost = -1
 		}

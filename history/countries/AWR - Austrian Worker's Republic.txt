@@ -102,11 +102,11 @@ set_popularities = {
 set_convoys = 0
 
 create_country_leader = {
-	name = "Josip Broz Tito"
-	desc = "CRO_JOSIP_TITO_DESC"
-	picture = "CRO_tito.tga"
+	name = "Disorganized and Decentralized"
+	desc = "NO_DESC"
+	picture = "x"
 	expire = "1965.1.1"
-	ideology = social_democrat_subtype
+	ideology = totalist_subtype
 	traits = {
 	}
 }

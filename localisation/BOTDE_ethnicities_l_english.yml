@@ -1,20 +1,34 @@
 ﻿l_english:
 
-#Slovenes
+constituents:0 "View the constituents of the Austrian Empire"
 
-AUS_slovene_zerotwofive:0 "The §YSlovenes§! will §Rgain 0.25§! unrest"
-AUS_slovene_zerotwofive_minus:0 "The §YSlovenes§! will §Glose 0.25§! unrest"
-AUS_slovene_zerofive:0 "The §YSlovenes§! will §Rgain 0.5§! unrest"
-AUS_slovene_zerofive_minus:0 "The §YSlovenes§! will §Glose 0.5§! unrest"
-AUS_slovene_one:0 "The §YSlovenes§! will §Ggain 1§! unrest"
+BOTDE_strike:0 "Strike!"
+BOTDE_mutiny:0 "Mutiny!"
+BOTDE_bickering:0 "Stalling!"
 
-#Italians
+AUS_appease_hungarians:0 "Appease the Hungarians [HUN.GetFlag]"
+AUS_appease_illyrians:0 "Appease the Illyrians [CRO.GetFlag]"
+AUS_appease_bohemians:0 "Appease the Bohemians [CZE.GetFlag]"
+AUS_appease_galicians:0 "Appease the Galicians [GAL.GetFlag]"
 
-AUS_italian_zerotwofive:0 "The §YItalians§! will §Rgain 0.25§! unrest"
-AUS_italian_zerotwofive_minus:0 "The §YItalians§! will §Glose 0.25§! unrest"
-AUS_italian_zerofive:0 "The §YItalians§! will §Rgain 0.5§! unrest"
-AUS_italian_zerofive_minus:0 "The §YItalians§! will §Glose 0.5§! unrest"
-AUS_italian_one:0 "The §YItalians§! will §Ggain 1§! unrest"
+no_backers_allowed:0 "The Empire is too stable to be toyed with"
+no_hungary_revolt:0 "§YHungary§! is unable to revolt"
+no_illyria_revolt:0 "§YIllyria§! is unable to revolt"
+no_bohemia_revolt:0 "§YBohemia§! is unable to revolt"
+no_galicia_revolt:0 "§YGalicia§! is unable to revolt"
+
+enables_revolt:0 "§YPicking this will enable you to revolt.§! §RYou will have to survive for §!§O4§!§R months.§!"
+disables_revolt:0 "§YPicking this will disable the ability to revolt.§!"
+chance_anger_hungary:0 "§YThis has a chance to move §!§CHungary §!§R2%§!§Y closer to revolt.§!"
+chance_anger_galicia:0 "§YThis has a chance to move §!§CGalicia §!§R2%§!§Y closer to revolt.§!"
+
+#### Decisions ####
+unrest_five_or_up:0 "The [ROOT.GetAdjective] must have at least 5 unrest"
+backer_war_tooltip:0 "§YWe will have §!§Cthree months§!§Y to fight. After the three months are over, any states we have §!§Gclaimed and under control§!§Y will become ours.§!"
+AUS_want_to_revolt:0 "Enable Revolt"
+AUS_dont_want_to_revolt:0 "Disable Revolt"
+
+
 
 slight_riot_chance:0 "§RThere is a slight chance of a riot occurring if we do this§!"
 
@@ -29,4 +43,64 @@ collapse_one_minus:0 "§YThe Empire will move §!§G1%§!§Y away from collapse�
 collapse_two_minus:0 "§YThe Empire will move §!§G2%§!§Y away from collapse§!"
 collapse_three_minus:0 "§YThe Empire will move §!§G3%§!§Y away from collapse§!"
 collapse_five_minus:0 "§YThe Empire will move §!§G5%§!§Y away from collapse§!"
+collapse_ten_minus:0 "§YThe Empire will move §!§G10%§!§Y away from collapse§!"
 
+
+
+collapse_hungary_one:0 "§YThe Hungarians will get §!§R1%§!§Y closer to revolt§!"
+collapse_hungary_two:0 "§YThe Hungarians will get §!§R2%§!§Y closer to revolt§!"
+collapse_hungary_three:0 "§YThe Hungarians will get §!§R3%§!§Y closer to revolt§!"
+collapse_hungary_five:0 "§YThe Hungarians will get §!§R5%§!§Y closer to revolt§!"
+collapse_hungary_ten:0 "§YThe Hungarians will get §!§R10%§!§Y closer to revolt§!"
+collapse_hungary_fifteen:0 "§YThe Hungarians will get §!§R15%§!§Y closer to revolt§!"
+
+collapse_hungary_one_minus:0 "§YThe Hungarians will get §!§G1%§!§Y farther from revolt§!"
+collapse_hungary_two_minus:0 "§YThe Hungarians will get §!§G2%§!§Y farther from revolt§!"
+collapse_hungary_three_minus:0 "§YThe Hungarians will get §!§G3%§!§Y farther from revolt§!"
+collapse_hungary_five_minus:0 "§YThe Hungarians will get §!§G5%§!§Y farther from revolt§!"
+collapse_hungary_ten_minus:0 "§YThe Hungarians will get §!§G10%§!§Y farther from revolt§!"
+
+
+
+collapse_bohemia_one:0 "§YThe Bohemians will get §!§R1%§!§Y closer to revolt§!"
+collapse_bohemia_two:0 "§YThe Bohemians will get §!§R2%§!§Y closer to revolt§!"
+collapse_bohemia_three:0 "§YThe Bohemians will get §!§R3%§!§Y closer to revolt§!"
+collapse_bohemia_five:0 "§YThe Bohemians will get §!§R5%§!§Y closer to revolt§!"
+collapse_bohemia_ten:0 "§YThe Bohemians will get §!§R10%§!§Y closer to revolt§!"
+
+collapse_bohemia_one_minus:0 "§YThe Bohemians will get §!§G1%§!§Y farther from revolt§!"
+collapse_bohemia_two_minus:0 "§YThe Bohemians will get §!§G2%§!§Y farther from revolt§!"
+collapse_bohemia_three_minus:0 "§YThe Bohemians will get §!§G3%§!§Y farther from revolt§!"
+collapse_bohemia_five_minus:0 "§YThe Bohemians will get §!§G5%§!§Y farther from revolt§!"
+collapse_bohemia_ten_minus:0 "§YThe Bohemians will get §!§G10%§!§Y farther from revolt§!"
+
+
+
+collapse_illyria_one:0 "§YThe Illyrians will get §!§R1%§!§Y closer to revolt§!"
+collapse_illyria_two:0 "§YThe Illyrians will get §!§R2%§!§Y closer to revolt§!"
+collapse_illyria_three:0 "§YThe Illyrians will get §!§R3%§!§Y closer to revolt§!"
+collapse_illyria_five:0 "§YThe Illyrians will get §!§R5%§!§Y closer to revolt§!"
+collapse_illyria_ten:0 "§YThe Illyrians will get §!§R10%§!§Y closer to revolt§!"
+
+collapse_illyria_one_minus:0 "§YThe Illyrians will get §!§G1%§!§Y farther from revolt§!"
+collapse_illyria_two_minus:0 "§YThe Illyrians will get §!§G2%§!§Y farther from revolt§!"
+collapse_illyria_three_minus:0 "§YThe Illyrians will get §!§G3%§!§Y farther from revolt§!"
+collapse_illyria_five_minus:0 "§YThe Illyrians will get §!§G5%§!§Y farther from revolt§!"
+collapse_illyria_ten_minus:0 "§YThe Illyrians will get §!§G10%§!§Y farther from revolt§!"
+
+collapse_galicia_one:0 "§YThe Galicians will get §!§R1%§!§Y closer to revolt§!"
+collapse_galicia_two:0 "§YThe Galicians will get §!§R2%§!§Y closer to revolt§!"
+collapse_galicia_three:0 "§YThe Galicians will get §!§R3%§!§Y closer to revolt§!"
+collapse_galicia_five:0 "§YThe Galicians will get §!§R5%§!§Y closer to revolt§!"
+collapse_galicia_ten:0 "§YThe Galicians will get §!§R10%§!§Y closer to revolt§!"
+
+collapse_galicia_one_minus:0 "§YThe Galicians will get §!§G1%§!§Y farther from revolt§!"
+collapse_galicia_two_minus:0 "§YThe Galicians will get §!§G2%§!§Y farther from revolt§!"
+collapse_galicia_three_minus:0 "§YThe Galicians will get §!§G3%§!§Y farther from revolt§!"
+collapse_galicia_five_minus:0 "§YThe Galicians will get §!§G5%§!§Y farther from revolt§!"
+collapse_galicia_ten_minus:0 "§YThe Galicians will get §!§G10%§!§Y farther from revolt§!"
+
+
+
+collapse_italians:0 "§YThe Italians in Austria will gain §!§G0.2-1.5§!§Y more unrest§!"
+collapse_croats:0 "§YThe Croats in Austria will gain §!§G0.2-1.5§!§Y more unrest§!"

@@ -84,9 +84,17 @@ defined_text = {
 	name = GetRevolt
 	text = {
 		trigger = {
-			always = yes
+			NOT = {
+				tag = AUS
+			}
 		}
 		localization_key = VARIABLE
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = COLLAPSE
 	}
 }
 

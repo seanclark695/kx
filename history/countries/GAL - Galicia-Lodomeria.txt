@@ -82,13 +82,13 @@ set_popularities = {
 	totalist = 0
 	radical_socialist = 0
 	syndicalist = 0
-	social_democrat = 2
-	social_liberal = 6
-	market_liberal = 6
-	social_conservative = 19
-	authoritarian_democrat = 54
-	paternal_autocrat = 12
-	national_populist = 1
+	social_democrat = 0
+	social_liberal = 0
+	market_liberal = 0
+	social_conservative = 0
+	authoritarian_democrat = 50
+	paternal_autocrat = 25
+	national_populist = 25
 }
 
 set_stability = 0.60
@@ -100,6 +100,9 @@ add_ideas = {
 	GAL_Kazimierz_Kumaniecki_sec_sco
 
 	AUS_part_of_the_Empire
+	GAL_looming_famine
+	GAL_GLF_rearmament
+	GAL_ethnic_split
 }
 
 create_country_leader = {

@@ -7,13 +7,7 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				ai_call_ally_desire_factor = -1000
-				ai_join_ally_desire_factor = -1000
-			}
-			targeted_modifier = {
-				tag = AUS
-				ai_call_ally_desire_factor = 2000
-				ai_join_ally_desire_factor = 2000
+				political_power_factor = 0.1
 			}
 			removal_cost = -1
 		}
@@ -38,9 +32,9 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				stability_weekly = 0.01
-				political_power_gain = -0.5
-				political_power_factor = -0.25
+				stability_weekly = 0.02
+				political_power_gain = -0.15
+				political_power_factor = -0.1
 			}
 			removal_cost = -1
 		}

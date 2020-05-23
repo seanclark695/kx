@@ -1,0 +1,1818 @@
+﻿###########################
+# Galicia Events
+###########################
+# By ~mw~
+###########################
+
+add_namespace = gal
+
+country_event = { #Galicia becomes independent, after war
+	id = gal.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.1" }
+	title = gal.1.t
+	desc = gal.1.d
+
+	trigger = {
+		tag = GAL
+		has_war = no
+		is_subject = no
+		country_exists = POL
+	}
+	mean_time_to_happen = {
+		days = 14
+	}
+
+	fire_only_once = yes
+
+	option = { #join Poland
+		name = gal.1.a
+		ai_chance = {
+			factor = 100
+		}
+		POL = {
+			country_event = {
+				id = gal.2
+				days = 2
+			}
+		}
+	}
+	option = { #stay independent
+		name = gal.1.b
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = -100
+	}
+}
+
+country_event = { #Galicia wants to join Poland
+	id = gal.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.2" }
+	title = gal.2.t
+	desc = gal.2.d
+
+	is_triggered_only = yes
+
+	option = { #excellent
+		name = gal.2.a
+		add_political_power = -30
+		add_state_core = 88 #Krakow
+		add_state_core = 89 #Stanislawow
+		add_state_core = 91 #Lwow
+		if = {
+			limit = {
+				73 = { #Transcarpathia
+					is_owned_by = FROM
+					is_core_of = FROM
+				}
+			}
+			add_state_core = 73
+		}
+		hidden_effect = {
+			FROM = {
+				transfer_units_fraction = {
+					target = ROOT
+					size = 1
+					keep_unit_leaders_trigger = { always = no }
+				}
+			}
+		}
+		annex_country = {
+			target = FROM
+			transfer_troops = yes
+		}
+		46 = {
+			owner = {
+				country_event = {
+					id = gal.3
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Romania occupies Bucovina
+	id = gal.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.3" }
+	title = gal.3.t
+	desc = gal.3.d
+
+	is_triggered_only = yes
+
+	option = { #do it
+		name = gal.3.a
+		add_political_power = -30
+		transfer_state = 80 #Cernauti
+		transfer_state = 713 #Suceava
+		add_state_core = 80 #Cernauti
+		add_state_core = 713 #Suceava
+	}
+}
+
+country_event = { # Albrecht Elected as King of Poland
+	id = gal.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.7" }
+	title = gal.7.t
+	desc = gal.7.d
+
+	is_triggered_only = yes
+
+	option = { # Wish him luck
+		name = gal.7.a
+		add_political_power = 10
+		hidden_effect = { kill_country_leader = yes }
+		create_country_leader = {
+			name = "Jozef Haller"
+			picture = "Portrait_Galicia_Jozef_Haller_von_Hallenburg.tga"
+			expire = "1965.1.1"
+			ideology = authoritarian_democrat_subtype
+		}
+	}
+}
+
+#country_event = { #The Flames of Revolution Simmer
+#	id = gal.8
+#	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.8" }
+#	title = gal.8.t
+#	desc = gal.8.d
+#
+#	is_triggered_only = yes
+#	
+#	option = { #Notify Austria immediately of this.
+#		name = gal.8.a
+#		add_stability = -0.1
+#		AUS = {
+#			country_event = {
+#				id = aus.24
+#				days = 2
+#				random = 24
+#			}
+#		}
+#		hidden_effect = {
+#			country_event = { #Bukovina
+#				id = gal.9
+#				days = 8
+#				random = 48
+#			}
+#		}
+#	}
+#}
+
+country_event = { #Bukovina Enters Famine
+	id = gal.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.9" }
+	title = gal.9.t
+	desc = gal.9.d
+
+	is_triggered_only = yes
+	
+	option = { #If only...
+		name = gal.9.a
+		swap_ideas = {
+			add_idea = GAL_famine
+			remove_idea = GAL_looming_famine
+		}
+		hidden_effect = {
+			country_event = { #Wiliczla and Krakow
+				id = gal.10
+				days = 2
+				random = 24
+			}
+		}
+	}
+}
+
+country_event = { #Wiliczla and Krakow Enter Famine
+	id = gal.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.10" }
+	title = gal.10.t
+	desc = gal.10.d
+
+	is_triggered_only = yes
+	
+	option = { #If only...
+		name = gal.10.a
+		swap_ideas = {
+			add_idea = GAL_famine_2
+			remove_idea = GAL_famine
+		}
+		hidden_effect = {
+			country_event = { #Halicz
+				id = gal.11
+				days = 2
+				random = 24
+			}
+		}
+	}
+}
+
+country_event = { #Halicz Enters Famine
+	id = gal.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.11" }
+	title = gal.11.t
+	desc = gal.11.d
+
+	is_triggered_only = yes
+	
+	option = { #If only...
+		name = gal.11.a
+		swap_ideas = {
+			add_idea = GAL_famine_3
+			remove_idea = GAL_famine_2
+		}
+		hidden_effect = {
+			country_event = { #Pilfno and Belz
+				id = gal.12
+				days = 2
+				random = 24
+			}
+		}
+	}
+}
+
+country_event = { #Pilfno and Belz Enter Famine
+	id = gal.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.12" }
+	title = gal.12.t
+	desc = gal.12.d
+
+	is_triggered_only = yes
+	
+	option = { #If only...
+		name = gal.12.a
+		swap_ideas = {
+			add_idea = GAL_famine_4
+			remove_idea = GAL_famine_3
+		}
+		hidden_effect = {
+			
+			country_event = { #Sambor and Tarnopol
+				id = gal.13
+				days = 2
+				random = 72
+			}
+		}
+	}
+}
+
+country_event = { #Sambor and Tarnopol Enter Famine
+	id = gal.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.13" }
+	title = gal.13.t
+	desc = gal.13.d
+
+	is_triggered_only = yes
+	
+	option = { #If only...
+		name = gal.13.a
+		swap_ideas = {
+			add_idea = GAL_famine_5
+			remove_idea = GAL_famine_4
+		}
+		hidden_effect = {
+			country_event = { #Lemberg!
+				id = gal.14
+				days = 2
+				random = 48
+			}
+		}
+	}
+}
+
+country_event = { #Lemberg Enters Famine
+	id = gal.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.14" }
+	title = gal.14.t
+	desc = gal.14.d
+
+	is_triggered_only = yes
+	
+	option = { #If only...
+		name = gal.14.a
+		swap_ideas = {
+			add_idea = GAL_famine_6
+			remove_idea = GAL_famine_5
+		}
+		hidden_effect = {
+			country_event = {
+				id = gal.16
+				days = 5
+				random = 48
+			}
+			country_event = {
+				id = gal.15
+				days = 4
+				random = 48
+			}
+		}
+	}
+}
+
+country_event = { #Pillaging Begins
+	id = gal.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.15" }
+	title = gal.15.t
+	desc = gal.15.d
+
+	is_triggered_only = yes
+	
+	option = { #Notify Austria! We might end up there again...
+		name = gal.15.a
+		add_political_power = -80
+		add_stability = -0.1
+		AUS = {
+			country_event = {
+				id = aus.25
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = { #Reappearance of the GLF (Galician Liberation Force)
+	id = gal.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.16" }
+	title = gal.16.t
+	desc = gal.16.d
+
+	is_triggered_only = yes
+	
+	option = { #*bzzt*
+		name = gal.16.a
+		add_political_power = -100
+		hidden_effect = {
+			country_event = {
+				id = gal.17
+				days = 1
+				random = 24
+			}
+		}
+	}
+}
+
+country_event = { #Pilfno and Sambor go rogue!
+	id = gal.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.17" }
+	title = gal.17.t
+	desc = gal.17.d
+
+	is_triggered_only = yes
+	
+	option = { #HELP
+		name = gal.17.a
+		add_stability = -0.15
+		1126 = {
+			set_demilitarized_zone = yes
+		}
+		89 = {
+			set_demilitarized_zone = yes
+		}
+		hidden_effect = {
+			country_event = {
+				id = gal.18
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #Bukovina Goes Rogue!
+	id = gal.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.18" }
+	title = gal.18.t
+	desc = gal.18.d
+
+	is_triggered_only = yes
+	
+	option = { #HELP
+		name = gal.18.a
+		add_stability = -0.05
+		80 = {
+			set_demilitarized_zone = yes
+		}
+		713 = {
+			set_demilitarized_zone = yes
+		}
+		hidden_effect = {
+			country_event = {
+				id = gal.19
+				days = 3
+				random = 12
+			}
+		}
+	}
+}
+
+country_event = { #Belz goes rogue!
+	id = gal.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.19" }
+	title = gal.19.t
+	desc = gal.19.d
+
+	is_triggered_only = yes
+	
+	option = { #HELP
+		name = gal.19.a
+		add_stability = -0.05
+		1127 = {
+			set_demilitarized_zone = yes
+		}
+		hidden_effect = {
+			country_event = {
+				id = gal.20
+				days = 3
+			}
+			
+			AUS = {
+				country_event = {
+					id = aus.26
+					days = 2
+				}
+			}
+		}
+	}
+}
+
+country_event = { #The Government Flees Lemberg (to Krakow)
+	id = gal.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.20" }
+	title = gal.20.t
+	desc = gal.20.d
+
+	is_triggered_only = yes
+	
+	option = { #HELP
+		name = gal.20.a
+		add_stability = -0.05
+		set_capital = 1124
+		
+		hidden_effect = {
+			country_event = {
+				id = gal.21
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = { #The GLF Takes Over Lemberg
+	id = gal.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.21" }
+	title = gal.21.t
+	desc = gal.21.d
+
+	is_triggered_only = yes
+	
+	option = { #HELP
+		name = gal.21.a
+		add_stability = -0.03
+		AUS = {
+			end_puppet = GAL
+		}
+		leave_faction = yes
+		set_politics = {
+			ruling_party = paternal_autocratr
+		}
+		91 = {
+			set_demilitarized_zone = yes
+		}
+		1140 = {
+			set_demilitarized_zone = yes
+		}
+		hidden_effect = {
+			POL = {
+				country_event = {
+					id = gal.22
+					days = 4
+					random = 24
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Poland - Galicia Spiraling Out of Control
+	id = gal.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.22" }
+	title = gal.22.t
+	desc = gal.22.d
+
+	is_triggered_only = yes
+	
+	option = { #Take over Krakow.
+		name = gal.22.a
+		ai_chance = { factor = 0 }
+		add_state_claim = 1124
+		transfer_state = 1124
+		
+		hidden_effect = {
+			GAL = {
+				country_event = gal.23
+			}
+		}
+	}
+	option = { #Take over Krakow and Galicia.
+		name = gal.22.b
+		ai_chance = { factor = 0 }
+		add_state_claim = 1124
+		add_state_claim = 1125
+		add_state_claim = 88
+		
+		transfer_state = 1124
+		transfer_state = 1125
+		transfer_state = 88
+		
+		hidden_effect = {
+			GAL = {
+				country_event = gal.23
+				set_country_flag = POL_took_galicia
+			}
+		}
+	}
+	option = { #Do nothing.
+		name = gal.22.c
+		add_political_power = -50
+		
+		hidden_effect = {
+			GAL = {
+				country_event = gal.24
+			}
+		}
+	}
+}
+
+country_event = { #Poland Seizes Land!
+	id = gal.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.23" }
+	title = gal.23.t
+	desc = {
+		text = gal.23.desc.a
+		trigger = {
+			NOT = {
+				has_country_flag = POL_took_galicia
+			}
+		}
+	}
+	
+	desc = {
+		text = gal.23.desc.b
+		trigger = {
+			has_country_flag = POL_took_galicia
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = { #We cannot do anything...
+		name = gal.23.a
+		hidden_effect = {
+			country_event = gal.24
+		}
+	}
+}
+
+country_event = { #Armed Insurrection Begins
+	id = gal.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.24" }
+	title = gal.24.t
+	desc = gal.24.d
+
+	is_triggered_only = yes
+	
+	option = { #And this time, we'll break free!
+		name = gal.24.a
+		add_stability = 0.75
+		remove_ideas = GAL_GLF_rearmament
+		every_owned_state = {
+			limit = {
+				is_demilitarized_zone = yes
+			}
+			set_demilitarized_zone = no
+			
+		}
+		every_owned_state = {
+			add_state_modifier = {
+				modifier = {
+					
+					attrition = 0.1
+					army_speed_factor = -0.15
+					army_org_factor = -0.2
+					supply_consumption_factor = 0.25
+				}
+			}
+		}
+		AUS = {
+			country_event = aus.27
+		}
+		ROM = {
+			country_event = {
+				id = gal.25
+				days = 1
+			}
+		}
+		UKR = {
+			country_event = {
+				id = gal.26
+				days = 1
+			}
+		}
+		hidden_effect = {
+			load_oob = GAL_second_galician_war
+			add_ideas = GAL_legends_of_war
+			add_ideas = AUS_fighting_for_the_people
+			add_ideas = GAL_counter_modifier
+			country_event = {
+				id = gal.28
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #ROM - Our claims in Bukovina
+	id = gal.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.25" }
+	title = gal.25.t
+	desc = gal.25.d
+
+	is_triggered_only = yes
+	
+	option = { #Fight!
+		name = gal.25.a
+		ai_chance = { factor = 10 }
+		declare_war_on = {
+			target = GAL
+			type = annex_everything
+		}
+		add_ideas = no_call_for_ai
+	}
+	
+	option = { #We can't risk it
+		name = gal.25.b
+		GAL = {
+			set_country_flag = ROM_no_sgw
+		}
+	}
+}
+
+country_event = { #UKR - Our people in Galicia
+	id = gal.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.26" }
+	title = gal.26.t
+	desc = gal.26.d
+
+	is_triggered_only = yes
+	
+	option = { #Fight!
+		name = gal.26.a
+		ai_chance = { factor = 10 }
+		declare_war_on = {
+			target = GAL
+			type = annex_everything
+		}
+		GAL = {
+			country_event = {
+				id = gal.27
+				days = 5
+				random = 72
+			}
+		}
+		add_ideas = no_call_for_ai
+	}
+	
+	option = { #We can't risk it
+		name = gal.25.b
+		ai_chance = { factor = 3 }
+		GAL = {
+			set_country_flag = UKR_no_sgw
+		}
+		hidden_effect = {
+			GAL = {
+				country_event = {
+					id = gal.50
+					days = 1080
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Pro-Ukraine Faction Splits
+	id = gal.27
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.27" }
+	title = gal.27.t
+	desc = gal.27.d
+
+	is_triggered_only = yes
+	
+	option = { #As expected, traitors!
+		name = gal.27.a
+		WSU = {
+			transfer_state = 1140
+			transfer_state = 1127
+			transfer_state = 1126
+			add_state_claim = 1140
+			add_state_claim = 1127
+			add_state_claim = 1126
+			add_ideas = no_call_for_ai
+			give_military_access = UKR
+		}
+		UKR = {
+			give_military_access = WSU
+		}
+		declare_war_on = {
+			target = WSU
+			type = annex_everything
+		}
+		every_other_country = {
+			limit = {
+				has_war_with = GAL
+				NOT = {
+					tag = UKR
+				}
+			}
+			declare_war_on = {
+				target = WSU
+				type = annex_everything
+			}
+		}
+		custom_effect_tooltip = two_nation_solution
+		hidden_effect = {
+			WSU = {
+				load_oob = WSU_collapse_oob
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = POL_took_galicia
+					}
+				}
+				country_event = { #Two-Nation Solution Checker
+					id = gal.30
+					days = 90
+				}
+			}
+		}
+	}
+	
+	option = { #They have the right idea!
+		name = gal.27.b
+		WSU = {
+			transfer_state = 1140
+			transfer_state = 1127
+			transfer_state = 1126
+			add_state_claim = 1140
+			add_state_claim = 1127
+			add_state_claim = 1126
+			add_ideas = no_call_for_ai
+			change_tag_from = ROOT
+		}
+		declare_war_on = {
+			target = WSU
+			type = annex_everything
+		}
+		every_other_country = {
+			limit = {
+				has_war_with = GAL
+				NOT = {
+					tag = UKR
+				}
+			}
+			declare_war_on = {
+				target = WSU
+				type = annex_everything
+			}
+		}
+		custom_effect_tooltip = two_nation_solution
+		hidden_effect = {
+			WSU = {
+				load_oob = WSU_collapse_oob
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = POL_took_galicia
+					}
+				}
+				country_event = { #Two-Nation Solution Checker
+					id = gal.30
+					days = 90
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Super event trigger
+	id = gal.28
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.28" }
+	title = gal.28.t
+	desc = gal.28.d
+
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	option = { #As expected, traitors!
+		name = gal.28.a
+		if = {
+			limit = {
+				OR = {
+					has_war_with = UKR
+					has_war_with = ROM
+					has_war_with = AUS
+				}
+			}
+			country_event = super.36
+		}
+		else = {
+			country_event = gal.29 #A Free and Untied Galicia!
+		}
+	}
+}
+
+country_event = { #Galicia is unopposed!
+	id = gal.29
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.29" }
+	title = gal.29.t
+	desc = gal.29.d
+
+	is_triggered_only = yes
+	
+	option = { #Hurrah!
+		name = gal.29.a
+		set_country_flag = GAL_unopposed
+	}
+}
+
+country_event = { #The Two-Nation Solution Check
+	id = gal.30
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.30" }
+	title = gal.30.t
+	desc = gal.30.d
+
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	option = { #Hurrah!
+		name = gal.30.a
+		if = {
+			limit = {
+				country_exists = WSU
+				NOT = {
+					has_country_flag = POL_took_galicia
+					has_war_with = AUS
+				}
+			}
+			UKR = {
+				country_event = gal.31
+			}
+		}
+		else_if = {
+			limit = {
+				country_exists = WSU
+				has_war_with = AUS
+				NOT = {
+					has_country_flag = POL_took_galicia
+				}
+			}
+			AUS = {
+				country_event = gal.32
+			}
+		}
+	}
+}
+
+country_event = { #The Two-Nation Solution? Ukraine
+	id = gal.31
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.31" }
+	title = gal.31.t
+	desc = gal.31.d
+
+	is_triggered_only = yes
+	
+	option = { #Let's hope it brings peace...
+		name = gal.31.a
+		ai_chance = { factor = 10 }
+		AUS = {
+			country_event = {
+				id = gal.33
+				days = 3
+			}
+		}
+	}
+	
+	option = { #No, we fight on!
+		name = gal.31.b
+		ai_chance = { factor = 1 }
+		add_war_support = -0.2
+		add_stability = -0.2
+	}
+}
+
+country_event = { #The Two-Nation Solution? Austria
+	id = gal.32
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.32" }
+	title = gal.32.t
+	desc = gal.32.d
+
+	is_triggered_only = yes
+	
+	option = { #Let's hope it brings peace...
+		name = gal.32.a
+		ai_chance = { factor = 10 }
+		UKR = {
+			country_event = {
+				id = gal.33
+				days = 3
+			}
+		}
+	}
+	
+	option = { #No, we fight on!
+		name = gal.32.b
+		ai_chance = { factor = 1 }
+		add_war_support = -0.2
+		add_stability = -0.2
+	}
+}
+
+country_event = { #The Two-Nation Solution? Other Party
+	id = gal.33
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.33" }
+	title = gal.33.t
+	desc = gal.33.d
+
+	is_triggered_only = yes
+	
+	option = { #We agree. Send the offer to the Galicians.
+		name = gal.33.a
+		ai_chance = { factor = 10 }
+		if = {
+			limit = {
+				GAL = {
+					is_ai = no
+				}
+			}
+			GAL = {
+				country_event = {
+					id = gal.34
+					days = 2
+				}
+			}
+		}
+		
+		else_if = {
+			limit = {
+				WSU = {
+					is_ai = no
+				}
+			}
+			WSU = {
+				country_event = {
+					id = gal.34
+					days = 2
+				}
+			}
+		}
+		
+		else = {
+			GAL = {
+				country_event = {
+					id = gal.34
+					days = 2
+				}
+			}
+		}
+	}
+	
+	option = { #Nope, we will not accept such a proposal.
+		name = gal.33.b
+		ai_chance = { factor = 2 }
+		if = {
+			limit = {
+				tag = UKR
+			}
+			custom_effect_tooltip = brings_other_party_in_UKR
+			GAL = {
+				country_event = {
+					id = gal.35
+					days = 15
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = AUS
+			}
+			custom_effect_tooltip = brings_other_party_in_AUS
+			custom_effect_tooltip = collapse_ten
+			add_to_variable = {
+				var = AUS.subject_revolt_progress
+				value = 0.1
+			}
+			UKR = {
+				country_event = {
+					id gal.36
+					days = 15
+				}
+			}
+		}
+		add_war_support = -0.2
+		add_stability = -0.2
+	}
+}
+
+country_event = { #The Two-Nation Solution? Galicia/West Ukraine
+	id = gal.34
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.34" }
+	title = gal.34.t
+	desc = gal.34.d
+
+	is_triggered_only = yes
+	
+	option = { #Let us end this pointless war.
+		name = gal.34.a
+		ai_chance = { factor = 10 }
+		if = {
+			limit = {
+				tag = GAL
+			}
+			WSU = {
+				country_event = {
+					id = gal.42
+					days = 7
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = WSU
+			}
+			GAL = {
+				country_event = {
+					id = gal.42
+					days = 7
+				}
+			}
+		}
+	}
+	
+	option = { #We'd rather have a split between who we choose.
+		name = gal.34.b
+		ai_chance = { factor = 5 }
+		custom_effect_tooltip = will_become_puppet
+		if = {
+			limit = {
+				tag = GAL
+			}
+			every_country = {
+				limit = {
+					has_war_with = GAL
+				}
+				white_peace = GAL
+			}
+			country_event = {
+				id = gal.37
+				days = 5
+			}
+			WSU = {
+				country_event = {
+					id = gal.40 #Ceasefire
+					days = 7
+				}
+				transfer_state = 91
+				transfer_state = 89
+				add_state_core = 91
+				add_state_core = 89
+			}
+			custom_effect_tooltip = releases_bukovina
+			hidden_effect = {
+				BUK = {
+					transfer_state = 713
+					transfer_state = 80
+					add_state_core = 713
+					add_state_core = 80
+					load_oob = BUK_collapse_oob
+				}
+				country_event = {
+					id = gal.39
+					days = 3
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = WSU
+			}
+			custom_effect_tooltip = will_become_puppet
+			every_country = {
+				limit = {
+					has_war_with = WSU
+					NOT = {
+						tag = GAL
+					}
+				}
+				white_peace = WSU
+			}
+			UKR = {
+				country_event = {
+					id = gal.38
+					days = 14
+				}
+			}
+			GAL = {
+				country_event = gal.41 #West Ukraine asks for ceasefire
+			}
+		}
+	}
+}
+
+country_event = { #Ukraine Abandons Peace
+	id = gal.35
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.35" }
+	title = gal.35.t
+	desc = gal.35.d
+
+	is_triggered_only = yes
+	
+	option = { #Ask the Poles for backup.
+		name = gal.35.a
+		ai_chance = { factor = 10 }
+		custom_effect_tooltip = POL_betrays
+		POL = {
+			country_event = gal.43
+		}
+	}
+	
+	option = { #Negotiate for a ceasefire.
+		name = gal.35.b
+		ai_chance = { factor = 5 }
+		WSU = {
+			country_event = gal.44
+		}
+		custom_effect_tooltip = releases_bukovina
+		hidden_effect = {
+			BUK = {
+				transfer_state = 713
+				transfer_state = 80
+				add_state_core = 713
+				add_state_core = 80
+				load_oob = BUK_collapse_oob
+			}
+			ROM = {
+				country_event = gal.39
+			}
+		}
+	}
+}
+
+country_event = { #UKR - Austria Abandons Peace
+	id = gal.36
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.36" }
+	title = gal.36.t
+	desc = gal.36.d
+
+	is_triggered_only = yes
+	
+	option = { #Hand Suceava over to Romania and Cernauti to our brothers.
+		name = gal.36.a
+		ai_chance = { factor = 10 }
+		ROM = {
+			transfer_state = 713
+			add_state_claim = 713
+		}
+		WSU = {
+			transfer_state = 80
+			add_state_claim = 80
+		}
+	}
+	
+	option = { #Release Bukovina, and set up a demilitarized zone on both sides.
+		name = gal.36.b
+		ai_chance = { factor = 5 }
+		BUK = {
+			transfer_state = 713
+			transfer_state = 80
+			add_state_core = 713
+			add_state_core = 80
+			load_oob = BUK_collapse_oob
+		}
+	}
+}
+
+country_event = { #POL - Take in Galicia?
+	id = gal.37
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.37" }
+	title = gal.37.t
+	desc = gal.37.d
+
+	is_triggered_only = yes
+	
+	option = { #We shall! Please make a ruler for Polish Galicia.
+		name = gal.37.a
+		ai_chance = { factor = 10 }
+		add_stability = 0.05
+		add_political_power = 50
+		puppet = GAL
+		GAL = {
+			set_cosmetic_tag = GAL_polish
+			set_country_flag = GAL_polish_puppet
+		}
+	}
+}
+
+country_event = { #UKR - Take in West Ukraine?
+	id = gal.38
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.38" }
+	title = gal.38.t
+	desc = gal.38.d
+
+	is_triggered_only = yes
+	
+	option = { #We shall!
+		name = gal.38.a
+		ai_chance = { factor = 10 }
+		add_stability = 0.05
+		add_political_power = 50
+		puppet = WSU
+		WSU = {
+			set_country_flag = WSU_ukrainian_puppet
+		}
+	}
+}
+
+country_event = { #ROM - Bukovina's Status
+	id = gal.39
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.39" }
+	title = gal.39.t
+	desc = gal.39.d
+
+	is_triggered_only = yes
+	
+	option = { #Attack them.
+		name = gal.39.a
+		ai_chance = { factor = 10 }
+		declare_war_on = {
+			target = BUK
+			type = annex_everything
+		}
+	}
+	
+	option = { #Leave them be.
+		name = gal.39.b
+		ai_chance = { factor = 5 }
+		add_stability = 0.1
+		add_political_power = 50
+	}
+}
+
+country_event = { #WSU - Galicia declares ceasefire
+	id = gal.40
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.40" }
+	title = gal.40.t
+	desc = gal.40.d
+
+	is_triggered_only = yes
+	
+	option = { #Let's go with Ukraine.
+		name = gal.40.a
+		ai_chance = { factor = 5 }
+		UKR = {
+			country_event = gal.38
+		}
+		every_country = {
+			limit = {
+				has_war_with = WSU
+			}
+			white_peace = WSU
+		}
+		set_country_flag = SGW_brothers_peace
+		hidden_effect = {
+			GAL = {
+				set_country_flag = SGW_brothers_peace
+			}
+		}
+	}
+	
+	option = { #We set out alone!
+		name = gal.40.b
+		ai_chance = { factor = 10 }
+		add_stability = 0.1
+		add_political_power = 100
+		every_country = {
+			limit = {
+				has_war_with = WSU
+			}
+			white_peace = WSU
+		}
+		set_country_flag = WSU_secured_independence
+		set_country_flag = SGW_brothers_peace
+		hidden_effect = {
+			GAL = {
+				set_country_flag = SGW_brothers_peace
+			}
+		}
+	}
+}
+
+country_event = { #GAL - West Ukraine asks for ceasefire
+	id = gal.41
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.41" }
+	title = gal.41.t
+	desc = gal.41.d
+
+	is_triggered_only = yes
+	
+	option = { #It's pointless to fight brothers...
+		name = gal.41.a
+		ai_chance = { factor = 10 }
+		set_country_flag = SGW_brothers_peace
+		white_peace = WSU
+		WSU = {
+			transfer_state = 91
+			transfer_state = 89
+			add_state_core = 91
+			add_state_core = 89
+		}
+		custom_effect_tooltip = releases_bukovina
+		hidden_effect = {
+			BUK = {
+				transfer_state = 713
+				transfer_state = 80
+				add_state_core = 713
+				add_state_core = 80
+				load_oob = BUK_collapse_oob
+			}
+			ROM = {
+				country_event = gal.39
+			}
+		}
+	}
+	
+	option = { #No, we want all of Galicia-Lodomeria!
+		name = gal.41.b
+		ai_chance = { factor = 2 }
+		add_stability = -0.1
+		add_political_power = -100
+	}
+}
+
+country_event = { #WSU/GAL - Two-Nation Solution?
+	id = gal.42
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.42" }
+	title = gal.42.t
+	desc = gal.42.d
+
+	is_triggered_only = yes
+	
+	option = { #This will hopefully bring us peace.
+		name = gal.42.a
+		ai_chance = { factor = 10 }
+		custom_effect_tooltip = give_up_suceava
+		GAL = {
+			annex_country = {
+				target = WSU
+				transfer_troops = yes
+			}
+			set_cosmetic_tag = GAL_two_nation_solution_tag
+			set_country_flag = GAL_two_nation_solution_flag
+		}
+		every_country = {
+			limit = {
+				has_war_with = GAL
+				NOT = {
+					tag = ROM
+				}
+			}
+			white_peace = GAL
+		}
+		if = {
+			limit = {
+				ROM = {
+					has_war_with = GAL
+				}
+			}
+			ROM = {
+				white_peace = GAL
+				transfer_state = 713
+				add_state_claim = 713
+			}
+		}
+		if = {
+			limit = {
+				tag = WSU
+				WSU = {
+					is_ai = no
+				}
+			}
+			GAL = {
+				change_tag_from = WSU
+			}
+		}
+	}
+	
+	option = { #No, we should go alone
+		name = gal.42.b
+		ai_chance = { factor = 2 }
+		custom_effect_tooltip = will_become_puppet
+		if = {
+			limit = {
+				tag = GAL
+			}
+			every_country = {
+				limit = {
+					has_war_with = GAL
+				}
+				white_peace = GAL
+			}
+			POL = {
+				country_event = gal.37
+			}
+			WSU = {
+				country_event = gal.40 #Galicia Declares a Ceasefire
+				transfer_state = 91
+				transfer_state = 89
+				add_state_core = 91
+				add_state_core = 89
+			}
+			custom_effect_tooltip = releases_bukovina
+			hidden_effect = {
+				BUK = {
+					transfer_state = 713
+					transfer_state = 80
+					add_state_core = 713
+					add_state_core = 80
+					load_oob = BUK_collapse_oob
+				}
+				ROM = {
+					country_event = gal.39
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = WSU
+			}
+			custom_effect_tooltip = will_become_puppet
+			every_country = {
+				limit = {
+					has_war_with = WSU
+					NOT = {
+						tag = GAL
+					}
+				}
+				white_peace = WSU
+			}
+			UKR = {
+				country_event = {
+					id = gal.38
+					days = 14
+				}
+			}
+			GAL = {
+				country_event = gal.41 #West Ukraine asks for ceasefire
+			}
+		}
+	}
+}
+
+country_event = { #POL - Galicia requests backup!
+	id = gal.43
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.43" }
+	title = gal.43.t
+	desc = gal.43.d
+
+	is_triggered_only = yes
+	
+	option = { #Let's move in... to Galicia.
+		name = gal.43.a
+		ai_chance = { factor = 10 }
+		GAL = {
+			country_event = {
+				id = gal.45
+				days = 12
+			}
+		}
+	}
+	
+	option = { #You're on your own.
+		name = gal.43.b
+		ai_chance = { factor = 5 }
+		GAL = {
+			country_event = {
+				id = gal.46
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #WSU - Galicia wants ceasefire!
+	id = gal.44
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.44" }
+	title = gal.44.t
+	desc = gal.44.d
+
+	is_triggered_only = yes
+	
+	option = { #End this war...
+		name = gal.44.a
+		ai_chance = { factor = 10 }
+		white_peace = GAL
+		set_country_flag = SGW_brothers_peace
+		GAL = {
+			set_country_flag = SGW_brothers_peace
+		}
+	}
+	
+	option = { #We will keep fighting!
+		name = gal.44.b
+		ai_chance = { factor = 5 }
+		hidden_effect = {
+			AUS = {
+				country_event = {
+					id = gal.47 #End of the SGW Checker
+					days = 30
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Poland marches into our territory malevolently!
+	id = gal.45
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.45" }
+	title = gal.45.t
+	desc = gal.45.d
+
+	is_triggered_only = yes
+	
+	option = { #Submit
+		name = gal.45.a
+		ai_chance = { factor = 12 }
+		white_peace = GAL
+		set_country_flag = SGW_brothers_peace
+		GAL = {
+			set_country_flag = SGW_brothers_peace
+		}
+	}
+	
+	option = { #We will keep fighting!
+		name = gal.45.b
+		ai_chance = { factor = 3 }
+		declare_war_on = {
+			target = POL
+			type = annex_everything
+		}
+	}
+}
+
+country_event = { #The War Drags On!
+	id = gal.46
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.46" }
+	title = gal.46.t
+	desc = gal.46.d
+
+	is_triggered_only = yes
+	
+	option = { #I don't want a repeat of this
+		name = gal.46.a
+		ai_chance = { factor = 12 }
+		hidden_effect = {
+			AUS = {
+				country_event = {
+					id = gal.47 #End of the SGW Checker
+					days = 30
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Has the war ended yet?
+	id = gal.47
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.47" }
+	title = gal.47.t
+	desc = gal.47.d
+
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	option = { #waaaah
+		name = gal.47.a
+		ai_chance = { factor = 12 }
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						GAL = {
+							owns_state = 91
+							owns_state = 1126
+							owns_state = 1127
+							owns_state = 1140
+						}
+						NOT = {
+							country_exists = WSU
+						}
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					has_war_with = GAL
+				}
+				country_event = gal.48 #Armistice in the Second Galician War!
+			}
+			GAL = {
+				set_country_flag = SGW_brothers_peace
+			}
+		}
+		
+		else_if = {
+			limit = {
+				OR = {
+					AND = {
+						WSU = {
+							owns_state = 91
+							owns_state = 1126
+							owns_state = 1127
+							owns_state = 89
+						}
+						NOT = {
+							country_exists = GAL
+						}
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					has_war_with = WSU
+				}
+				country_event = gal.49 #Armistice in the Second Galician War!
+			}
+			WSU = {
+				set_country_flag = SGW_brothers_peace
+			}
+		}
+		
+		else = {
+			country_event = {
+				id = gal.47
+				days = 30
+			}
+		}
+	}
+}
+
+country_event = { #Armistice in the Galician War?
+	id = gal.48
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.48" }
+	title = gal.48.t
+	desc = gal.48.d
+
+	is_triggered_only = yes
+	
+	option = { #Of course we will
+		name = gal.48.a
+		ai_chance = { factor = 15 }
+		white_peace = GAL
+		set_country_flag = SGW_brothers_peace
+	}
+	
+	option = { #No!
+		name = gal.48.b
+		ai_chance = { factor = 2 }
+		trigger = {
+			OR = {
+				tag = AUS
+				tag = UKR
+			}
+		}
+		if = {
+			limit = {
+				tag = AUS
+			}
+			custom_effect_tooltip = collapse_ten
+			add_to_variable = {
+				var = AUS.subject_revolt_progress
+				value = 0.1
+			}
+		}
+		add_stability = -0.25
+		add_war_support = -0.3
+		add_political_power = -150
+	}
+}
+
+country_event = { #Armistice in the Galician War?
+	id = gal.49
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.49" }
+	title = gal.49.t
+	desc = gal.49.d
+
+	is_triggered_only = yes
+	
+	option = { #Of course we will
+		name = gal.49.a
+		ai_chance = { factor = 15 }
+		white_peace = WSU
+		set_country_flag = SGW_brothers_peace
+	}
+	
+	option = { #No!
+		name = gal.49.b
+		ai_chance = { factor = 2 }
+		trigger = {
+			OR = {
+				tag = AUS
+				tag = UKR
+			}
+		}
+		if = {
+			limit = {
+				tag = AUS
+			}
+			custom_effect_tooltip = collapse_ten
+			add_to_variable = {
+				var = AUS.subject_revolt_progress
+				value = 0.1
+			}
+		}
+		add_stability = -0.25
+		add_war_support = -0.3
+		add_political_power = -150
+	}
+}
+
+country_event = { #The War Keeps Going!
+	id = gal.50
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.50" }
+	title = gal.50.t
+	desc = gal.50.d
+
+	is_triggered_only = yes
+	
+	option = { #Let's sign an armistice.
+		name = gal.50.a
+		ai_chance = { factor = 15 }
+		every_country = {
+			limit = {
+				has_war_with = GAL
+			}
+			white_peace = {
+				tag = GAL
+				message = GAL_toolong
+			}
+		}
+		if = {
+			limit = {
+				AUS = {
+					has_war_with = GAL
+				}
+			}
+			custom_effect_tooltip = collapse_ten
+			add_to_variable = {
+				var = AUS.subject_revolt_progress
+				value = 0.1
+			}
+			transfer_state = 73
+			transfer_state = 1119
+		}
+	}
+}
+
+country_event = { #Remove ideas, sorry knifepony hahahahaha
+	id = gal.51
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.51" }
+	title = gal.51.t
+	desc = gal.51.d
+
+	is_triggered_only = no
+	fire_only_once = yes
+	hidden = yes
+	
+	trigger = {
+		has_country_flag = SGW_brothers_peace
+		tag = GAL
+	}
+	
+	option = { #Let's sign an armistice.
+		name = gal.51.a
+		ai_chance = { factor = 15 }
+		remove_ideas = GAL_legends_of_war
+		remove_ideas = AUS_fighting_for_the_people
+		if = {
+			limit = {
+				country_exists = WSU
+			}
+			WSU = {
+				remove_ideas = AUS_fighting_for_the_people
+				remove_ideas = no_call_for_ai
+			}
+		}
+	}
+}

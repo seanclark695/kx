@@ -1,0 +1,78 @@
+division_template = {
+	name = "Serbian Infantry"
+	division_names_group = SKS_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Serbian Militia"
+	division_names_group = SKS_INF_01
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 1 y = 2 }
+	}
+}
+units = {
+
+	division = {
+		location = 11572
+		division_template = "Serbian Infantry"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		location = 11577
+		division_template = "Serbian Infantry"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		location = 6619
+		division_template = "Serbian Infantry"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		location = 6983
+		division_template = "Serbian Militia"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		location = 606
+		division_template = "Serbian Militia"
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		location = 9586
+		division_template = "Serbian Militia"
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		location = 9588
+		division_template = "Serbian Militia"
+		start_experience_factor = 0.3
+	}
+
+	division = {
+		location = 6614
+		division_template = "Serbian Militia"
+		start_experience_factor = 0.3
+	}
+}
