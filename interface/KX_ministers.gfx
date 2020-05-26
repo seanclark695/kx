@@ -745,6 +745,22 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/FRA/FRA_Marc_Augier.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_FRA_Joseph_Darnand_hog_tot" 
+		texturefile = "gfx/interface/ministers/FRA/FRA_Joseph_Darnand.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_FRA_Robert_Brasillach_for_tot" 
+		texturefile = "gfx/interface/ministers/FRA/FRA_Robert_Brasillach.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_FRA_Victor_Arrighi_eco_tot" 
+		texturefile = "gfx/interface/ministers/FRA/FRA_Victor_Arrighi.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_FRA_Victor_Barthelemy_sec_tot" 
+		texturefile = "gfx/interface/ministers/FRA/FRA_Victor_Barthelemy.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_CSA_James_Burnham_hog_tot"
 		texturefile = "gfx/interface/ministers/CSA/CSA_James_Burnham.tga"
 	}
