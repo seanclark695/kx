@@ -6132,6 +6132,53 @@ country_event = {
 		}
     }
 }
+country_event = {
+	id = comfrance.999
+	immediate = {log = "[GetDateText]: [Root.GetName]: event comfrance.999"}
+	title = comfrance.999.t
+	desc = comfrance.999.d
+	picture = GFX_news_event_FRA_doriot_event
+
+	is_triggered_only = yes
+	
+	option = {
+	    name = comfrance.999.a 
+		
+		hidden_effect = {	
+			kill_country_leader = yes
+			
+			create_country_leader = {
+				name = "Jacques Doriot"
+				desc = "POLITICS_DORIOT_DESC"
+				picture = "Portrait_France_Jacques_Doriot_marshal.tga"
+				expire = "1965.1.1"
+				ideology = totalist_subtype
+			}
+		    add_stability = -0.1
+		    remove_ideas_with_trait = head_of_government
+		    add_ideas = FRA_Joseph_Darnand_hog_tot
+		    remove_ideas_with_trait = foreign_minister
+		    add_ideas = FRA_Robert_Brasillach_for_tot
+		    remove_ideas_with_trait = economy_minister
+		    add_ideas = FRA_Victor_Arrighi_eco_tot
+		    remove_ideas_with_trait = security_minister
+		    add_ideas = FRA_Victor_Barthelemy_sec_tot
+		    add_popularity = {
+			  ideology = totalist
+			   popularity = 0.20
+		 	}
+		    set_party_name = {
+			  ideology = totalist
+			  long_name = FRA_militarysorel
+			  name = FRA_militarysorel
+	        }	 
+			country_event = {
+				id = comfrance.9991
+				days = 10
+			}
+		}
+    }
+}
 
 country_event = {
 	id = comfrance.907
@@ -6797,7 +6844,7 @@ country_event = {
 	option = { 
 		name = comfrance.926.a
 		ai_chance = {
-			factor = 60
+			factor = 40
 			modifier = {
 				factor = 100
 				has_game_rule = {
@@ -6806,7 +6853,7 @@ country_event = {
 				}
 			}
 		}
-		add_stability = 0.12
+		add_stability = 0.10
 		hidden_effect = {
 			country_event = {
 				id = comfrance.905
@@ -6817,7 +6864,7 @@ country_event = {
 	option = { 
 		name = comfrance.926.b
 		ai_chance = {
-			factor = 40
+			factor = 30
 			modifier = {
 				factor = 100
 				has_game_rule = {
@@ -6826,10 +6873,23 @@ country_event = {
 				}
 			}
 		}
-		add_stability = 0.12
+		add_stability = 0.10
 		hidden_effect = {
 			country_event = {
 				id = comfrance.906
+				days = 5
+			}
+	    }
+    }
+	option = { 
+		name = comfrance.926.c
+		ai_chance = {
+			factor = 30
+		}
+		add_stability = 0.10
+		hidden_effect = {
+			country_event = {
+				id = comfrance.999
 				days = 5
 			}
 	    }
@@ -6896,6 +6956,31 @@ country_event = {
 		}
 		hidden_effect = {
 		    set_cosmetic_tag = FRA_Vanguard
+		}
+	}
+}
+
+country_event = {
+	id = comfrance.9991
+	immediate = {log = "[GetDateText]: [Root.GetName]: event comfrance.9991"}
+	title = comfrance.9991.t
+	desc = comfrance.9991.d
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = comfrance.9991.a
+		ai_chance = {
+			factor = 30
+		}		
+    }
+	option = { 
+		name = comfrance.9991.b
+		ai_chance = {
+			factor = 70
+		}
+		hidden_effect = {
+		    set_cosmetic_tag = FRA_Militantsorel
 		}
 	}
 }
