@@ -1026,7 +1026,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_news_event_FRA_modern_army"
-		texturefile = "gfx/event_pictures/Europe/France/FRA_modern_army.dds"
+		texturefile = "gfx/event_pictures/Europe/France/FRA_modern_army.dds
 	}
 	spriteType = {
 		name = "GFX_news_event_FRA_terror"
@@ -1307,6 +1307,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_news_event_FRA_black_logo"
 		texturefile = "gfx/event_pictures/Europe/France/FRA_black_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_FRA_doriot_event"
+		texturefile = "gfx/event_pictures/Europe/France/FRA_doriot_event.dds"
 	}
 	spriteType = {
 		name = "GFX_news_event_FRA_black_army"
