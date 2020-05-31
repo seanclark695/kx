@@ -3,6 +3,7 @@
 ##################
 
 add_namespace = super
+add_namespace = ultimate
 
 country_event = {	#Secont Weltkrieg
 	id = super.1
@@ -26,6 +27,8 @@ country_event = {	#Secont Weltkrieg
         set_global_flag = Super_Event_Visible
         set_global_flag = GER_Second_Weltkrieg
 		sound_effect = "superev_weltkrieg"
+		#set_global_flag = radio_2wk
+		#country_event = ultimate.1
 	}
 }
 
@@ -977,22 +980,171 @@ country_event = {		#The American Civil War is Avoided
 
 
 
-country_event = {		#Super Event Others
-	id = super.700
-	title = super.700.t
-	desc = super.700.d
+country_event = {	#Fire stuff off
+	id = ultimate.1
+	title = ultimate.1.t
+	desc = ultimate.1.d
 	picture = GFX_report_event_diplomatic_message
 
 	is_triggered_only = yes
+	
+	hidden = yes
+
+	fire_only_once = no
+
+	option = {
+		name = ultimate.1.a
+		set_global_flag = ULT_radio_slide
+		country_event = {
+			id = ultimate.2
+			hours = 6
+		}
+		sound_effect = superev_fire
+	}
+}
+
+country_event = {	#Fire stuff off
+	id = ultimate.2
+	title = ultimate.2.t
+	desc = ultimate.2.d
+	picture = GFX_report_event_diplomatic_message
+
+	is_triggered_only = yes
+	
+	hidden = yes
+
+	fire_only_once = no
+
+	option = {
+		name = ultimate.2.a
+		country_event = {
+			id = ultimate.3
+			hours = 32
+		}
+		set_global_flag = ULT_transmission_named
+		if = {
+			limit = {
+				has_global_flag = radio_2wk
+			}
+			sound_effect = superev_weltkrieg
+		}
+	}
+}
+
+country_event = {	#Fire stuff off
+	id = ultimate.3
+	title = ultimate.3.t
+	desc = ultimate.3.d
+	picture = GFX_report_event_diplomatic_message
+
+	is_triggered_only = yes
+	
+	hidden = yes
+
+	fire_only_once = no
+
+	option = {
+		name = ultimate.3.a
+		country_event = {
+			id = ultimate.4
+			hours = 32
+		}
+		set_global_flag = ULT_text1
+		sound_effect = superev_text
+	}
+}
+
+country_event = {	#Fire stuff off
+	id = ultimate.4
+	title = ultimate.4.t
+	desc = ultimate.4.d
+	picture = GFX_report_event_diplomatic_message
+
+	is_triggered_only = yes
+	
+	hidden = yes
+
+	fire_only_once = no
+
+	option = {
+		name = ultimate.4.a
+		country_event = {
+			id = ultimate.5
+			hours = 32
+		}
+		clr_global_flag = ULT_text1
+		set_global_flag = ULT_text2
+		sound_effect = superev_text
+	}
+}
+
+country_event = {	#Fire stuff off
+	id = ultimate.5
+	title = ultimate.5.t
+	desc = ultimate.5.d
+	picture = GFX_report_event_diplomatic_message
+
+	is_triggered_only = yes
+	
+	hidden = yes
+
+	fire_only_once = no
+
+	option = {
+		name = ultimate.5.a
+		country_event = {
+			id = ultimate.6
+			hours = 18
+		}
+		clr_global_flag = ULT_text2
+		set_global_flag = ULT_text3
+		sound_effect = superev_text
+	}
+}
+
+country_event = {	#Fire stuff off
+	id = ultimate.6
+	title = ultimate.6.t
+	desc = ultimate.6.d
+	picture = GFX_report_event_diplomatic_message
+
+	is_triggered_only = yes
+	
+	hidden = yes
+
+	fire_only_once = no
+
+	option = {
+		name = ultimate.6.a
+		country_event = {
+			id = ultimate.7
+			hours = 8
+		}
+		set_global_flag = ULT_part2_text
+		sound_effect = superev_text
+	}
+}
+
+country_event = {	#Clear flag
+	id = ultimate.100
+	title = ultimate.100.t
+	desc = ultimate.100.d
+	picture = GFX_report_event_diplomatic_message
+
+	is_triggered_only = yes
+	
+	hidden = yes
 
 	fire_only_once = yes
 
 	option = {
-		name = super.700.a
-
-        SPR = {
-			country_event = super.9
-		}
+		name = ultimate.100.a
+		clr_global_flag = ULT_radio_slide
+		clr_global_flag = ULT_transmission_named
+		clr_global_flag = ULT_text1
+		clr_global_flag = ULT_text2
+		clr_global_flag = ULT_text3
+		clr_global_flag = ULT_part2_text
 	}
 }
 

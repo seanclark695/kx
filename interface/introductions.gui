@@ -1,0 +1,173 @@
+guiTypes = {
+	containerWindowType = {
+		name = "intro_screen"
+		size = { width = 1167 height = 675}
+		position = { x=-583 y=-297 }
+		Orientation = center
+		moveable = yes
+		clipping = no
+		show_sound = menu_open_window
+		hide_sound = menu_close_window
+
+		Background = {
+			name = "welcome_screen_bg"
+			quadTextureSprite = "GFX_thanks_eaw_welcome_screen"
+		}
+
+		instantTextboxType = {
+			name = "header_desc"
+			position = { x = -267 y = 23 }
+			font = "hoi_24header"
+			text = "[THIS.KX_nation_header]"
+			Orientation = center_up
+			format = center
+			maxWidth = 530
+			maxHeight = 30
+		}
+
+		buttonType = {
+			name = "tab_1_on"
+			position = { x = 58 y = 104 }
+			quadTextureSprite ="GFX_thanks_eaw_tab_on"
+			font = "hoi_18mbs"
+			#buttonText = "[THIS.KX_tab_1]"
+			pdx_tooltip = "KX_tab_1_tt"
+		}
+
+		buttonType = {
+			name = "tab_2_on"
+			position = { x = 331 y = 104 }
+			quadTextureSprite ="GFX_thanks_eaw_tab_on"
+			font = "hoi_18mbs"
+			buttonText = "[THIS.KX_tab_2]"
+			pdx_tooltip = "KX_tab_2_tt"
+		}
+
+		buttonType = {
+			name = "tab_3_on"
+			position = { x = 596 y = 104 }
+			quadTextureSprite ="GFX_thanks_eaw_tab_on"
+			font = "hoi_18mbs"
+			buttonText = "[THIS.KX_tab_3]"
+			pdx_tooltip = "KX_tab_3_tt"
+		}
+
+		buttonType = {
+			name = "tab_4_on"
+			position = { x = 869 y = 104 }
+			quadTextureSprite ="GFX_thanks_eaw_tab_on"
+			font = "hoi_18mbs"
+			buttonText = "[THIS.KX_tab_4]"
+			pdx_tooltip = "KX_tab_4_tt"
+		}
+
+		buttonType = {
+			name = "tab_1_off"
+			position = { x = 58 y = 104 }
+			quadTextureSprite ="GFX_thanks_eaw_tab_off"
+			font = "hoi_18mbs"
+			#buttonText = "KX_tab_1"
+			pdx_tooltip = "KX_tab_1_tt"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "tab_2_off"
+			position = { x = 331 y = 104 }
+			quadTextureSprite ="GFX_thanks_eaw_tab_off"
+			font = "hoi_18mbs"
+			buttonText = "[THIS.KX_tab_2]"
+			pdx_tooltip = "KX_tab_2_tt"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "tab_3_off"
+			position = { x = 596 y = 104 }
+			quadTextureSprite ="GFX_thanks_eaw_tab_off"
+			font = "hoi_18mbs"
+			buttonText = "[THIS.KX_tab_3]"
+			pdx_tooltip = "KX_tab_3_tt"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "tab_4_off"
+			position = { x = 869 y = 104 }
+			quadTextureSprite ="GFX_thanks_eaw_tab_off"
+			font = "hoi_18mbs"
+			buttonText = "[THIS.KX_tab_4]"
+			pdx_tooltip = "KX_tab_4_tt"
+			clicksound = click_default
+		}
+		
+		buttonType = {
+			name = "close_button"
+			position = { x = -44 y = 22 }
+			quadTextureSprite ="GFX_closebutton"
+			shortcut = "ESCAPE"
+			Orientation = UPPER_RIGHT
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+
+		instantTextboxType = {
+			name = "tab_1_btn_text"
+			position = { x = -505 y = 125 }
+			font = "hoi_18mbs"
+			text = "[THIS.KX_tab_1]"
+			pdx_tooltip = "KX_tab_1_tt"
+			maxWidth = 200
+			maxHeight = 18
+			fixedsize = yes
+		    Orientation = center_up
+			format = center
+		}
+
+		instantTextboxType = {
+			name = "tab_1_header"
+			position = { x = -550 y = 160 }
+			font = "hoi_24header"
+			text = "[THIS.KX_button_header_1]"
+			Orientation = center_up
+			format = center
+			maxWidth = 1100
+			maxHeight = 30
+		}
+
+		instantTextboxType = {
+			name = "tab_2_header"
+			position = { x = -550 y = 160 }
+			font = "hoi_24header"
+			text = "[THIS.KX_button_header_2]"
+			Orientation = center_up
+			format = center
+			maxWidth = 1100
+			maxHeight = 30
+		}
+
+		instantTextboxType = {
+			name = "tab_3_header"
+			position = { x = -550 y = 160 }
+			font = "hoi_24header"
+			text = "[THIS.KX_button_header_3]"
+			Orientation = center_up
+			format = center
+			maxWidth = 1100
+			maxHeight = 30
+		}
+
+		instantTextboxType = {
+			name = "tab_4_header"
+			position = { x = -550 y = 160 }
+			font = "hoi_24header"
+			text = "[THIS.KX_button_header_4]"
+			Orientation = center_up
+			format = center
+			maxWidth = 1100
+			maxHeight = 30
+		}
+	}
+}
+
+

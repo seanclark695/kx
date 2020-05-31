@@ -1,0 +1,86 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "radio_container"
+		size = { width = 600 height = 500 }
+		position = { x=-600 y=500 }
+		Orientation = upper_left
+		Origo = upper_left
+		clipping = no	
+		moveable = no
+		hide_position = { x=-600 y=500 }
+		show_position = { x = 50 y = 500 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 2400
+		
+		iconType = {
+			name = "Radio_Intro"
+			spriteType = "GFX_Ultimate_Radio"
+			position = { x = 0 y = 0 }
+		}
+		containerWindowType = {
+			name = "incoming_transmission_container"
+			size = { width = 500 height = 30 }
+			Orientation = upper_left
+			Origo = upper_left
+			fade_time = 50000
+			fade_type = linear
+			
+			instantTextboxType = {
+				name = "radio_message"
+				position = { x = 80 y = -240 }
+				font = "hoi_30header"
+				text = "INCOMING_TRANSMISSION"
+				maxWidth = 500
+				maxHeight = 30
+				format = upper_left
+			}
+			instantTextboxType = {
+				name = "radio_title"
+				position = { x = 10 y = -215 }
+				font = "hoi_36header"
+				text = "[GetUltimateName]"
+				maxWidth = 500
+				maxHeight = 30
+				format = upper_left
+			}
+			instantTextboxType = {
+				name = "radio_text1"
+				position = { x = 10 y = -180 }
+				font = "hoi_26mbs"
+				text = "[GetTextPart1]"
+				maxWidth = 460
+				maxHeight = 30
+				format = upper_left
+			}
+			instantTextboxType = {
+				name = "radio_text2"
+				position = { x = 10 y = -180 }
+				font = "hoi_26mbs"
+				text = "[GetTextPart2]"
+				maxWidth = 460
+				maxHeight = 30
+				format = upper_left
+			}
+			instantTextboxType = {
+				name = "radio_text3"
+				position = { x = 10 y = -180 }
+				font = "hoi_26mbs"
+				text = "[GetTextPart3]"
+				maxWidth = 460
+				maxHeight = 30
+				format = upper_left
+			}
+			instantTextboxType = {
+				name = "radio_part2"
+				position = { x = -10 y = -35 }
+				font = "hoi_30header"
+				text = "[GetPart2]"
+				maxWidth = 600
+				maxHeight = 30
+				format = upper_left
+			}
+		}
+	}
+}

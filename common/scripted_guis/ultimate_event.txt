@@ -1,0 +1,39 @@
+scripted_gui = {
+	radio_event = {
+		window_name = "radio_container"
+		context_type = player_context
+		visible = {
+			#always = yes
+			has_global_flag = ULT_radio_slide
+		}
+		
+		triggers = {
+			Radio_Intro_visible = {
+				#always = yes
+				has_global_flag = ULT_radio_slide
+			}
+			radio_message_visible = {
+				#always = yes
+				has_global_flag = ULT_radio_slide
+			}
+			radio_title_visible = {
+				has_global_flag = ULT_transmission_named
+			}
+			radio_text1_visible = {
+				has_global_flag = ULT_text1
+			}
+			radio_text2_visible = {
+				has_global_flag = ULT_text2
+			}
+			radio_text3_visible = {
+				has_global_flag = ULT_text3
+			}
+			radio_part2_visible = {
+				has_global_flag = ULT_part2_text
+			}
+		}
+		
+		effects = {
+		}
+	}
+}

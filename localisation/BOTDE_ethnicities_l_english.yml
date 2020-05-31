@@ -17,6 +17,16 @@ no_illyria_revolt:0 "§YIllyria§! is unable to revolt"
 no_bohemia_revolt:0 "§YBohemia§! is unable to revolt"
 no_galicia_revolt:0 "§YGalicia§! is unable to revolt"
 
+no_slovene_revolt:0 "§YSlovenia§! is unable to revolt"
+no_slovak_revolt:0 "§YSlovakia§! is unable to revolt"
+no_transylvanian_revolt:0 "§YTransylvania§! is unable to revolt"
+no_banat_revolt:0 "The §YBanat§! is unable to revolt"
+no_bosnian_revolt:0 "§YBosnia§! is unable to revolt"
+no_serb_revolt:0 "The §YSerbs in Illyria§! is unable to revolt"
+no_ruthenian_revolt:0 "§YCarpatho-Ukraine§! is unable to revolt"
+no_montenegrin_revolt:0 "§YMontenegro§! is unable to revolt"
+no_bukovina_revolt:0 "The §YBukovina§! is unable to revolt"
+
 enables_revolt:0 "§YPicking this will enable you to revolt.§! §RYou will have to survive for §!§O4§!§R months.§!"
 disables_revolt:0 "§YPicking this will disable the ability to revolt.§!"
 chance_anger_hungary:0 "§YThis has a chance to move §!§CHungary §!§R2%§!§Y closer to revolt.§!"
@@ -27,6 +37,16 @@ unrest_five_or_up:0 "The [ROOT.GetAdjective] must have at least 5 unrest"
 backer_war_tooltip:0 "§YWe will have §!§Cthree months§!§Y to fight. After the three months are over, any states we have §!§Gclaimed and under control§!§Y will become ours.§!"
 AUS_want_to_revolt:0 "Enable Revolt"
 AUS_dont_want_to_revolt:0 "Disable Revolt"
+
+AUS_pacify_SLO:0 "Pacify the Slovenes"
+HUN_pacify_SVK:0 "Pacify the Slovaks"
+HUN_pacify_TRS:0 "Pacify the Transylvanians"
+HUN_pacify_BAN:0 "Pacify the Banat region"
+HUN_pacify_CPU:0 "Pacify the Carpathian Ruthenia"
+CRO_pacify_BOS:0 "Pacify the Bosnians"
+CRO_pacify_SKS:0 "Pacify the Serbs in Illyria"
+CRO_pacify_MNT:0 "Pacify the Montenegrins"
+GAL_pacify_BUK:0 "Pacify the Bukovina"
 
 
 
@@ -102,5 +122,38 @@ collapse_galicia_ten_minus:0 "§YThe Galicians will get §!§G10%§!§Y farther 
 
 
 
+
+collapse_slovenia_one:0 "§YThe Slovenes will get §!§R1%§!§Y closer to revolt§!"
+collapse_slovenia_two:0 "§YThe Slovenes will get §!§R2%§!§Y closer to revolt§!"
+collapse_slovenia_three:0 "§YThe Slovenes will get §!§R3%§!§Y closer to revolt§!"
+collapse_slovenia_five:0 "§YThe Slovenes will get §!§R5%§!§Y closer to revolt§!"
+collapse_slovenia_ten:0 "§YThe Slovenes will get §!§R10%§!§Y closer to revolt§!"
+
+
+collapse_slovenia_one_minus:0 "§YThe Slovenes will get §!§G1%§!§Y farther from revolt§!"
+collapse_slovenia_two_minus:0 "§YThe Slovenes will get §!§G2%§!§Y farther from revolt§!"
+collapse_slovenia_three_minus:0 "§YThe Slovenes will get §!§G3%§!§Y farther from revolt§!"
+collapse_slovenia_five_minus:0 "§YThe Slovenes will get §!§G5%§!§Y farther from revolt§!"
+collapse_slovenia_ten_minus:0 "§YThe Slovenes will get §!§G10%§!§Y farther from revolt§!"
+collapse_slovenia_twenty_minus:0 "§YThe Slovenes will get §!§G20%§!§Y farther from revolt§!"
+
+collapse_slovakia_twenty_minus:0 "§YThe Slovaks will get §!§G3 points§!§Y farther from revolt§!"
+collapse_transylvania_twenty_minus:0 "§YThe Transylvanians will get §!§G3 points§!§Y farther from revolt§!"
+collapse_banat_twenty_minus:0 "§YThe Banat region will get §!§G3 points§!§Y farther from revolt§!"
+collapse_bosnia_twenty_minus:0 "§YThe Bosnians will get §!§G3 points§!§Y farther from revolt§!"
+collapse_serbia_twenty_minus:0 "§YThe Serbs will get §!§G3 points§!§Y farther from revolt§!"
+collapse_montenegro_twenty_minus:0 "§YThe Montenegrins will get §!§G3 points§!§Y farther from revolt§!"
+collapse_bukovina_twenty_minus:0 "§YThe Bukovina will get §!§G3 points§!§Y farther from revolt§!"
+
+
+
+
+
+
 collapse_italians:0 "§YThe Italians in Austria will gain §!§G0.2-1.5§!§Y more unrest§!"
 collapse_croats:0 "§YThe Croats in Austria will gain §!§G0.2-1.5§!§Y more unrest§!"
+collapse_minority_one_minus:0 "§YThis minority will lose §!§G1§!§Y unrest.§!"
+
+4_months_to_win:0 "§YYou have §!§Rfour§!§Y months to defeat the revolt.§!"
+5_months_to_win:0 "§YYou have §!§Rfive§!§Y months to defeat the revolt.§!"
+6_months_to_win:0 "§YYou have §!§Rsix§!§Y months to defeat the revolt.§!"

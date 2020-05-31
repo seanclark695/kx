@@ -7267,15 +7267,7 @@ country_event = { #Set collapse level to 100. UH OH!
 
 	option = { #I have voluntarily killed myself.
 		name = AUS_DEBUG.2.a
-		every_state = {
-			limit = {
-				is_core_of = HUN
-				is_owned_by = AUS
-			}
-			HUN = {
-				transfer_state = PREV
-			}
-		}
+		set_country_flag = debug_show_radio
 	}
 }
 
@@ -7290,18 +7282,7 @@ country_event = { #Add idea (???)
 
 	option = { #I have voluntarily killed myself.
 		name = AUS_DEBUG.3.a
-		set_popularities = {
-			totalist = 0
-			radical_socialist = 0
-			syndicalist = 0
-			social_democrat = 0
-			social_liberal = 0
-			market_liberal = 0
-			social_conservative = 0
-			authoritarian_democrat = 40
-			paternal_autocrat = 30
-			national_populist = 30
-		}
+		clr_country_flag = debug_show_radio
 	}
 }
 

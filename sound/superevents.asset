@@ -310,3 +310,30 @@ soundeffect =
 	}
 	volume = 1
 }
+
+soundeffect =
+{
+	name = "superev_galicia"
+	sounds = {
+		sound = "super_galicia"
+	}
+	volume = 1
+}
+
+soundeffect =
+{
+	name = "superev_fire"
+	sounds = {
+		sound = "super_fire"
+	}
+	volume = 1
+}
+
+soundeffect =
+{
+	name = "superev_text"
+	sounds = {
+		sound = "super_text"
+	}
+	volume = 1
+}
