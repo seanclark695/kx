@@ -7010,7 +7010,7 @@ country_event = { #Tick up Slovene counter by 0.1
 					}
 					SLO = {
 						OVERLORD = {
-							country_event = revolt.10 #Transylvanian Revolt
+							country_event = revolt.10 #Slovene Revolt
 						}
 					}
 				}
@@ -7166,13 +7166,13 @@ country_event = { #Tick up Transylvanian counter by 0.1
 	option = { #k
 		name = ethnic.3.a
 		random_list = {
-			65 = {
+			85 = {
 				add_to_variable = {
 					var = HUN.transylvanian_unrest
 					value = 0.1
 				}
 			}
-			35 = {
+			15 = {
 				add_to_variable = {
 					var = HUN.transylvanian_unrest
 					value = -0.2

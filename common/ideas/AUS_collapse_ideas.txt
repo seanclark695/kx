@@ -397,9 +397,9 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				offence = 0.2
+				offence = 0.1
 				defence = 0.1
-				army_speed_factor = 0.1
+				army_speed_factor = 0.05
 				army_morale_factor = 0.1
 				army_org_factor = 0.05
 			}

@@ -720,7 +720,7 @@ save_austria = {
 		complete_effect = {
 			custom_effect_tooltip = collapse_minority_one_minus
 			add_to_variable = {
-				var = HUN.banatian_unrest
+				var = HUN.banat_unrest
 				value = -1
 			}
 		}
