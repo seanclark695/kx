@@ -3482,7 +3482,7 @@ SpriteTypes = {
 		texturefile = "gfx/interface/goals/USA_working_with_dems.tga"
 	}
 	SpriteType = {
-		name = "GFX_PER_pahlavi_dynasty"
+		name = "GFX_PER_Pahlavi_Dynasty"
 		texturefile = "gfx/interface/goals/PER_Pahlavi_Dynasty.dds"
 	}
 	SpriteType = {

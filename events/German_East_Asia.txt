@@ -929,7 +929,9 @@ country_event = { # Time to Retreat?
 				}
 			}
 		}
-		white_peace_with_TARGET = yes
+		GEA = {
+			white_peace_with_TARGET = yes
+		}
 		hidden_effect = {
 			INC = {
 				country_event = {
