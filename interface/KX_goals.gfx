@@ -2970,6 +2970,7 @@ SpriteTypes = {
 		name = "GFX_goal_BAN_our_sphere"
 		texturefile = "gfx/interface/goals/BAN_our_sphere.dds"
 	}
+	
 	SpriteType = {
 		name = "GFX_goal_BAN_gifts_citizens"
 		texturefile = "gfx/interface/goals/BAN_gifts_citizens.dds"
@@ -3009,30 +3010,37 @@ SpriteTypes = {
 		name = "GFX_goal_BAN_clean_instability"
 		texturefile = "gfx/interface/goals/BAN_clean_instability.dds"
 	}
+	
 	SpriteType = {
 		name = "GFX_goal_BAN_next_target"
 		texturefile = "gfx/interface/goals/BAN_next_target.dds"
 	}
+	
 	SpriteType = {
 		name = "GFX_goal_BAN_regain_confidence"
 		texturefile = "gfx/interface/goals/BAN_regain_confidence.dds"
 	}
+	
 	SpriteType = {
 		name = "GFX_goal_BAN_protect_normality"
 		texturefile = "gfx/interface/goals/BAN_protect_normality.dds"
 	}
+	
 	SpriteType = {
 		name = "GFX_goal_BAN_new_hungary"
 		texturefile = "gfx/interface/goals/BAN_new_hungary.dds"
 	}
+	
 	SpriteType = {
 		name = "GFX_goal_BAN_potential_industries"
 		texturefile = "gfx/interface/goals/BAN_potential_industries.dds"
 	}
+	
 	SpriteType = {
 		name = "GFX_goal_BAN_order_streets"
 		texturefile = "gfx/interface/goals/BAN_order_streets.dds"
 	}
+	
 	SpriteType = {
 		name = "GFX_goal_BAN_loyalty_conducator"
 		texturefile = "gfx/interface/goals/BAN_loyalty_conducator.dds"
@@ -3051,14 +3059,17 @@ SpriteTypes = {
 		name = "GFX_goal_BAN_guaranteed_benevolence"
 		texturefile = "gfx/interface/goals/BAN_guaranteed_benevolence.dds"
 	}
+	
 	SpriteType = {
 		name = "GFX_goal_BAN_magyar_indoctrination"
 		texturefile = "gfx/interface/goals/BAN_magyar_indoctrination.dds"
 	}
+	
 	SpriteType = {
 		name = "GFX_goal_BAN_peace_facade"
 		texturefile = "gfx/interface/goals/BAN_peace_facade.dds"
 	}
+	
 	SpriteType = {
 		name = "GFX_goal_BAN_country_smoking"
 		texturefile = "gfx/interface/goals/BAN_country_smoking.dds"
@@ -3075,14 +3086,17 @@ SpriteTypes = {
 		name = "GFX_goal_bulgaria"
 		texturefile = "gfx/interface/goals/flag_bulgaria.dds"
 	}
+	
 	SpriteType = {
 		name = "GFX_goal_hungary"
 		texturefile = "gfx/interface/goals/flag_hungary.dds"
 	}
+	
 	SpriteType = {
 		name = "GFX_goal_galicia"
 		texturefile = "gfx/interface/goals/flag_galicia.dds"
 	}
+	
 	SpriteType = {
 		name = "GFX_goal_romania"
 		texturefile = "gfx/interface/goals/flag_royalist_romania.dds"
@@ -3452,51 +3466,43 @@ SpriteTypes = {
 		texturefile = "gfx/interface/goals/ITA_dannunzio.tga"
 	}
 	SpriteType = {
-	    name = "GFX_goal_SOV_tukhachevsky"
-	    texturefile= "gfx/interface/goals/SOV_tukhachevsky.dds"
+		name = "USA_four_more_years"
+		texturefile = "gfx/interface/goals/USA_four_more_years.dds"
 	}
 	SpriteType = {
-	    name = "GFX_goal_SOV_army"
-	    texturefile= "gfx/interface/goals/SOV_army.dds"
+		name = "USA_work_with_dems"
+		texturefile = "gfx/interface/goals/USA_work_with_dems.tga"
 	}
 	SpriteType = {
-	    name = "GFX_goal_SOV_humanity"
-	    texturefile= "gfx/interface/goals/SOV_humanity.dds"
+		name = "USA_union_forever"
+		texturefile = "gfx/interface/goals/USA_union_forever.tga"
 	}
 	SpriteType = {
-	    name = "GFX_goal_SOV_internationalism"
-	    texturefile= "gfx/interface/goals/SOV_internationalism.dds"
+		name = "USA_working_with_dems"
+		texturefile = "gfx/interface/goals/USA_working_with_dems.tga"
 	}
 	SpriteType = {
-	    name = "GFX_goal_SOV_workers"
-	    texturefile= "gfx/interface/goals/SOV_workers.dds"
+		name = "GFX_PER_pahlavi_dynasty"
+		texturefile = "gfx/interface/goals/PER_Pahlavi_Dynasty.dds"
 	}
 	SpriteType = {
-	    name = "GFX_goal_SOV_world"
-	    texturefile= "gfx/interface/goals/SOV_world.dds"
+		name = "GFX_goal_PER_crush_enemies"
+		texturefile = "gfx/interface/goals/PER_crush_our_enemies.dds"
 	}
 	SpriteType = {
-	    name = "GFX_goal_SOV_cleaning_opposition"
-	    texturefile= "gfx/interface/goals/SOV_cleaning_opposition.dds"
+		name = "GFX_goal_PER_cult_of_cyrus"
+		texturefile = "gfx/interface/goals/PER_cult_of_cyrus.dds"
 	}
 	SpriteType = {
-	    name = "GFX_goal_SOV_premier_Tukhachevsky"
-	    texturefile= "gfx/interface/goals/SOV_premier_Tukhachevsky.dds"
+		name = "GFX_goal_PER_hail_the_shah"
+		texturefile = "gfx/interface/goals/PER_hail_the_shah.dds"
 	}
 	SpriteType = {
-	    name = "GFX_goal_SOV_totalist_propaganda"
-	    texturefile= "gfx/interface/goals/SOV_totalist_propaganda.dds"
+		name = "GFX_goal_PER_lion_once_more_roars"
+		texturefile = "gfx/interface/goals/PER_lion_once_more_roars.dds"
 	}
-	spriteType = {
-		name = "GFX_goal_ALB_King_Cult"
-		texturefile = "gfx/interface/goals/goal_ALB_King_Cult.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_ALB_Expanding_Albania"
-		texturefile = "gfx/interface/goals/goal_ALB_Expanding_Albania.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_ALB_Kingdom"
-		texturefile = "gfx/interface/goals/goal_ALB_Kingdom.dds"
+	SpriteType = {
+		name = "GFX_goal_PER_roach_be_gone"
+		texturefile = "gfx/interface/goals/PER_roach_be_gone.dds"
 	}
 }
