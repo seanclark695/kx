@@ -264,6 +264,18 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/Europe/Two Sicilies/SIC_terror.dds"
 	}	
 	spriteType  = {
+		name = "GFX_report_event_ALB_Zog_1"
+		texturefile = "gfx/event_pictures/Europe/Albania/report_event_ALB_Zog_1.dds"
+	}
+	spriteType  = {
+		name = "GFX_report_event_ALB_Zog_2"
+		texturefile = "gfx/event_pictures/Europe/Albania/report_event_ALB_Zog_2.dds"
+	}
+	spriteType  = {
+		name = "GFX_report_event_ALB_Zog_3"
+		texturefile = "gfx/event_pictures/Europe/Albania/report_event_ALB_Zog_3.dds"
+	}
+	spriteType  = {
 		name = "GFX_SIC_victor_emmanuel_funeral"
 		texturefile = "gfx/event_pictures/Europe/Two Sicilies/SIC_victor_emmanuel_funeral.dds"
 	}
@@ -362,6 +374,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_LEC_jinrong"
 		texturefile = "gfx/event_pictures/Asia/Legation_Cities/LEC_jinrong.dds"
+	}
+	spriteType = {
+		name = "LEC_Flag_event"
+		texturefile = "gfx/event_pictures/Asia/Legation_Cities/LEC_Flag_event.dds"
 	}
 	spriteType = {
 		name = "GFX_report_event_LEC_modern_times"
@@ -1319,5 +1335,9 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_report_event_SOV_world_revolution"
 		texturefile = "gfx/event_pictures/SOV/SOV_world_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_spanish_empire"
+		texturefile = "gfx/event_pictures/News Events/news_event_spanish_empire.dds"
 	}
 }

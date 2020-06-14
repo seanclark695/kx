@@ -1760,7 +1760,11 @@ focus_tree = {
 	focus = {
 		id = SOV_Ural_Tractor_Plants
 		text = RUS_Ural_Tractor_Plants
+<<<<<<< HEAD
 		icon = GFX_goal_generic_heavy_tank
+=======
+		icon = GFX_goal_generic_heavy_armour_british
+>>>>>>> master
 		cost = 8,00
 		prerequisite = {
 			focus = SOV_Promote_Industrialisation

@@ -211,7 +211,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_hawking_plan
-		icon = GFX_DAH_Topke
+		icon = GFX_goal_generic_deals
 		cost = 6.00
 		prerequisite = {
 			focus = USA_gwbill_succeeds
@@ -3994,7 +3994,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_woman_army_corps
-		icon = GFX_goal_women_industry
+		icon = GFX_focus_generic_female_soldiers
 		cost = 5.00
 		prerequisite = {
 			focus = USA_military_research
