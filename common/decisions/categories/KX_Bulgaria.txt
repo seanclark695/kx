@@ -1,0 +1,7 @@
+BUL_industrial_category = {
+	icon = GFX_decision_category_generic_industry
+	visible = {
+		tag = BUL
+		always = yes
+	}
+}

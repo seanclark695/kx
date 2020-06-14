@@ -1,0 +1,79 @@
+###########################
+# Breakaways Focus Tree
+###########################
+
+focus_tree = {
+	id = breakaway_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 1
+			OR = {
+				tag = SVK
+				tag = SKS
+			}
+		}
+	}
+
+	default = no
+
+	#Victory, independence path
+
+	focus = {
+		id = BRK_free_and_proud
+		icon = x
+		x = 6
+		y = 0
+		cost = 7.2
+		
+		available = {
+			has_country_flag = BREAKAWAY_independent
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BRK_free_and_proud"
+			
+		}
+	}
+	
+	focus = {
+		id = BRK_seek_protection
+		icon = x
+		x = 6
+		y = 0
+		cost = 7.2
+		
+		available = {
+			has_country_flag = BREAKAWAY_independent
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BRK_free_and_proud"
+			custom_effect_tooltip = BRK_unlock_decisions_faction
+			set_country_flag = BRK_join_faction_decisions
+		}
+	}
+	
+	#Defeat, austrian puppet path
+
+	focus = {
+		id = BRK_chains_slackened
+		icon = x
+		x = 18
+		y = 0
+		cost = 7.2
+		
+		available = {
+			NOT = {
+				has_country_flag = BREAKAWAY_independent
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BRK_chained_again"
+			
+		}
+	}
+}

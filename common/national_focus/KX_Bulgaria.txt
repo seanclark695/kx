@@ -1,0 +1,2776 @@
+###########################
+# Breakaways Focus Tree
+###########################
+
+focus_tree = {
+	id = kx_bulgaria
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 0
+			tag = BUL
+		}
+	}
+
+	default = no
+
+	focus = {
+		id = BUL_rectify_economic_mistakes
+		icon = GFX_goal_BUL_rectify_economic_mistakes
+		x = 8
+		y = 0
+		cost = 7.2
+		
+		available = {
+			has_country_flag = BUL_black_monday_has_hit
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_rectify_economic_mistakes"
+			swap_ideas = {
+				add_idea = BUL_black_monday_idea_2
+				remove_idea = BUL_black_monday_idea
+			}
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+	
+	#### We Must Industrialize! ####
+	
+	focus = {
+		id = BUL_we_must_industrialize
+		icon = GFX_goal_BUL_must_industrialize
+		x = 4
+		y = 1
+		cost = 7.2
+		
+		available = {
+			has_country_flag = BUL_black_monday_has_hit
+		}
+		
+		prerequisite = {
+			focus = BUL_rectify_economic_mistakes
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_we_must_industrialize"
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			
+			add_tech_bonus = {
+				bonus = 0.33
+				uses = 1
+				category = industry
+			}
+			
+			hidden_effect = {
+				country_event = {
+					id = bul.4 #Strike
+					days = 21
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_endorse_arsenal_ad
+		icon = GFX_goal_BUL_arsenal_ad
+		x = 4
+		y = 2
+		cost = 7.2
+		
+		available = {
+			has_country_flag = BUL_black_monday_has_hit
+		}
+		
+		prerequisite = {
+			focus = BUL_we_must_industrialize
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_endorse_arsenal_ad"
+			212 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_assist_bulgarian_state_railways
+		icon = GFX_goal_BUL_state_railways
+		x = 2
+		y = 2
+		cost = 7.2
+		
+		available = {
+			has_country_flag = BUL_black_monday_has_hit
+		}
+		
+		prerequisite = {
+			focus = BUL_we_must_industrialize
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_assist_bulgarian_state_railways"
+			48 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			random_owned_state = {
+				limit = {
+					NOT = {
+						state = 48
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			random_owned_state = {
+				limit = {
+					NOT = {
+						state = 48
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			add_tech_bonus = {
+				bonus = 0.33
+				uses = 1
+				category = construction_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_mechanize_farming
+		icon = GFX_goal_BUL_mechanize_farming
+		x = 6
+		y = 2
+		cost = 7.2
+		
+		available = {
+			has_country_flag = BUL_black_monday_has_hit
+		}
+		
+		prerequisite = {
+			focus = BUL_we_must_industrialize
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_mechanize_farming"
+			random_owned_state = {
+				limit = {
+					NOT = {
+						state = 48
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_direct_petrol_ad
+		icon = GFX_goal_BUL_petrol_ad
+		x = 4
+		y = 3
+		cost = 7.2
+		
+		available = {
+			has_country_flag = BUL_black_monday_has_hit
+		}
+		
+		prerequisite = {
+			focus = BUL_assist_bulgarian_state_railways
+			focus = BUL_mechanize_farming
+			focus = BUL_endorse_arsenal_ad
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_direct_petrol_ad"
+			48 = {
+				add_resource = {
+					type = oil
+					amount = 15
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			
+			add_tech_bonus = {
+				bonus = 0.33
+				uses = 1
+				category = synth_resources
+			}
+			
+			add_tech_bonus = {
+				bonus = 0.33
+				uses = 1
+				category = excavation_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_reopen_closed_civilian_industry
+		icon = GFX_goal_BUL_reopen_industry
+		x = 3
+		y = 4
+		cost = 7.2
+		
+		available = {
+			has_country_flag = BUL_black_monday_has_hit
+		}
+		
+		prerequisite = {
+			focus = BUL_direct_petrol_ad
+		}
+		
+		mutually_exclusive = {
+			focus = BUL_rifles_for_civilians
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_reopen_closed_civilian_industry"
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			
+			random_owned_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_rifles_for_civilians
+		icon = GFX_goal_BUL_citizen_rifles
+		x = 5
+		y = 4
+		cost = 7.2
+		
+		available = {
+			has_country_flag = BUL_black_monday_has_hit
+		}
+		
+		prerequisite = {
+			focus = BUL_direct_petrol_ad
+		}
+		
+		mutually_exclusive = {
+			focus = BUL_reopen_closed_civilian_industry
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_rifles_for_civilians"
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			
+			
+			add_war_support = 0.1
+			
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_further_industrialization
+		icon = GFX_goal_BUL_industrial_programs
+		x = 5
+		y = 7
+		cost = 7.2
+		
+		available = {
+			has_global_flag = balkan_war_ended
+		}
+		
+		prerequisite = {
+			focus = BUL_rifles_for_civilians
+			focus = BUL_reopen_closed_civilian_industry
+		}
+		
+		mutually_exclusive = {
+			focus = BUL_wildlife_protection
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_rifles_for_civilians"
+			add_stability = -0.1
+			add_war_support = 0.05
+			
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+			
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_wildlife_protection
+		icon = GFX_goal_BUL_wildlife
+		x = 3
+		y = 7
+		cost = 5
+		#Bulgaria has lots of biodiversity.
+		available = {
+			has_global_flag = balkan_war_ended
+		}
+		
+		prerequisite = {
+			focus = BUL_reopen_closed_civilian_industry
+			focus = BUL_rifles_for_civilians
+		}
+		
+		mutually_exclusive = {
+			focus = BUL_further_industrialization
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_rifles_for_civilians"
+			add_stability = 0.15
+			add_political_power = 100
+			
+			add_ideas = BUL_wildlife_conservation
+		}
+	}
+	
+	focus = {
+		id = BUL_navibulgar_shipping
+		icon = GFX_goal_BUL_navibulgar
+		x = 4
+		y = 8
+		cost = 5
+		
+		prerequisite = {
+			focus = BUL_wildlife_protection
+			focus = BUL_further_industrialization
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_rifles_for_civilians"
+			771 = {
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_fortify_northern_borders
+		icon = GFX_goal_BUL_north_forts
+		x = 4
+		y = 5
+		cost = 5
+		
+		available = {
+			has_country_flag = BUL_black_monday_has_hit
+		}
+		
+		prerequisite = {
+			focus = BUL_rifles_for_civilians
+			focus = BUL_reopen_closed_civilian_industry
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_rifles_for_civilians"
+			every_state = {
+				limit = {
+					is_owned_by = BUL
+					any_neighbor_state = {
+						OR = {
+							is_owned_by = SER
+							is_owned_by = ROM
+						}
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+			
+			add_war_support = 0.1
+		}
+	}
+	
+	focus = {
+		id = BUL_enemy_in_the_east
+		icon = GFX_goal_ottoman
+		x = 4
+		y = 6
+		cost = 7.2
+		
+		prerequisite = {
+			focus = BUL_fortify_northern_borders
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_rifles_for_civilians"
+			every_state = {
+				limit = {
+					is_owned_by = BUL
+					any_neighbor_state = {
+						OR = {
+							is_owned_by = OTT
+							is_owned_by = TUR
+						}
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+			add_ideas = BUL_eastern_enemy
+		}
+	}
+	
+	
+	
+	focus = {
+		id = BUL_end_german_trade_war
+		icon = GFX_goal_BUL_end_trade_war
+		x = 10
+		y = 1
+		cost = 7.2
+		
+		available = {
+			has_country_flag = BUL_black_monday_has_hit
+		}
+		
+		prerequisite = {
+			focus = BUL_rectify_economic_mistakes
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_end_german_trade_war"
+			add_stability = 0.05
+			remove_ideas = BUL_trade_war
+			GER = {
+				country_event = bul.3
+			}
+			reverse_add_opinion_modifier = {
+				target = GER
+				modifier = KR_pleased
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_reorganize_veteran_payments
+		icon = GFX_goal_BUL_reorganize_pensions
+		x = 12
+		y = 1
+		cost = 7.2
+		
+		available = {
+			has_country_flag = BUL_black_monday_has_hit
+		}
+		
+		prerequisite = {
+			focus = BUL_rectify_economic_mistakes
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_reorganize_veteran_payments"
+			add_stability = -0.05
+			add_war_support = -0.05
+			swap_ideas = {
+				add_idea = BUL_military_pensions_compromise
+				remove_idea = BUL_military_pensions_idea 
+			}
+			hidden_effect = {
+				country_event = {
+					id = bul.1
+					days = 3
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_take_fight_to_unemployment
+		icon = GFX_goal_BUL_tackle_unemployment
+		x = 11
+		y = 2
+		cost = 7.2
+		
+		available = {
+			has_country_flag = BUL_black_monday_has_hit
+		}
+		
+		prerequisite = {
+			focus = BUL_reorganize_veteran_payments
+		}
+		prerequisite = {
+			focus = BUL_end_german_trade_war
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_take_fight_to_unemployment"
+			add_political_power = 100
+			add_stability = 0.1
+			custom_effect_tooltip = BUL_pia
+			hidden_effect = {
+				country_event = {
+					id = bul.2 #Public Infrastructure Administration Proclaimed
+					days = 20
+				}
+			}
+			
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = construction_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_wisen_banking_system
+		icon = GFX_goal_BUL_wisen_banking
+		x = 10
+		y = 3
+		cost = 7.2
+		
+		available = {
+			has_country_flag = BUL_black_monday_has_hit
+		}
+		
+		prerequisite = {
+			focus = BUL_end_german_trade_war
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_wisen_banking_system"
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_social_insurance_measures
+		icon = GFX_goal_BUL_insurance
+		x = 12
+		y = 3
+		cost = 7.2
+		
+		available = {
+			has_country_flag = BUL_black_monday_has_hit
+		}
+		
+		prerequisite = {
+			focus = BUL_reorganize_veteran_payments
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_social_insurance_measures"
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.05
+			}
+			add_stability = 0.05
+			add_timed_idea = {
+				idea = BUL_insurance_program
+				days = 720
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_prepare_war_industry
+		icon = GFX_goal_BUL_war_industry
+		x = 11
+		y = 4
+		cost = 7.2
+		
+		available = {
+			has_country_flag = BUL_black_monday_has_hit
+		}
+		
+		prerequisite = {
+			focus = BUL_wisen_banking_system
+		}
+		prerequisite = {
+			focus = BUL_take_fight_to_unemployment
+		}
+		prerequisite = {
+			focus = BUL_social_insurance_measures
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_prepare_war_industry"
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			
+			custom_effect_tooltip = BUL_unlocks_military_preparation_decision
+			set_country_flag = BUL_military_preparation_decision
+			
+			hidden_effect = {
+				country_event = {
+					id = bul.5 #Strikes, again
+					days = 13
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_bulgarian_urban_metropolis
+		icon = GFX_goal_BUL_metropolis
+		x = 8
+		y = 5
+		cost = 7.2
+		
+		available = {
+			has_country_flag = BUL_black_monday_has_hit
+		}
+		
+		prerequisite = {
+			focus = BUL_prepare_war_industry
+		}
+		prerequisite = {
+			focus = BUL_reopen_closed_civilian_industry
+			focus = BUL_rifles_for_civilians
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_bulgarian_urban_metropolis"
+			48 = {
+				add_extra_state_shared_building_slots = 4
+			}
+			
+			771 = {
+				add_extra_state_shared_building_slots = 3
+			}
+			
+			212 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			
+			add_political_power = 75
+			
+			if = {
+				limit = {
+					has_idea = BUL_black_monday_idea_3
+				}
+				swap_ideas = {
+					add_idea = BUL_black_monday_idea_4
+					remove_idea = BUL_black_monday_idea_3
+				}
+			}
+			
+			if = {
+				limit = {
+					has_idea = BUL_black_monday_idea_4
+				}
+				swap_ideas = {
+					add_idea = BUL_black_monday_idea_5
+					remove_idea = BUL_black_monday_idea_4
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_university_of_sofia
+		icon = GFX_goal_BUL_university_sofia
+		x = 10
+		y = 6
+		cost = 7.2
+		
+		available = {
+			has_country_flag = BUL_black_monday_has_hit
+		}
+		
+		prerequisite = {
+			focus = BUL_bulgarian_urban_metropolis
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_university_of_sofia"
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = BUL_technological_institutes
+		icon = GFX_goal_BUL_tech_institutes
+		x = 6
+		y = 6
+		cost = 7.2
+		
+		available = {
+			has_country_flag = BUL_black_monday_has_hit
+		}
+		
+		prerequisite = {
+			focus = BUL_bulgarian_urban_metropolis
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_technological_institutes"
+			add_ideas = BUL_tech_institutes
+		}
+	}
+	
+	focus = {
+		id = BUL_automobile_industry
+		icon = GFX_goal_BUL_automobile_industry
+		x = 8
+		y = 6
+		cost = 7.2
+		
+		available = {
+			has_country_flag = BUL_black_monday_has_hit
+		}
+		
+		prerequisite = {
+			focus = BUL_bulgarian_urban_metropolis
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_automobile_industry"
+			remove_ideas = BUL_black_monday_idea_5
+			add_tech_bonus = {
+				bonus = 0.33
+				uses = 1
+				category = motorized_equipment
+			}
+			add_tech_bonus = {
+				bonus = 0.33
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	
+	#### War on the Horizon ####
+	
+	focus = {
+		id = BUL_war_horizon
+		icon = x
+		x = 20
+		y = 0
+		cost = 7.2
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_war_horizon"
+			add_political_power = 80
+			add_war_support = 0.1
+			add_manpower = 50000
+			48 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 949
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_lukov_line
+		icon = x
+		x = 18
+		y = 1
+		cost = 7.2
+		
+		prerequisite = {
+			focus = BUL_war_horizon
+		}
+		
+		available = {
+			has_completed_focus = BUL_take_fight_to_unemployment
+		}
+		
+		mutually_exclusive = {
+			focus = BUL_special_forces
+			focus = BUL_armored_columns
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_lukov_line"
+			every_state = {
+				limit = {
+					is_owned_by = BUL
+					any_neighbor_state = {
+						OR = {
+							is_owned_by = SER
+						}
+					}
+				}
+				set_building_level = {
+					type = bunker
+					level = 5
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+			set_country_flag = BUL_lukov_flag_1
+		}
+	}
+	
+	focus = {
+		id = BUL_purchase_strategic_bombers
+		icon = x
+		x = 16
+		y = 2
+		cost = 7.2
+		
+		prerequisite = {
+			focus = BUL_lukov_line
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_long_range_howitzers"
+			add_equipment_to_stockpile = {
+				type = strat_bomber_equipment
+				amount = 30
+				producer = BUL
+			}
+			air_experience = 50
+		}
+	}
+	
+	focus = {
+		id = BUL_enemies_on_all_sides
+		icon = x
+		x = 16
+		y = 3
+		cost = 7.2
+		
+		prerequisite = {
+			focus = BUL_purchase_strategic_bombers
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_long_range_howitzers"
+			set_country_flag = BUL_enemies_sides
+			custom_effect_tooltip = BUL_unlocks_fort_building_again
+		}
+	}
+	
+	focus = {
+		id = BUL_special_forces
+		icon = x
+		x = 20
+		y = 1
+		cost = 7.2
+		
+		prerequisite = {
+			focus = BUL_war_horizon
+		}
+		
+		available = {
+			has_completed_focus = BUL_endorse_arsenal_ad
+		}
+		
+		mutually_exclusive = {
+			focus = BUL_lukov_line
+			focus = BUL_armored_columns
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_special_forces"
+			add_ideas = BUL_specops_idea
+		}
+	}
+	
+	focus = {
+		id = BUL_operation_constantine #Romanian operation
+		icon = x
+		x = 19
+		y = 2
+		cost = 7.2
+		
+		prerequisite = {
+			focus = BUL_special_forces
+		}
+		
+		available = {
+			country_exists = ALB
+			NOT = {
+				ALB = {
+					is_in_faction_with = SER
+				}
+			}
+			ALB = {
+				has_war = no
+			}
+			has_global_flag = balkan_war_started
+			NOT = {
+				has_global_flag = balkan_war_ended
+			}
+		}
+		
+		mutually_exclusive = {
+			focus = BUL_operation_crackshot
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_operation_constantine"
+			custom_effect_tooltip = BUL_operation_constantine_tooltip
+		}
+	}
+	
+	focus = {
+		id = BUL_operation_crackshot #Greek operation
+		icon = x
+		x = 21
+		y = 2
+		cost = 7.2
+		
+		prerequisite = {
+			focus = BUL_special_forces
+		}
+		
+		available = {
+			GRE = {
+				is_in_faction_with = SER
+			}
+			has_global_flag = balkan_war_started
+			NOT = {
+				has_global_flag = balkan_war_ended
+			}
+		}
+		
+		mutually_exclusive = {
+			focus = BUL_operation_constantine
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_operation_crackshot"
+			custom_effect_tooltip = BUL_operation_crackshot_tooltip
+		}
+	}
+	
+	focus = {
+		id = BUL_our_specialty
+		icon = x
+		x = 20
+		y = 4
+		cost = 7.2
+		
+		prerequisite = {
+			focus = BUL_special_forces
+		}
+		
+		mutually_exclusive = {
+			focus = BUL_lukov_line
+			focus = BUL_armored_columns
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_special_forces"
+			country_event = bul.6
+		}
+	}
+	
+	focus = {
+		id = BUL_armored_columns
+		icon = x
+		x = 22
+		y = 1
+		cost = 7.2
+		
+		prerequisite = {
+			focus = BUL_war_horizon
+		}
+		
+		available = {
+			has_completed_focus = BUL_direct_petrol_ad
+		}
+		
+		mutually_exclusive = {
+			focus = BUL_lukov_line
+			focus = BUL_special_forces
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_armored_columns"
+			army_experience = 10
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment
+				amount = 350
+				producer = BUL
+			}
+			custom_effect_tooltip = BUL_tankspawner_two
+			hidden_effect = {
+				load_oob = BUL_old_enemies_columns
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_use_our_resources
+		icon = x
+		x = 24
+		y = 2
+		cost = 7.2
+		
+		prerequisite = {
+			focus = BUL_armored_columns
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_use_our_resources"
+			army_experience = 40
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment
+				amount = 150
+				producer = BUL
+			}
+			add_ideas = BUL_armor_resources
+			custom_effect_tooltip = BUL_tankspawner_veteran
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
+			hidden_effect = {
+				load_oob = BUL_old_enemies_columns_veteran
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_experimental_tank_types
+		icon = x
+		x = 24
+		y = 3
+		cost = 7.2
+		
+		prerequisite = {
+			focus = BUL_use_our_resources
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_experimental_tank_types"
+			army_experience = 50
+			add_equipment_to_stockpile = {
+				type = light_tank_destroyer_equipment
+				amount = 150
+				producer = BUL
+			}
+			
+			add_equipment_to_stockpile = {
+				type = light_tank_artillery_equipment
+				amount = 150
+				producer = BUL
+			}
+			
+			add_equipment_to_stockpile = {
+				type = light_tank_aa_equipment
+				amount = 150
+				producer = BUL
+			}
+			
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+			
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	#### Mutuals ####
+	
+	
+	
+	
+	
+	focus = {
+		id = BUL_fortress_bulgaria
+		icon = x
+		x = 18
+		y = 3
+		cost = 7.2
+		
+		prerequisite = {
+			focus = BUL_lukov_line
+			focus = BUL_special_forces
+			focus = BUL_armored_columns
+		}
+		
+		available = {
+			has_global_flag = balkan_war_started
+			NOT = {
+				has_global_flag = balkan_war_ended
+			}
+		}
+		
+		mutually_exclusive = {
+			focus = BUL_home_by_christmas
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_fortress_bulgaria"
+			add_timed_idea = {
+				idea = BUL_fortress
+				days = 720
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_home_by_christmas
+		icon = x
+		x = 22
+		y = 3
+		cost = 7.2
+		
+		prerequisite = {
+			focus = BUL_lukov_line
+			focus = BUL_special_forces
+			focus = BUL_armored_columns
+		}
+		
+		available = {
+			has_global_flag = balkan_war_started
+			NOT = {
+				has_global_flag = balkan_war_ended
+			}
+		}
+		
+		mutually_exclusive = {
+			focus = BUL_fortress_bulgaria
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_home_by_christmas"
+			add_timed_idea = {
+				idea = BUL_be_home_by_christmas
+				days = 240
+			}
+		}
+	}
+	
+	#### BASED VOLGA BULGARIA ####
+
+	focus = {
+    	id = BUL_ideals_of_bulgarism
+    	icon = x
+    	x = 50
+    	y = 0
+    	cost = 7.2
+    	
+    	
+    	
+    	available = {
+    		has_country_flag = BUL_based_path
+    	}
+    
+    	completion_reward = {
+    		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
+    		add_ideas = BUL_bulgarian_destiny
+    	}
+    }
+	
+	focus = {
+    	id = BUL_slash_and_burn
+    	icon = x
+    	x = 50
+    	y = 2
+    	cost = 7.2
+    	
+    	prerequisite = {
+			focus = BUL_ideals_of_bulgarism
+		}
+    	
+    	available = {
+    		has_country_flag = BUL_based_path
+    	}
+    
+    	completion_reward = {
+    		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
+    		random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+    	}
+    }
+	
+	focus = {
+    	id = BUL_history_of_bulgars
+    	icon = x
+    	x = 49
+    	y = 1
+    	cost = 7.2
+    	
+    	prerequisite = {
+			focus = BUL_ideals_of_bulgarism
+		}
+    	
+    	available = {
+    		has_country_flag = BUL_based_path
+    	}
+    
+    	completion_reward = {
+    		log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
+    		add_ideas = BUL_history_education
+			army_experience = 20
+    	}
+    }
+	
+	focus = {
+    	id = BUL_modernize_feudalism
+    	icon = x
+    	x = 47
+    	y = 1
+    	cost = 7.2
+    	
+    	prerequisite = {
+			focus = BUL_ideals_of_bulgarism
+		}
+    	
+    	available = {
+    		has_country_flag = BUL_based_path
+    	}
+    
+    	completion_reward = {
+    		log = "[GetDateText]: [Root.GetName]: Focus BUL_modernize_feudalism"
+    		add_ideas = BUL_new_feudalism
+			add_political_power = 100
+    	}
+    }
+	
+	focus = {
+    	id = BUL_bulgar_identity
+    	icon = x
+    	x = 48
+    	y = 2
+    	cost = 7.2
+    	
+    	prerequisite = {
+			focus = BUL_modernize_feudalism
+		}
+		
+    	prerequisite = {
+			focus = BUL_history_of_bulgars
+		}
+    	
+    	available = {
+    		has_country_flag = BUL_based_path
+    	}
+    
+    	completion_reward = {
+    		log = "[GetDateText]: [Root.GetName]: Focus BUL_bulgar_identity"
+			add_stability = 0.15
+			country_event = bu.404
+    	}
+    }
+	
+	focus = {
+    	id = BUL_steppe_prepared_cossacks
+    	icon = x
+    	x = 51
+    	y = 1
+    	cost = 7.2
+    	
+    	prerequisite = {
+			focus = BUL_ideals_of_bulgarism
+		}
+    	
+    	available = {
+    		has_country_flag = BUL_based_path
+    	}
+    
+    	completion_reward = {
+    		log = "[GetDateText]: [Root.GetName]: Focus BUL_steppe_prepared_cossacks"
+    		add_ideas = BUL_bulgarian_ambition
+    	}
+    }
+	
+	focus = {
+    	id = BUL_lay_claim_to_old
+    	icon = x
+    	x = 53
+    	y = 1
+    	cost = 7.2
+    	
+    	prerequisite = {
+			focus = BUL_ideals_of_bulgarism
+		}
+    	
+    	available = {
+    		has_country_flag = BUL_based_path
+    	}
+    
+    	completion_reward = {
+    		log = "[GetDateText]: [Root.GetName]: Focus BUL_lay_claim_to_old"
+    		add_war_support = 0.25
+			add_state_claim = 218
+			add_state_claim = 245
+			add_state_claim = 137
+			add_state_claim = 196
+			add_state_claim = 200
+			add_state_claim = 227
+			add_state_claim = 228
+			add_state_claim = 221
+			add_state_claim = 821
+			add_state_claim = 226
+			add_state_claim = 197
+			add_state_claim = 203
+			add_state_claim = 259
+			add_state_claim = 238
+			add_state_claim = 234
+    	}
+    }
+	
+	focus = {
+    	id = BUL_unified_hordes
+    	icon = x
+    	x = 52
+    	y = 2
+    	cost = 7.2
+    	
+    	prerequisite = {
+			focus = BUL_steppe_prepared_cossacks
+		}
+		
+    	prerequisite = {
+			focus = BUL_lay_claim_to_old
+		}
+    	
+    	available = {
+    		has_country_flag = BUL_based_path
+    	}
+    
+    	completion_reward = {
+    		log = "[GetDateText]: [Root.GetName]: Focus BUL_unified_hordes"
+    		add_ideas = BUL_the_hordes
+			
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+    	}
+    }
+
+	focus = {
+    	id = BUL_a_khan_reborn
+    	icon = x
+    	x = 51
+    	y = 3
+    	cost = 7.2
+    	
+    	prerequisite = {
+			focus = BUL_bulgar_identity
+		}
+		
+    	prerequisite = {
+			focus = BUL_unified_hordes
+		}
+    	
+    	available = {
+    		has_country_flag = BUL_based_path
+    	}
+    
+    	completion_reward = {
+    		log = "[GetDateText]: [Root.GetName]: Focus BUL_a_khan_reborn"
+			set_cosmetic_tag = BUL_khanate
+			add_war_support = 0.15
+			
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+    	}
+    }
+	
+	
+	focus = {
+    	id = BUL_rebulgarize_lost_territory
+    	icon = x
+    	x = 50
+    	y = 4
+    	cost = 7.2
+    	
+    	prerequisite = {
+			focus = BUL_toss_orthodoxy
+		}
+		
+    	prerequisite = {
+			focus = BUL_a_khan_reborn
+		}
+    	
+    	available = {
+    		has_country_flag = BUL_based_path
+    	}
+    
+    	completion_reward = {
+    		log = "[GetDateText]: [Root.GetName]: Focus BUL_a_khan_reborn"
+			declare_war_on = {
+				target = SER
+				type = annex_everything
+			}
+    	}
+    }
+	
+	focus = {
+    	id = BUL_toss_orthodoxy
+    	icon = x
+    	x = 49
+    	y = 3
+    	cost = 7.2
+    	
+    	prerequisite = {
+			focus = BUL_bulgar_identity
+		}
+		
+    	prerequisite = {
+			focus = BUL_unified_hordes
+		}
+    	
+    	available = {
+    		has_country_flag = BUL_based_path
+    	}
+    
+    	completion_reward = {
+    		log = "[GetDateText]: [Root.GetName]: Focus BUL_a_khan_reborn"
+			add_stability = -0.2
+			add_political_power = -100
+			custom_effect_tooltip = BUL_rip_orthodoxy
+			
+			48 = {
+				set_state_name = "New Phanagoria"
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+				
+				add_resource = {
+					type = tungsten
+					amount = 12
+				}
+			}
+    	}
+    }
+	
+	focus = {
+    	id = BUL_state_atheism
+    	icon = x
+    	x = 49
+    	y = 5
+    	cost = 7.2
+    	
+    	prerequisite = {
+			focus = BUL_toss_orthodoxy
+		}
+		
+    	prerequisite = {
+			focus = BUL_a_khan_reborn
+		}
+		
+		mutually_exclusive = {
+			focus = BUL_european_tengri
+		}
+    	
+    	available = {
+    		has_country_flag = BUL_based_path
+    	}
+    
+    	completion_reward = {
+    		log = "[GetDateText]: [Root.GetName]: Focus BUL_state_atheism"
+			add_stability = 0.2
+			add_political_power = 50
+			swap_ideas = {
+				add_idea = BUL_bulgarian_ambition_atheism
+				remove_idea = BUL_bulgarian_ambition
+			}
+			custom_effect_tooltip = BUL_atheism
+    	}
+    }
+	
+	
+	focus = {
+    	id = BUL_european_tengri
+    	icon = x
+    	x = 51
+    	y = 5
+    	cost = 7.2
+    	
+    	prerequisite = {
+			focus = BUL_toss_orthodoxy
+		}
+		
+    	prerequisite = {
+			focus = BUL_a_khan_reborn
+		}
+		
+		mutually_exclusive = {
+			focus = BUL_state_atheism
+		}
+    	
+    	available = {
+    		has_country_flag = BUL_based_path
+    	}
+    
+    	completion_reward = {
+    		log = "[GetDateText]: [Root.GetName]: Focus BUL_european_tengri"
+			add_stability = 0.1
+			add_political_power = 100
+			swap_ideas = {
+				add_idea = BUL_bulgarian_ambition_2
+				remove_idea = BUL_bulgarian_ambition
+			}
+			custom_effect_tooltip = BUL_tengri
+    	}
+    }
+
+	focus = {
+    	id = BUL_revolutionize_incendiary_warfare
+    	icon = x
+    	x = 48
+    	y = 4
+    	cost = 7.2
+    	
+    	prerequisite = {
+			focus = BUL_slash_and_burn
+		}
+    	
+    	available = {
+    		has_country_flag = BUL_based_path
+    	}
+    
+    	completion_reward = {
+    		log = "[GetDateText]: [Root.GetName]: Focus BUL_revolutionize_incendiary_warfare"
+    		add_ideas = BUL_incendiary_warfare
+			
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+    	}
+    }
+	
+	focus = {
+    	id = BUL_field_medicine_trials
+    	icon = x
+    	x = 52
+    	y = 4
+    	cost = 7.2
+    	
+    	prerequisite = {
+			focus = BUL_slash_and_burn
+		}
+    	
+    	available = {
+    		has_country_flag = BUL_based_path
+    	}
+    
+    	completion_reward = {
+    		log = "[GetDateText]: [Root.GetName]: Focus BUL_field_medicine_trials"
+			army_experience = 10
+			add_ideas = BUL_medical_equipment
+			hidden_effect = {
+				country_event = {
+					id = bul.403
+					days = 13
+				}
+			}
+			
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+    	}
+    }
+	
+	focus = {
+    	id = BUL_valor_and_honor
+    	icon = x
+    	x = 47
+    	y = 6
+    	cost = 7.2
+    	
+    	prerequisite = {
+			focus = BUL_modernize_feudalism
+		}
+    	
+    	available = {
+    		has_country_flag = BUL_based_path
+    	}
+    
+    	completion_reward = {
+    		log = "[GetDateText]: [Root.GetName]: Focus BUL_field_medicine_trials"
+			swap_ideas = {
+				add_idea = BUL_new_feudalism_2
+				remove_idea = BUL_new_feudalism
+			}
+			
+			random_owned_state = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+			
+			random_owned_state = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+    	}
+    }
+	
+	focus = {
+    	id = BUL_intentions_of_restoration
+    	icon = x
+    	x = 53
+    	y = 6
+    	cost = 7.2
+    	
+    	prerequisite = {
+			focus = BUL_lay_claim_to_old
+		}
+    	
+    	available = {
+    		has_country_flag = BUL_based_path
+    	}
+    
+    	completion_reward = {
+    		log = "[GetDateText]: [Root.GetName]: Focus BUL_intentions_of_restoration"
+			add_war_support = 0.25
+			add_state_claim = 236
+			add_state_claim = 217
+			add_state_claim = 401
+			add_state_claim = 251
+			add_state_claim = 250
+			add_state_claim = 265
+			add_state_claim = 239
+			add_state_claim = 255
+			add_state_claim = 249
+			add_state_claim = 256
+			add_state_claim = 252
+			add_state_claim = 255
+			add_state_claim = 237
+			add_state_claim = 235
+			add_state_claim = 787
+			add_state_claim = 233
+			add_state_claim = 232
+			add_state_claim = 652
+			add_state_claim = 407
+			add_state_claim = 406
+			
+			random_owned_state = {
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+			}
+			
+			random_owned_state = {
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+			}
+    	}
+    }
+	
+	focus = {
+		id = BUL_takeover_of_donkuban
+		icon = x
+		x = 50
+		y = 6
+		cost = 7.2
+		
+		prerequisite = {
+			focus = BUL_state_atheism
+			focus = BUL_european_tengri
+		}
+		
+		will_lead_to_war_with = DKB
+	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_takeover_of_donkuban"
+			add_war_support = 0.1
+			add_political_power = 50
+			every_country = {
+				limit = {
+					OR = {
+						owns_state = 234
+					}
+				}
+				BUL = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_attack_ukraine
+		icon = x
+		x = 48
+		y = 7
+		cost = 7.2
+		
+		prerequisite = {
+			focus = BUL_takeover_of_donkuban
+		}
+		
+		prerequisite = {
+			focus = BUL_valor_and_honor
+		}
+		
+		will_lead_to_war_with = UKR
+	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_takeover_of_donkuban"
+			add_war_support = 0.1
+			add_political_power = 50
+			every_country = {
+				limit = {
+					OR = {
+						owns_state = 234
+					}
+				}
+				BUL = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_restoration_of_volga_bulgaria
+		icon = x
+		x = 52
+		y = 7
+		cost = 7.2
+		
+		prerequisite = {
+			focus = BUL_takeover_of_donkuban
+		}
+		
+		prerequisite = {
+			focus = BUL_intentions_of_restoration
+		}
+		
+		available = {
+			owns_state = 236
+			owns_state = 217
+			owns_state = 401
+			owns_state = 251
+			owns_state = 250
+			owns_state = 265
+			owns_state = 239
+			owns_state = 255
+			owns_state = 249
+			owns_state = 256
+			owns_state = 252
+			owns_state = 255
+			owns_state = 237
+			owns_state = 235
+			owns_state = 787
+			owns_state = 233
+			owns_state = 232
+			owns_state = 652
+			owns_state = 407
+			owns_state = 406
+		}
+	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_restoration_of_volga_bulgaria"
+			DKB = {
+				set_cosmetic_tag = BUL_volga_bulgaria
+				transfer_state = 236
+				transfer_state = 217
+				transfer_state = 401
+				transfer_state = 251
+				transfer_state = 250
+				transfer_state = 265
+				transfer_state = 239
+				transfer_state = 255
+				transfer_state = 249
+				transfer_state = 256
+				transfer_state = 252
+				transfer_state = 255
+				transfer_state = 237
+				transfer_state = 235
+				transfer_state = 787
+				transfer_state = 233
+				transfer_state = 232
+				transfer_state = 652
+				transfer_state = 407
+				transfer_state = 406
+				
+				add_state_core = 236
+				add_state_core = 217
+				add_state_core = 401
+				add_state_core = 251
+				add_state_core = 250
+				add_state_core = 265
+				add_state_core = 239
+				add_state_core = 255
+				add_state_core = 249
+				add_state_core = 256
+				add_state_core = 252
+				add_state_core = 255
+				add_state_core = 237
+				add_state_core = 235
+				add_state_core = 787
+				add_state_core = 233
+				add_state_core = 232
+				add_state_core = 652
+				add_state_core = 407
+				add_state_core = 406
+				add_stability = 0.3
+				add_war_support = 0.3
+				
+				set_capital = 249
+			}
+			249 = {
+				set_state_name = "Bolghar"
+			}
+			puppet = DKB
+			custom_effect_tooltip = BUL_annex_volga_wen
+			hidden_effect = {
+				country_event = {
+					id = bul.402
+					days = 720
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_attack_russia
+		icon = x
+		x = 50
+		y = 7
+		cost = 7.2
+		
+		prerequisite = {
+			focus = BUL_takeover_of_donkuban
+		}
+		
+		will_lead_to_war_with = RUS
+		will_lead_to_war_with = SOV
+	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_attack_russia"
+			add_war_support = 0.1
+			add_political_power = 50
+			every_country = {
+				limit = {
+					OR = {
+						owns_state = 249
+					}
+				}
+				BUL = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = BUL_bulgarian_genghis
+		icon = x
+		x = 50
+		y = 8
+		cost = 7.2
+		
+		prerequisite = {
+			focus = BUL_attack_russia
+		}
+		
+		prerequisite = {
+			focus = BUL_attack_ukraine
+		}
+		
+		prerequisite = {
+			focus = BUL_restoration_of_volga_bulgaria
+		}
+		
+		available = {
+			owns_state = 218
+			owns_state = 245
+			owns_state = 137
+			owns_state = 196
+			owns_state = 200
+			owns_state = 227
+			owns_state = 228
+			owns_state = 221
+			owns_state = 821
+			owns_state = 226
+			owns_state = 197
+			owns_state = 203
+			owns_state = 259
+			owns_state = 238
+			owns_state = 234
+		}
+	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_attack_russia"
+			set_war_support = 1
+			add_political_power = 100
+			add_ideas = BUL_genghis_khan
+			custom_effect_tooltip = BUL_svetoven_khan
+			hidden_effect = {
+				create_country_leader = {
+					name = "Khan Kubrat II"
+					desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+					picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	#focus = {
+	#	id = BUL_our_roots
+	#	icon = x
+	#	x = 60
+	#	y = 0
+	#	cost = 7.2
+	#	
+	#	
+	#	
+	#	available = {
+	#		has_country_flag = BUL_based_path
+	#	}
+	#
+	#	completion_reward = {
+	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_home_by_christmas"
+	#		add_ideas = BUL_bulgarian_destiny
+	#	}
+	#}
+	#
+	#focus = {
+	#	id = BUL_totalist_feudalism
+	#	icon = x
+	#	x = 57
+	#	y = 1
+	#	cost = 7.2
+	#	
+	#	prerequisite = {
+	#		focus = BUL_our_roots
+	#	}
+	#
+	#	completion_reward = {
+	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_modernize_feudalism"
+	#		add_political_power = 100
+	#		set_politics = {
+	#			ruling_party = paternal_autocrat
+	#		}
+	#		add_ideas = BUL_new_feudalism
+	#	}
+	#}
+	#
+	#focus = {
+	#	id = BUL_historical_education
+	#	icon = x
+	#	x = 59
+	#	y = 1
+	#	cost = 7.2
+	#	
+	#	prerequisite = {
+	#		focus = BUL_our_roots
+	#	}
+	#
+	#	completion_reward = {
+	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_historical_education"
+	#		add_stability = 0.1
+	#		add_political_power = 80
+	#		country_event = bul.400
+	#		add_ideas = BUL_history_education
+	#	}
+	#}
+	#
+	#focus = {
+	#	id = BUL_display_volga_revanchism
+	#	icon = x
+	#	x = 63
+	#	y = 1
+	#	cost = 5
+	#	
+	#	prerequisite = {
+	#		focus = BUL_our_roots
+	#	}
+	#
+	#	completion_reward = {
+	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_display_volga_revanchism"
+	#		add_war_support = 0.25
+	#		add_state_claim = 236
+	#		add_state_claim = 217
+	#		add_state_claim = 401
+	#		add_state_claim = 251
+	#		add_state_claim = 250
+	#		add_state_claim = 265
+	#		add_state_claim = 239
+	#		add_state_claim = 255
+	#		add_state_claim = 249
+	#		add_state_claim = 256
+	#		add_state_claim = 252
+	#		add_state_claim = 255
+	#		add_state_claim = 237
+	#		add_state_claim = 235
+	#		add_state_claim = 787
+	#		add_state_claim = 233
+	#		add_state_claim = 232
+	#		add_state_claim = 652
+	#		add_state_claim = 407
+	#		add_state_claim = 406
+	#	}
+	#}
+	#
+	#focus = {
+	#	id = BUL_modern_bulgarian_cossacks
+	#	icon = x
+	#	x = 61
+	#	y = 1
+	#	cost = 7.2
+	#	
+	#	prerequisite = {
+	#		focus = BUL_our_roots
+	#	}
+	#
+	#	completion_reward = {
+	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_bulgarian_cossacks"
+	#		army_experience = 50
+	#		add_ideas = BUL_bulgarian_ambition
+	#	}
+	#}
+	#
+	#focus = {
+	#	id = BUL_raise_hordes
+	#	icon = x
+	#	x = 62
+	#	y = 2
+	#	cost = 7.2
+	#	
+	#	prerequisite = {
+	#		focus = BUL_modern_bulgarian_cossacks
+	#	}
+	#
+	#	prerequisite = {
+	#		focus = BUL_display_volga_revanchism
+	#	}
+	#
+	#	completion_reward = {
+	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_old_great_bulgaria"
+	#		add_ideas = BUL_the_hordes
+	#		add_manpower = 100000
+	#	}
+	#}
+	#
+	#focus = {
+	#	id = BUL_red_khanate
+	#	icon = x
+	#	x = 59
+	#	y = 3
+	#	cost = 7.2
+	#	
+	#	prerequisite = {
+	#		focus = BUL_raise_hordes
+	#	}
+	#
+	#	prerequisite = {
+	#		focus = BUL_eliminate_class_struggle
+	#	}
+	#
+	#	completion_reward = {
+	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_old_great_bulgaria"
+	#		set_cosmetic_tag = BUL_khanate
+	#		random_owned_state = {
+	#			add_building_construction = {
+	#				type = arms_factory
+	#				level = 1
+	#				instant_build = yes
+	#			}
+	#			add_extra_state_shared_building_slots = 1
+	#		}
+	#		random_owned_state = {
+	#			add_building_construction = {
+	#				type = arms_factory
+	#				level = 1
+	#				instant_build = yes
+	#			}
+	#			add_extra_state_shared_building_slots = 1
+	#		}
+	#		
+	#		add_tech_bonus = {
+	#			bonus = 0.5
+	#			uses = 1
+	#			category = industry
+	#		}
+	#	}
+	#}
+	#
+	#focus = {
+	#	id = BUL_ambition_great_bulgaria
+	#	icon = x
+	#	x = 66
+	#	y = 2
+	#	cost = 5
+	#	
+	#	prerequisite = {
+	#		focus = BUL_display_volga_revanchism
+	#	}
+	#
+	#	completion_reward = {
+	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_ambition_great_bulgaria"
+	#		add_war_support = 0.25
+	#		add_state_claim = 218
+	#		add_state_claim = 245
+	#		add_state_claim = 137
+	#		add_state_claim = 196
+	#		add_state_claim = 200
+	#		add_state_claim = 227
+	#		add_state_claim = 228
+	#		add_state_claim = 221
+	#		add_state_claim = 821
+	#		add_state_claim = 226
+	#		add_state_claim = 197
+	#		add_state_claim = 203
+	#		add_state_claim = 259
+	#		add_state_claim = 238
+	#		add_state_claim = 234
+	#	}
+	#}
+	#
+	#focus = {
+	#	id = BUL_takeover_of_donkuban
+	#	icon = x
+	#	x = 64
+	#	y = 3
+	#	cost = 7.2
+	#	
+	#	prerequisite = {
+	#		focus = BUL_raise_hordes
+	#	}
+	#
+	#	prerequisite = {
+	#		focus = BUL_ambition_great_bulgaria
+	#	}
+	#	
+	#	will_lead_to_war_with = DKB
+	#
+	#	completion_reward = {
+	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_takeover_of_donkuban"
+	#		every_country = {
+	#			limit = {
+	#				OR = {
+	#					owns_state = 234
+	#				}
+	#			}
+	#			BUL = {
+	#				declare_war_on = {
+	#					target = PREV
+	#					type = annex_everything
+	#				}
+	#			}
+	#		}
+	#	}
+	#}
+	#
+	#focus = {
+	#	id = BUL_false_flag_ukraine
+	#	icon = x
+	#	x = 64
+	#	y = 4
+	#	cost = 7.2
+	#	
+	#	available = {
+	#		country_exists = UKR
+	#		NOT = {
+	#			is_in_faction_with = UKR
+	#		}
+	#	}
+	#	
+	#	prerequisite = {
+	#		focus = BUL_takeover_of_donkuban
+	#	}
+	#	
+	#	will_lead_to_war_with = UKR
+	#
+	#	completion_reward = {
+	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_false_flag_ukraine"
+	#		custom_effect_tooltip = BUL_execute_false_flag_on_ukraine
+	#		country_event = bul.401
+	#		#Be sure to use an every country in case Russia takes Ukraine!
+	#	}
+	#}
+	#
+	#focus = {
+	#	id = BUL_restore_great_bulgaria
+	#	icon = x
+	#	x = 63
+	#	y = 5
+	#	cost = 7.2
+	#	
+	#	available = {
+	#		owns_state = 218
+	#		owns_state = 245
+	#		owns_state = 137
+	#		owns_state = 196
+	#		owns_state = 200
+	#		owns_state = 227
+	#		owns_state = 228
+	#		owns_state = 221
+	#		owns_state = 821
+	#		owns_state = 226
+	#		owns_state = 197
+	#		owns_state = 203
+	#		owns_state = 259
+	#		owns_state = 238
+	#		owns_state = 234
+	#	}
+	#	
+	#	prerequisite = {
+	#		focus = BUL_false_flag_ukraine
+	#	}
+	#	
+	#	will_lead_to_war_with = DKB
+	#
+	#	completion_reward = {
+	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_restore_great_bulgaria"
+	#		set_cosmetic_tag = BUL_old_great_bulgaria
+	#		add_state_core = 218
+	#		add_state_core = 245
+	#		add_state_core = 137
+	#		add_state_core = 196
+	#		add_state_core = 200
+	#		add_state_core = 227
+	#		add_state_core = 228
+	#		add_state_core = 221
+	#		add_state_core = 821
+	#		add_state_core = 226
+	#		add_state_core = 197
+	#		add_state_core = 203
+	#		add_state_core = 259
+	#		add_state_core = 238
+	#		add_state_core = 234
+	#		add_ideas = BUL_furious_ukrainians
+	#	}
+	#}
+	#
+	#focus = {
+	#	id = BUL_restore_volga_bulgaria
+	#	icon = x
+	#	x = 65
+	#	y = 5
+	#	cost = 7.2
+	#	
+	#	prerequisite = {
+	#		focus = BUL_false_flag_ukraine
+	#	}
+	#	
+	#	will_lead_to_war_with = DKB
+	#
+	#	completion_reward = {
+	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_restore_volga_bulgaria"
+	#		every_country = {
+	#			limit = {
+	#				OR = {
+	#					owns_state = 256
+	#					owns_state = 252
+	#					owns_state = 249
+	#				}
+	#			}
+	#			BUL = {
+	#				declare_war_on = {
+	#					target = PREV
+	#					type = annex_everything
+	#				}
+	#			}
+	#		}
+	#	}
+	#}
+	#
+	#focus = {
+	#	id = BUL_statehood_of_volga_bulgaria
+	#	icon = x
+	#	x = 64
+	#	y = 6
+	#	cost = 7.2
+	#	
+	#	prerequisite = {
+	#		focus = BUL_restore_great_bulgaria
+	#	}
+	#	
+	#	prerequisite = {
+	#		focus = BUL_restore_volga_bulgaria
+	#	}
+	#	
+	#	available = {
+	#		owns_state = 236
+	#		owns_state = 217
+	#		owns_state = 401
+	#		owns_state = 251
+	#		owns_state = 250
+	#		owns_state = 265
+	#		owns_state = 239
+	#		owns_state = 255
+	#		owns_state = 249
+	#		owns_state = 256
+	#		owns_state = 252
+	#		owns_state = 255
+	#		owns_state = 237
+	#		owns_state = 235
+	#		owns_state = 787
+	#		owns_state = 233
+	#		owns_state = 232
+	#		owns_state = 652
+	#		owns_state = 407
+	#		owns_state = 406
+	#	}
+	#
+	#	completion_reward = {
+	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_restore_volga_bulgaria"
+	#		DKB = {
+	#			set_cosmetic_tag = BUL_volga_bulgaria
+	#			transfer_state = 236
+	#			transfer_state = 217
+	#			transfer_state = 401
+	#			transfer_state = 251
+	#			transfer_state = 250
+	#			transfer_state = 265
+	#			transfer_state = 239
+	#			transfer_state = 255
+	#			transfer_state = 249
+	#			transfer_state = 256
+	#			transfer_state = 252
+	#			transfer_state = 255
+	#			transfer_state = 237
+	#			transfer_state = 235
+	#			transfer_state = 787
+	#			transfer_state = 233
+	#			transfer_state = 232
+	#			transfer_state = 652
+	#			transfer_state = 407
+	#			transfer_state = 406
+	#			
+	#			add_state_core = 236
+	#			add_state_core = 217
+	#			add_state_core = 401
+	#			add_state_core = 251
+	#			add_state_core = 250
+	#			add_state_core = 265
+	#			add_state_core = 239
+	#			add_state_core = 255
+	#			add_state_core = 249
+	#			add_state_core = 256
+	#			add_state_core = 252
+	#			add_state_core = 255
+	#			add_state_core = 237
+	#			add_state_core = 235
+	#			add_state_core = 787
+	#			add_state_core = 233
+	#			add_state_core = 232
+	#			add_state_core = 652
+	#			add_state_core = 407
+	#			add_state_core = 406
+	#			add_stability = 0.3
+	#			add_war_support = 0.3
+	#		}
+	#		puppet = DKB
+	#		custom_effect_tooltip = BUL_annex_volga_wen
+	#		hidden_effect = {
+	#			country_event = {
+	#				id = bul.402
+	#				days = 720
+	#			}
+	#		}
+	#	}
+	#}
+	#
+	#focus = {
+	#	id = BUL_eliminate_class_struggle
+	#	icon = x
+	#	x = 58
+	#	y = 2
+	#	cost = 7.2
+	#	
+	#	prerequisite = {
+	#		focus = BUL_totalist_feudalism
+	#	}
+	#	
+	#	prerequisite = {
+	#		focus = BUL_historical_education
+	#	}
+	#
+	#	completion_reward = {
+	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_eliminate_class_struggle"
+	#		random_owned_state = {
+	#			add_building_construction = {
+	#				type = industrial_complex
+	#				level = 1
+	#				instant_build = yes
+	#			}
+	#			add_extra_state_shared_building_slots = 1
+	#		}
+	#		random_owned_state = {
+	#			add_building_construction = {
+	#				type = industrial_complex
+	#				level = 1
+	#				instant_build = yes
+	#			}
+	#			add_extra_state_shared_building_slots = 1
+	#		}
+	#		random_owned_state = {
+	#			add_building_construction = {
+	#				type = industrial_complex
+	#				level = 1
+	#				instant_build = yes
+	#			}
+	#			add_extra_state_shared_building_slots = 1
+	#		}
+	#		add_political_power = 50
+	#		add_stability = 0.1
+	#		add_popularity = {
+	#			ideology = totalist
+	#			popularity = 0.1
+	#		}
+	#	}
+	#}
+	#
+	#focus = {
+	#	id = BUL_slash_and_burn
+	#	icon = x
+	#	x = 61
+	#	y = 3
+	#	cost = 7.2
+	#	
+	#	prerequisite = {
+	#		focus = BUL_raise_hordes
+	#	}
+	#	
+	#	prerequisite = {
+	#		focus = BUL_eliminate_class_struggle
+	#	}
+	#
+	#	completion_reward = {
+	#		log = "[GetDateText]: [Root.GetName]: Focus BUL_raise_hordes"
+	#		random_owned_state = {
+	#			add_building_construction = {
+	#				type = infrastructure
+	#				level = 3
+	#				instant_build = yes
+	#			}
+	#			add_extra_state_shared_building_slots = 2
+	#		}
+	#		
+	#		random_owned_state = {
+	#			add_building_construction = {
+	#				type = infrastructure
+	#				level = 3
+	#				instant_build = yes
+	#			}
+	#			add_extra_state_shared_building_slots = 2
+	#		}
+	#		
+	#		random_owned_state = {
+	#			add_building_construction = {
+	#				type = infrastructure
+	#				level = 3
+	#				instant_build = yes
+	#			}
+	#			add_extra_state_shared_building_slots = 2
+	#		}
+	#	}
+	#}
+}
