@@ -5,6 +5,9 @@ constituents:0 "View the constituents of the Austrian Empire"
 BOTDE_strike:0 "Strike!"
 BOTDE_mutiny:0 "Mutiny!"
 BOTDE_bickering:0 "Stalling!"
+AUS_fighting_for_the_people_backer:0 "Fighting for the People!"
+AUS_fighting_for_the_people:0 "Fighting for the People!"
+
 
 AUS_appease_hungarians:0 "Appease the Hungarians [HUN.GetFlag]"
 AUS_appease_illyrians:0 "Appease the Illyrians [CRO.GetFlag]"
@@ -33,7 +36,8 @@ chance_anger_hungary:0 "§YThis has a chance to move §!§CHungary §!§R2%§!§
 chance_anger_galicia:0 "§YThis has a chance to move §!§CGalicia §!§R2%§!§Y closer to revolt.§!"
 
 #### Decisions ####
-unrest_five_or_up:0 "The [ROOT.GetAdjective] must have at least 5 unrest"
+unrest_five_or_up:0 "The [ROOT.GetAdjective]s must have at least 5 unrest"
+unrest_two_or_up:0 "The [ROOT.GetAdjective]s must have at least 2 unrest"
 backer_war_tooltip:0 "§YWe will have §!§Cthree months§!§Y to fight. After the three months are over, any states we have §!§Gclaimed and under control§!§Y will become ours.§!"
 AUS_want_to_revolt:0 "Enable Revolt"
 AUS_dont_want_to_revolt:0 "Disable Revolt"
@@ -48,9 +52,35 @@ CRO_pacify_SKS:0 "Pacify the Serbs in Illyria"
 CRO_pacify_MNT:0 "Pacify the Montenegrins"
 GAL_pacify_BUK:0 "Pacify the Bukovina"
 
+BREAKAWAY_independent:0 "This breakaway state is independent from Austria"
+BRK_unlock_decisions_faction:0 "§GUnlocks the decision to join a faction§!"
+
 
 
 slight_riot_chance:0 "§RThere is a slight chance of a riot occurring if we do this§!"
+
+
+#Collapse decisions
+collapse_agitate_serbs_HUN:0 "Agitate Hungarian Serbs"
+collapse_stage_serb_intervention_HUN:0 "Stage Intervention in Hungary on Behalf of the Serbs"
+collapse_agitate_serbs_CRO:0 "Agitate Illyrian Serbs"
+collapse_stage_serb_intervention_CRO:0 "Stage Intervention in Illyria on Behalf of the Serbs"
+collapse_stage_bosnian_revolt:0 "Stoke the Bosnian Fire"
+collapse_agitate_romanians_HUN:0 "Agitate Hungarian Romanians"
+collapse_stage_romanian_intervention_HUN:0 "Stage Romanian Intervention in Hungary"
+collapse_stage_transylvanian_revolt:0 "Stoke the Fires in Transylvania"
+#collapse_
+#collapse_
+#collapse_
+#collapse_
+#collapse_
+
+#Decisions tooltips
+collapse_serbs:0 "§GThe §!§CSerbians§!§G will gain anywhere from 0 to 1.5 unrest§!"
+collapse_croats:0 "§GThe §!§CCroats§!§G will gain anywhere from 0 to 1.5 unrest§!"
+collapse_italians:0 "§GThe §!§CItalians§!§G will gain anywhere from 0 to 1.5 unrest§!"
+collapse_ukrainians:0 "§GThe §!§CUkrainians§!§G will gain anywhere from 0 to 1.5 unrest§!"
+collapse_romanians:0 "§GThe §!§CRomanians§!§G will gain anywhere from 0 to 1.5 unrest. This includes §!§CBanat§!§G and §!§CTransylvania§!§G§!"
 
 #Collapse ticker
 collapse_one:0 "§YThe Empire will move §!§R1%§!§Y closer to collapse§!"

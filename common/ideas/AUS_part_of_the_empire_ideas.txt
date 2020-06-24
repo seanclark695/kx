@@ -26,13 +26,13 @@ ideas = {
 			removal_cost = -1
 		}
 		
-		AUS_fireside_chats = {
+		AUS_fireside_chats_idea = {
 			picture = GFX_idea_chi_war_of_resistance
 			allowed = {
 				always = yes
 			}
 			modifier = {
-				stability_weekly = 0.02
+				stability_weekly = 0.03
 				political_power_gain = -0.15
 				political_power_factor = -0.1
 			}

@@ -106,6 +106,12 @@ collapse_austria = {
 				factor = 0
 				has_war = yes
 			}
+			modifier = {
+				factor = 0.1
+				AUS = {
+					has_war = no
+				}
+			}
 		}
 	}
 	
@@ -216,6 +222,12 @@ collapse_austria = {
 				factor = 0
 				has_war = yes
 			}
+			modifier = {
+				factor = 0.1
+				AUS = {
+					has_war = no
+				}
+			}
 		}
 	}
 	
@@ -318,6 +330,12 @@ collapse_austria = {
 				factor = 0
 				has_war = yes
 			}
+			modifier = {
+				factor = 0.1
+				HUN = {
+					has_war = no
+				}
+			}
 		}
 	}
 	
@@ -381,6 +399,7 @@ collapse_austria = {
 		available = {
 			NOT = {
 				has_global_flag = no_backers_allowed
+				has_war_with = CRO
 			}
 			CRO = {
 				owns_state = 1141
@@ -404,7 +423,7 @@ collapse_austria = {
 			}
 		}
 		ai_will_do = {
-			factor = 3
+			factor = 1
 		}
 	}
 	
@@ -427,6 +446,7 @@ collapse_austria = {
 			NOT = {
 				owns_state = 1141
 				owns_state = 1142
+				has_war_with = CRO
 			}
 		}
 		complete_effect = {
@@ -454,6 +474,12 @@ collapse_austria = {
 			modifier = {
 				factor = 0
 				has_war = yes
+			}
+			modifier = {
+				factor = 0.1
+				CRO = {
+					has_war = no
+				}
 			}
 		}
 	}
@@ -528,7 +554,7 @@ collapse_austria = {
 		}
 		complete_effect = {
 			GAL = {
-				country_event = west_ukraine_revolt
+				country_event = revolt.102
 			}
 			hidden_effect = {
 				country_event = {
@@ -542,7 +568,13 @@ collapse_austria = {
 			}
 		}
 		ai_will_do = {
-			factor = 3
+			factor = 1
+			modifier = {
+				factor = 0.1
+				GAL = {
+					has_war = no
+				}
+			}
 		}
 	}
 	
@@ -592,6 +624,221 @@ collapse_austria = {
 			modifier = {
 				factor = 0
 				has_war = yes
+			}
+			modifier = {
+				factor = 0.1
+				GAL = {
+					has_war = no
+				}
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	#### Romanians ####
+	
+	collapse_agitate_romanians_HUN = {
+		cost = 25
+		icon = GFX_decision_generic_nationalism
+		days_re_enable = 21
+		visible = {
+			OR = {
+				tag = ROM
+				tag = RRM
+			}
+		}
+		available = {
+			NOT = {
+				has_global_flag = no_backers_allowed
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = collapse_romanians
+			hidden_effect = {
+				random_list = {
+					15 = {
+						add_to_variable = {
+							var = HUN.transylvanian_unrest
+							value = 1.5
+						}
+						add_to_variable = {
+							var = HUN.banat_unrest
+							value = 1.5
+						}
+					}
+					20 = {
+						add_to_variable = {
+							var = HUN.transylvanian_unrest
+							value = 1
+						}
+						add_to_variable = {
+							var = HUN.banat_unrest
+							value = 1
+						}
+					}
+					45 = {
+						add_to_variable = {
+							var = HUN.transylvanian_unrest
+							value = 0.5
+						}
+						add_to_variable = {
+							var = HUN.banat_unrest
+							value = 0.5
+						}
+					}
+					20 = {
+						add_to_variable = {
+							var = HUN.transylvanian_unrest
+							value = 0.2
+						}
+						add_to_variable = {
+							var = HUN.banat_unrest
+							value = 0.2
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	
+	collapse_stage_romanian_intervention_HUN = {
+		cost = 80
+		icon = GFX_decision_generic_nationalism
+		fire_only_once = yes
+		visible = {
+			OR = {
+				tag = ROM
+				tag = RRM
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = unrest_two_or_up
+				check_variable = {
+					var = HUN.transylvanian_unrest
+					value = 2
+					compare = greater_than_or_equals
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = unrest_two_or_up
+				check_variable = {
+					var = HUN.banat_unrest
+					value = 2
+					compare = greater_than_or_equals
+				}
+			}
+			NOT = {
+				owns_state = 875
+				owns_state = 45
+				has_war_with = HUN
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = backer_war_tooltip
+			add_state_claim = 84
+			add_state_claim = 1116
+			add_state_claim = 789
+			add_state_claim = 76
+			add_state_claim = 1117
+			add_state_claim = 1112
+			add_state_claim = 1118
+			add_state_claim = 83
+			add_state_claim = 1114
+			add_state_claim = 1113
+			add_state_claim = 1115
+			add_state_claim = 82
+			declare_war_on = {
+				target = HUN
+				type = annex_everything
+			}
+			add_ideas = AUS_fighting_for_the_people_backer
+			hidden_effect = {
+				country_event = {
+					id = revolt_peace.21
+					days = 90
+				}
+				add_to_variable = {
+					var = HUN.transylvanian_unrest
+					value = -3
+				}
+				add_to_variable = {
+					var = HUN.banat_unrest
+					value = -3
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.1
+				HUN = {
+					has_war = no
+				}
+			}
+		}
+	}
+	
+	collapse_stage_transylvanian_revolt = {
+		cost = 150
+		icon = GFX_decision_generic_nationalism
+		days_re_enable = 21
+		visible = {
+			OR = {
+				tag = ROM
+				tag = RRM
+			}
+		}
+		available = {
+			NOT = {
+				has_global_flag = no_backers_allowed
+				has_war_with = HUN
+			}
+			HUN = {
+				owns_state = 83
+				owns_state = 1113
+				owns_state = 76
+			}
+			custom_trigger_tooltip = {
+				tooltip = unrest_five_or_up
+				check_variable = {
+					var = HUN.transylvanian_unrest
+					value = 5
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		complete_effect = {
+			HUN = {
+				country_event = {
+					id = revolt.103
+					days = 7
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = HUN.transylvanian_unrest
+					value = -3
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				HUN = {
+					has_war = no
+				}
 			}
 		}
 	}

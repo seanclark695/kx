@@ -1,0 +1,40 @@
+add_namespace = nfenews
+
+news_event = { #The Napoleonic Wars Anew!
+	id = nfenews.1
+	title = nfenews.1.t
+    desc = nfenews.1.d
+	picture = GFX_news_event_GER_alsace
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #Now they say nothing...
+		name = nfenews.1.a
+		ai_chance = { factor = 100 }
+		trigger = {
+			tag = NFA
+		}
+	}
+	
+	option = { #It seems we're regressing.
+		name = nfenews.1.b
+		ai_chance = { factor = 100 }
+		trigger = {
+			NOT = {
+				tag = NFA
+				has_war_with = NFA
+			}
+		}
+	}
+	
+	option = { #How many times must we beat you?
+		name = nfenews.1.c
+		ai_chance = { factor = 100 }
+		trigger = {
+			has_war_with = NFA
+		}
+	}
+}
+

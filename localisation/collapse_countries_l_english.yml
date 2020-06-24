@@ -142,6 +142,9 @@ PGU_authoritarian_democrat_ADJ:0 "Czech"
 WSU_paternal_autocrat:0 "West Ukraine"
 WSU_paternal_autocrat_DEF:0 "West Ukraine"
 WSU_paternal_autocrat_ADJ:0 "Ukrainian"
+WSU_authoritarian_democrat:0 "West Ukraine"
+WSU_authoritarian_democrat_DEF:0 "West Ukraine"
+WSU_authoritarian_democrat_ADJ:0 "Ukrainian"
 
 
 
@@ -260,3 +263,6 @@ SWH_social_democrat_DEF:0 "Schleswig-Holstein"
 SWH_social_democrat_ADJ:0 "Schleswig-Holsteiner"
 
 
+MNT_paternal_autocrat:0 "Montenegro"
+MNT_paternal_autocrat_DEF:0 "Montenegro"
+MNT_paternal_autocrat_ADJ:0 "Montenegrin"

@@ -46,7 +46,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/blank_tapestry_overlay.dds"
 		legacy_lazy_load = no
 	}
-<<<<<<< HEAD
 	
 	spriteType = {
 		name = "GFX_thanks_eaw_welcome_screen"
@@ -65,6 +64,4 @@ spriteTypes = {
 		texturefile = "gfx/interface/eaw_welcome_screen_tab_on.dds"
 		legacy_lazy_load = no
 	}
-=======
->>>>>>> master
 }

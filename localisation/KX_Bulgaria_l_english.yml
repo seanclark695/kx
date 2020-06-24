@@ -13,7 +13,12 @@ BUL_khanate:0 "Bulgar Khanate"
 BUL_khanate_DEF:0 "the Khanate of the Bulgars"
 BUL_khanate_ADJ:0 "Bulgarian"
 
+#### Triggers
+BUL_victorious_in_balkan_war:0 "Bulgaria is victorious in the Fourth Balkan War"
+BUL_defeated_in_balkan_war:0 "Bulgaria is defeated in the Fourth Balkan War"
 
+
+#### Tooltips
 
 BUL_pia:0 "§GWe shall begin to plot a job creation program§!"
 BUL_unlocks_military_preparation_decision:0 "§GUnlocks the decision to start an industrial program aimed at readying the economy for an imminent war§!"
@@ -28,16 +33,28 @@ BUL_execute_false_flag_on_ukraine:0 "§GWe will execute a false flag attack on U
 BUL_annex_volga_wen:0 "§YYou will be able to fully integrate Volga Bulgaria in two years§!"
 BUL_rip_orthodoxy:0 "§GThe state religion of Orthodoxy shall be tossed to rot!§!"
 BUL_svetoven_khan:0 "§GKhan Derzhavin shall be renamed to the grand designation of Khan Kubrat II§!"
-
+BUL_christianity:0 "§GBulgaria shall be Christian by heart... with time.§!"
+BUL_free_religion:0 "§GThere shall be no discrimination here based on religious association.§!"
 BUL_atheism:0 "§GThere are no Gods! Bulgaria is atheist!§!"
 BUL_tengri:0 "§GThe old gods are the way of the true Bulgar!§!"
-
+BUL_unlocks_decisions_join_faction:0 "§GUnlocks the decisions to join a faction. The factions available depend on the result of the Balkan War and your political alignment.§!"
+BUL_puppet_SER:0 "§GA military dictatorship will be established in Serbia, led by Bulgarians. This essentially creates a client state.§!"
+BUL_retake_southeast:0 "§GIf the Turks own either§! §CKardzhali§! §Gor§! §CWestern Thrace§! §Gwe will unlock the decision to demand its return§!"
+BUL_stop_warreps:0 "§RRemoves the War Reparations idea§!"
+BUL_romania_peacekeeping:0 "§YThe effects of this focus are not visible - but it will give [RRM.GetFlag]§! §ORomania§! §G100 political power and 10% stability§!§Y, but their government will be§! §Routraged§!§Y. The §!§Osouth of Romania§!§Y shall be put under §!§Rtemporary military police occupation§!§Y, giving us §!§Gvaluable experience.§!"
+BUL_force_weapons:0 "§GSerbia will also be forced to give us a portion of their industrial production§!"
 
 
 BUL_diplomatic_isolation:0 "Diplomatic Isolation"
 BUL_restless_minorities:0 "Unruly Minorities"
 BUL_trade_war:0 "German-Bulgarian Trade War"
+BUL_balkan_pensions:0 "Pensions from the Balkan War"
 
+SER_forbidden_army:0 "Forbidden Army"
+
+#################
+#### Focuses ####
+#################
 
 BUL_rectify_economic_mistakes:0 "Rectify Economic Mistakes"
 BUL_spur_money_printers:0 "Spur Money Printing"
@@ -62,6 +79,16 @@ BUL_fortify_northern_borders:0 "Fortify the Unruly North"
 BUL_bulgarian_urban_metropolis:0 "A Bulgarian Urban Metropolis"
 BUL_technological_institutes:0 "Technological Institutes"
 BUL_automobile_industry:0 "Expand Automobile Industry"
+
+BUL_standing_undefeated:0 "Our Equals Are None!"
+BUL_punish_serbia:0 "Disciplining Obstreperous Serbia"
+BUL_lessons_of_war:0 "Ameliorate the Current Strategy"
+BUL_cement_bulgarian_hegemony:0 "Confirm Bulgarian Ascendancy"
+BUL_utilize_war_reparations:0 "Disburse the Reparations"
+BUL_peacekeeping_in_romania:0 "Pacify the Romanian Insurrectionists"
+BUL_deal_greece:0 "The Veria Treaty"
+BUL_national_humiliation:0 "Shattered and Humiliated"
+BUL_seek_protection:0 "Debut on the World Stage"
 
 BUL_war_horizon:0 "War's on the Horizon"
 BUL_lukov_line:0 "Commission the Lukov Line"
@@ -107,3 +134,14 @@ BUL_bulgarian_genghis:0 "The Rebirth of Kubrat"
 
 
 bul.6.t:0 "The Specialty of the Special Operations"
+bul.6.d:0 "specops"
+bul.6.a:0 "Bulgaria shall rule all shores by force!"
+bul.6.b:0 "Nothing will be in our way!"
+bul.6.c:0 "We'll be self-sufficient!"
+bul.7.t:0 "Demobilization!"
+bul.7.d:0 ""
+bul.7.a:0 "A war hard fought and hard won!"
+bul.8.t:0 "The Punishment Upon Serbia"
+bul.8.d:0 "serbia dumb"
+bul.8.a:0 "Demilitarize Serbia and never allow it to rebuild an army as long as we live."
+bul.8.b:0 "Install a military and government entirely comprised of Bulgarians"

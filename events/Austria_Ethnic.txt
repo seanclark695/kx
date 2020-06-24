@@ -4588,6 +4588,8 @@ country_event = { #Srpska!
 				type = annex_everything
 			}
 			puppet = SKS
+			remove_state_claim = 1141
+			remove_state_claim = 1142
 		}
 		hidden_effect = {
 			SER = {
@@ -4653,6 +4655,174 @@ country_event = { #West Ukraine
 			country_event = {
 				id = revolt_peace.10
 				days = 90
+			}
+			WSU = {
+				load_oob = WSU_collapse_oob
+				
+				set_politics = {
+					ruling_party = paternal_autocrat
+				}
+				
+				set_popularities = {
+					totalist = 6
+					radical_socialist = 0
+					syndicalist = 0
+					social_democrat = 0
+					social_liberal = 5
+					market_liberal = 7
+					social_conservative = 23
+					authoritarian_democrat = 44
+					paternal_autocrat = 6
+					national_populist = 9
+				}
+			}
+		}
+	}
+}
+
+country_event = { #West Ukraine from decision
+	id = revolt.102
+	title = revolt.102.t
+	desc = revolt.102.d
+	
+	picture = GFX_report_event_BAN_big_speech2
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = { #coolio
+		name = revolt.102.a
+		WSU = {
+			transfer_state = 91
+			transfer_state = 1140
+			transfer_state = 1127
+			add_state_claim = 1126
+			add_state_claim = 89
+			declare_war_on = {
+				target = ROOT
+				type = annex_everything
+			}
+		}
+		UKR = {
+			declare_war_on = {
+				target = ROOT
+				type = annex_everything
+			}
+			puppet = WSU
+		}
+		hidden_effect = {
+			country_event = {
+				id = revolt_peace.10
+				days = 90
+			}
+			
+			WSU = {
+				load_oob = WSU_collapse_oob
+				
+				set_politics = {
+					ruling_party = paternal_autocrat
+				}
+				
+				set_popularities = {
+					totalist = 6
+					radical_socialist = 0
+					syndicalist = 0
+					social_democrat = 0
+					social_liberal = 5
+					market_liberal = 7
+					social_conservative = 23
+					authoritarian_democrat = 44
+					paternal_autocrat = 6
+					national_populist = 9
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Transylvania revolt from decision
+	id = revolt.103
+	title = revolt.103.t
+	desc = revolt.103.d
+	
+	picture = GFX_report_event_BAN_big_speech2
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = { #coolio
+		name = revolt.103.a
+		TRS = {
+			transfer_state = 1113
+			transfer_state = 83
+			transfer_state = 76
+			add_state_claim = 84
+			add_state_claim = 1116
+			add_state_claim = 789
+			add_state_claim = 76
+			add_state_claim = 1117
+			add_state_claim = 1112
+			add_state_claim = 1118
+			add_state_claim = 83
+			add_state_claim = 1114
+			add_state_claim = 1113
+			add_state_claim = 1115
+			add_state_claim = 82
+			declare_war_on = {
+				target = ROOT
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = {
+				country_exists = ROM
+			}
+			ROM = {
+				declare_war_on = {
+					target = ROOT
+					type = annex_everything
+				}
+				puppet = TRS
+			}
+			else_if = {
+				limit = {
+					country_exists = RRM
+				}
+				RRM = {
+					declare_war_on = {
+						target = ROOT
+						type = annex_everything
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = revolt_peace.22
+				days = 90
+			}
+			
+			TRS = {
+				load_oob = TRS_collapse_oob
+				
+				set_politics = {
+					ruling_party = social_conservative
+				}
+				
+				set_popularities = {
+					totalist = 0
+					radical_socialist = 0
+					syndicalist = 0
+					social_democrat = 7
+					social_liberal = 8
+					market_liberal = 10
+					social_conservative = 60
+					authoritarian_democrat = 8
+					paternal_autocrat = 5
+					national_populist = 2
+				}
 			}
 		}
 	}
@@ -5132,6 +5302,91 @@ country_event = { #End of the War
 			}
 			SKS = {
 				transfer_state = 1145
+			}
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					controls_state = 1143
+					SKS = {
+						controls_state = 1143
+					}
+				}
+			}
+			SKS = {
+				transfer_state = 1143
+			}
+		}
+		
+		if = {
+			limit = {
+				SKS = {
+					has_capitulated = yes
+				}
+			}
+			if = {
+				limit = {
+					CRO = {
+						is_in_faction_with = AUS
+					}
+				}
+				CRO = {
+					transfer_state = 1141
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							country_exists = CRO
+						}
+					}
+					AUS = {
+						transfer_state = 1141
+					}
+					else = {
+						any_country = {
+							limit = {
+								owns_state = 109
+							}
+							transfer_state = 1141
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				SKS = {
+					has_capitulated = yes
+				}
+			}
+			if = {
+				limit = {
+					CRO = {
+						is_in_faction_with = AUS
+					}
+				}
+				CRO = {
+					transfer_state = 1142
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							country_exists = CRO
+						}
+					}
+					AUS = {
+						transfer_state = 1142
+					}
+					else = {
+						any_country = {
+							limit = {
+								owns_state = 109
+							}
+							transfer_state = 1142
+						}
+					}
+				}
 			}
 		}
 		
@@ -6889,7 +7144,669 @@ country_event = { #End of the Bukovina Rebellion
 	}
 }
 
+country_event = { #End of the War
+	id = revolt_peace.21
+	title = revolt_peace.21.t
+	desc = revolt_peace.21.d
+	
+	picture = GFX_report_event_BAN_big_speech2
 
+	fire_only_once = no
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	option = { #Okay.
+		name = revolt_peace.21.a
+		if = {
+			limit = {
+				controls_state = 84
+			}
+			transfer_state = 84
+		}
+		if = {
+			limit = {
+				controls_state = 1116
+			}
+			transfer_state = 1116
+		}
+		
+		if = {
+			limit = {
+				controls_state = 789
+			}
+			transfer_state = 789
+		}
+		if = {
+			limit = {
+				controls_state = 76
+			}
+			transfer_state = 76
+		}
+		
+		if = {
+			limit = {
+				controls_state = 1117
+			}
+			transfer_state = 1117
+		}
+		if = {
+			limit = {
+				controls_state = 1112
+			}
+			transfer_state = 1112
+		}
+		
+		if = {
+			limit = {
+				controls_state = 1118
+			}
+			transfer_state = 1118
+		}
+		if = {
+			limit = {
+				controls_state = 83
+			}
+			transfer_state = 83
+		}
+		
+		if = {
+			limit = {
+				controls_state = 1114
+			}
+			transfer_state = 1114
+		}
+		if = {
+			limit = {
+				controls_state = 1113
+			}
+			transfer_state = 1113
+		}
+		
+		if = {
+			limit = {
+				controls_state = 1115
+			}
+			transfer_state = 1115
+		}
+		if = {
+			limit = {
+				controls_state = 82
+			}
+			transfer_state = 82
+		}
+		white_peace = HUN
+		every_country = {
+			limit = {
+				is_in_faction_with = HUN
+				OR = {
+					has_war_with = ROM
+					has_war_with = RRM
+				}
+			}
+			if = {
+				limit = {
+					country_exists = ROM
+				}
+				white_peace = ROM
+			}
+			if = {
+				limit = {
+					country_exists = RRM
+				}
+				white_peace = RRM
+			}
+		}
+	}
+}
+country_event = { #End of the Transylvanian War
+	id = revolt_peace.22
+	title = revolt_peace.22.t
+	desc = revolt_peace.22.d
+	
+	picture = GFX_report_event_BAN_big_speech2
+
+	fire_only_once = no
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	option = { #Okay.
+		name = revolt_peace.22.a
+		if = {
+			limit = {
+				AND = {
+					OR = {
+						TRS = {
+							controls_state = 1118
+						}
+						RRM = {
+							controls_state = 1118
+						}
+						ROM = {
+							controls_state = 1118
+						}
+					}
+					
+					OR = {
+						TRS = {
+							controls_state = 1117
+						}
+						RRM = {
+							controls_state = 1117
+						}
+						ROM = {
+							controls_state = 1117
+						}
+					}
+					
+					OR = {
+						TRS = {
+							controls_state = 1113
+						}
+						RRM = {
+							controls_state = 1113
+						}
+						ROM = {
+							controls_state = 1113
+						}
+						
+						TRS = {
+							controls_state = 82
+						}
+						RRM = {
+							controls_state = 82
+						}
+						ROM = {
+							controls_state = 82
+						}
+					}
+					
+					OR = {
+						TRS = {
+							controls_state = 83
+						}
+						RRM = {
+							controls_state = 83
+						}
+						ROM = {
+							controls_state = 83
+						}
+					}
+				}
+				NOT = {
+					country_exists = BAN
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						TRS = {
+							controls_state = 82
+						}
+						RRM = {
+							controls_state = 82
+						}
+						ROM = {
+							controls_state = 82
+						}
+					}
+				}
+				TRS = {
+					transfer_state = 82
+				}
+				if = {
+					limit = {
+						OR = {
+							TRS = {
+								controls_state = 1114
+							}
+							RRM = {
+								controls_state = 1114
+							}
+							ROM = {
+								controls_state = 1114
+							}
+						}
+					}
+					TRS = {
+						transfer_state = 1114
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						TRS = {
+							controls_state = 1113
+						}
+						RRM = {
+							controls_state = 1113
+						}
+						ROM = {
+							controls_state = 1113
+						}
+					}
+				}
+				TRS = {
+					transfer_state = 1113
+				}
+			}
+			TRS = {
+				transfer_state = 83
+				transfer_state = 1118
+				transfer_state = 1117
+				transfer_state = 76
+				transfer_state = 789
+				transfer_state = 1112
+				transfer_state = 1115
+				transfer_state = 84
+				transfer_state = 1116
+			}
+			else_if = {
+				limit = {
+					AND = {
+						OR = {
+							TRS = {
+								controls_state = 1112
+							}
+							RRM = {
+								controls_state = 1112
+							}
+							ROM = {
+								controls_state = 1112
+							}
+						}
+						
+						OR = {
+							TRS = {
+								controls_state = 76
+							}
+							RRM = {
+								controls_state = 76
+							}
+							ROM = {
+								controls_state = 76
+							}
+						}
+						
+						OR = {
+							TRS = {
+								controls_state = 1113
+							}
+							RRM = {
+								controls_state = 1113
+							}
+							ROM = {
+								controls_state = 1113
+							}
+						}
+						
+						OR = {
+							TRS = {
+								controls_state = 83
+							}
+							RRM = {
+								controls_state = 83
+							}
+							ROM = {
+								controls_state = 83
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						AND = {
+							OR = {
+								TRS = {
+									controls_state = 84
+								}
+								RRM = {
+									controls_state = 84
+								}
+								ROM = {
+									controls_state = 84
+								}
+							}
+							
+							OR = {
+								TRS = {
+									controls_state = 789
+								}
+								RRM = {
+									controls_state = 789
+								}
+								ROM = {
+									controls_state = 789
+								}
+							}
+						}
+					}
+					TRS = {
+						transfer_state = 789
+						transfer_state = 84
+						transfer_state = 1116
+					}
+					if = {
+						limit = {
+							OR = {
+								TRS = {
+									controls_state = 1113
+								}
+								RRM = {
+									controls_state = 1113
+								}
+								ROM = {
+									controls_state = 1113
+								}
+							}
+						}
+						TRS = {
+							transfer_state = 1113
+						}
+						if = {
+							limit = {
+								OR = {
+									TRS = {
+										controls_state = 82
+									}
+									RRM = {
+										controls_state = 82
+									}
+									ROM = {
+										controls_state = 82
+									}
+								}
+							}
+							TRS = {
+								transfer_state = 82
+							}
+							if = {
+								limit = {
+									OR = {
+										TRS = {
+											controls_state = 1114
+										}
+										RRM = {
+											controls_state = 1114
+										}
+										ROM = {
+											controls_state = 1114
+										}
+									}
+								}
+								TRS = {
+									transfer_state = 1114
+								}
+							}
+						}
+					}
+					
+					if = {
+						limit = {
+							OR = {
+								TRS = {
+									controls_state = 76
+								}
+								RRM = {
+									controls_state = 76
+								}
+								ROM = {
+									controls_state = 76
+								}
+							}
+						}
+						TRS = {
+							transfer_state = 76
+						}
+						if = {
+							limit = {
+								OR = {
+									TRS = {
+										controls_state = 1117
+									}
+									RRM = {
+										controls_state = 1117
+									}
+									ROM = {
+										controls_state = 1117
+									}
+								}
+							}
+							TRS = {
+								transfer_state = 1117
+							}
+						}
+					}
+					
+					if = {
+						limit = {
+							OR = {
+								TRS = {
+									controls_state = 1115
+								}
+								RRM = {
+									controls_state = 1115
+								}
+								ROM = {
+									controls_state = 1115
+								}
+							}
+						}
+						TRS = {
+							transfer_state = 1115
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							TRS = {
+								controls_state = 82
+							}
+							RRM = {
+								controls_state = 82
+							}
+							ROM = {
+								controls_state = 82
+							}
+						}
+					}
+					TRS = {
+						transfer_state = 82
+					}
+					if = {
+						limit = {
+							OR = {
+								TRS = {
+									controls_state = 1114
+								}
+								RRM = {
+									controls_state = 1114
+								}
+								ROM = {
+									controls_state = 1114
+								}
+							}
+						}
+						TRS = {
+							transfer_state = 1114
+						}
+					}
+				}
+				TRS = {
+					transfer_state = 76
+					transfer_state = 789
+					transfer_state = 1115	
+					transfer_state = 1113
+					transfer_state = 84
+					transfer_state = 1116
+				}
+				if = {
+					limit = {
+						OR = {
+							TRS = {
+								controls_state = 82
+							}
+							RRM = {
+								controls_state = 82
+							}
+							ROM = {
+								controls_state = 82
+							}
+						}
+					}
+					TRS = {
+						transfer_state = 82
+					}
+					if = {
+						limit = {
+							OR = {
+								TRS = {
+									controls_state = 1114
+								}
+								RRM = {
+									controls_state = 1114
+								}
+								ROM = {
+									controls_state = 1114
+								}
+							}
+						}
+						TRS = {
+							transfer_state = 1114
+						}
+					}
+				}
+				
+				if = {
+					limit = {
+						OR = {
+							TRS = {
+								controls_state = 83
+							}
+							RRM = {
+								controls_state = 83
+							}
+							ROM = {
+								controls_state = 83
+							}
+						}
+					}
+					TRS = {
+						transfer_state = 83
+					}
+				}
+				
+				if = {
+					limit = {
+						OR = {
+							TRS = {
+								controls_state = 1117
+							}
+							RRM = {
+								controls_state = 1117
+							}
+							ROM = {
+								controls_state = 1117
+							}
+						}
+					}
+					TRS = {
+						transfer_state = 1117
+					}
+				}
+				
+				if = {
+					limit = {
+						OR = {
+							TRS = {
+								controls_state = 1112
+							}
+							RRM = {
+								controls_state = 1112
+							}
+							ROM = {
+								controls_state = 1112
+							}
+						}
+					}
+					TRS = {
+						transfer_state = 1112
+					}
+					if = {
+						limit = {
+							OR = {
+								TRS = {
+									controls_state = 1118
+								}
+								RRM = {
+									controls_state = 1118
+								}
+								ROM = {
+									controls_state = 1118
+								}
+							}
+						}
+						TRS = {
+							transfer_state = 1118
+						}
+					}
+				}
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		white_peace = HUN
+		every_country = {
+			limit = {
+				is_in_faction_with = HUN
+				OR = {
+					has_war_with = ROM
+					has_war_with = RRM
+				}
+			}
+			if = {
+				limit = {
+					country_exists = ROM
+				}
+				white_peace = ROM
+			}
+			if = {
+				limit = {
+					country_exists = RRM
+				}
+				white_peace = RRM
+			}
+		}
+	}
+}
 
 
 
@@ -6941,13 +7858,13 @@ country_event = { #Tick up Slovene counter by 0.1
 	option = { #k
 		name = ethnic.1.a
 		random_list = {
-			65 = {
+			85 = {
 				add_to_variable = {
 					var = AUS.slovene_unrest
 					value = 0.1
 				}
 			}
-			35 = {
+			15 = {
 				add_to_variable = {
 					var = AUS.slovene_unrest
 					value = -0.2
@@ -7051,13 +7968,13 @@ country_event = { #Tick up Slovak counter by 0.1
 	option = { #k
 		name = ethnic.2.a
 		random_list = {
-			65 = {
+			85 = {
 				add_to_variable = {
 					var = HUN.slovak_unrest
 					value = 0.1
 				}
 			}
-			35 = {
+			15 = {
 				add_to_variable = {
 					var = HUN.slovak_unrest
 					value = -0.2
@@ -7273,13 +8190,13 @@ country_event = { #Tick up Banatian counter by 0.1
 	option = { #k
 		name = ethnic.4.a
 		random_list = {
-			65 = {
+			85 = {
 				add_to_variable = {
 					var = HUN.banat_unrest
 					value = 0.1
 				}
 			}
-			35 = {
+			15 = {
 				add_to_variable = {
 					var = HUN.banat_unrest
 					value = -0.2
@@ -7368,13 +8285,13 @@ country_event = { #Tick up Bosnian counter by 0.1
 	option = { #k
 		name = ethnic.5.a
 		random_list = {
-			65 = {
+			85 = {
 				add_to_variable = {
 					var = CRO.bosnian_unrest
 					value = 0.1
 				}
 			}
-			35 = {
+			15 = {
 				add_to_variable = {
 					var = CRO.bosnian_unrest
 					value = -0.2
@@ -7463,13 +8380,13 @@ country_event = { #Tick up Serb counter by 0.1
 	option = { #k
 		name = ethnic.6.a
 		random_list = {
-			65 = {
+			85 = {
 				add_to_variable = {
 					var = CRO.serb_unrest
 					value = 0.1
 				}
 			}
-			35 = {
+			15 = {
 				add_to_variable = {
 					var = CRO.serb_unrest
 					value = -0.2
@@ -7560,13 +8477,13 @@ country_event = { #Tick up Montenegrin counter by 0.1
 	option = { #k
 		name = ethnic.7.a
 		random_list = {
-			65 = {
+			85 = {
 				add_to_variable = {
 					var = CRO.montenegrin_unrest
 					value = 0.1
 				}
 			}
-			35 = {
+			15 = {
 				add_to_variable = {
 					var = CRO.montenegrin_unrest
 					value = -0.2
@@ -7655,13 +8572,13 @@ country_event = { #Tick up Bukovina counter by 0.1
 	option = { #k
 		name = ethnic.8.a
 		random_list = {
-			65 = {
+			85 = {
 				add_to_variable = {
 					var = GAL.bukovina_unrest
 					value = 0.1
 				}
 			}
-			35 = {
+			15 = {
 				add_to_variable = {
 					var = GAL.bukovina_unrest
 					value = -0.2
@@ -7770,7 +8687,12 @@ country_event = { #Tick up Germans in Austria counter by 0.1 if...
 			}
 			add_to_variable = {
 				var = AUS.german_unrest
-				value = -0.2
+				value = -0.1
+			}
+			clamp_variable = {
+				var = AUS.german_unrest
+				min = 0
+				max = 8
 			}
 		}
 		
@@ -7963,7 +8885,12 @@ country_event = { #Tick up Hungarians in Hungary counter by 0.1 if...
 			}
 			add_to_variable = {
 				var = HUN.hungarian_unrest
-				value = -0.2
+				value = -0.1
+			}
+			clamp_variable = {
+				var = HUN.hungarian_unrest
+				min = 0
+				max = 8
 			}
 		}
 		
@@ -8203,7 +9130,12 @@ country_event = { #Tick up Croatians in Illyria counter by 0.1 if...
 			}
 			add_to_variable = {
 				var = CRO.croat_unrest
-				value = -0.2
+				value = -0.1
+			}
+			clamp_variable = {
+				var = CRO.croat_unrest
+				min = 0
+				max = 8
 			}
 		}
 		
@@ -8343,7 +9275,12 @@ country_event = { #Tick up Czechs in Bohemia counter by 0.1 if...
 			}
 			add_to_variable = {
 				var = CZE.czech_unrest
-				value = -0.2
+				value = -0.1
+			}
+			clamp_variable = {
+				var = CZE.czech_unrest
+				min = 0
+				max = 8
 			}
 		}
 		
@@ -8459,7 +9396,12 @@ country_event = { #Tick up Poles and Ukrainians in Galicia counter by 0.1 if...
 			}
 			add_to_variable = {
 				var = GAL.polish_unrest
-				value = -0.2
+				value = -0.1
+			}
+			clamp_variable = {
+				var = GAL.polish_unrest
+				min = 0
+				max = 8
 			}
 		}
 		
@@ -8473,7 +9415,12 @@ country_event = { #Tick up Poles and Ukrainians in Galicia counter by 0.1 if...
 			}
 			add_to_variable = {
 				var = GAL.ukrainian_unrest
-				value = -0.2
+				value = -0.1
+			}
+			clamp_variable = {
+				var = GAL.ukrainian_unrest
+				min = 0
+				max = 8
 			}
 		}
 		
@@ -8730,7 +9677,7 @@ country_event = { #Tick up Ruthenian counter by 0.1
 				}
 			}
 			else = {
-				any_country = {
+				every_country = {
 					limit = {
 						OR = {
 							tag = AUS
@@ -9152,24 +10099,25 @@ country_event = { #AI - collapse or nah
 				AUS = {
 					is_ai = yes
 				}
-				HUN = {
-					is_ai = yes
-				}
-				CZE = {
-					is_ai = yes
-				}
-				CRO = {
-					is_ai = yes
-				}
-				GAL = {
-					is_ai = yes
-				}
+				#HUN = {
+				#	is_ai = yes
+				#}
+				#CZE = {
+				#	is_ai = yes
+				#}
+				#CRO = {
+				#	is_ai = yes
+				#}
+				#GAL = {
+				#	is_ai = yes
+				#}
 			}
 			random_list = {
 				25 = {
 					
 				}
-				75 = {
+				
+				35 = {
 					set_global_flag = no_more_collapse
 					set_global_flag = no_majority_revolt
 					set_global_flag = no_hungary_revolt
@@ -9180,6 +10128,12 @@ country_event = { #AI - collapse or nah
 					set_global_flag = no_slovak_revolt
 					set_global_flag = no_transylvanian_revolt
 					set_global_flag = no_ruthenian_revolt
+					set_global_flag = no_banat_revolt
+					set_global_flag = no_bosnian_revolt
+					set_global_flag = no_serb_revolt
+					set_global_flag = no_slovak_revolt
+					set_global_flag = no_bukovina_revolt
+					set_global_flag = no_montenegrin_revolt
 					set_variable = {
 						var = AUS.subject_revolt_progress
 						value = 0
@@ -9190,8 +10144,146 @@ country_event = { #AI - collapse or nah
 						max = 0
 					}
 				}
+				
+				15 = {
+					set_global_flag = no_more_collapse
+					set_global_flag = no_majority_revolt
+					set_global_flag = no_hungary_revolt
+					set_global_flag = no_bohemia_revolt
+					set_global_flag = no_illyria_revolt
+					set_global_flag = no_galicia_revolt
+					set_global_flag = no_slovene_revolt
+					set_global_flag = no_slovak_revolt
+					set_global_flag = no_transylvanian_revolt
+					set_global_flag = no_ruthenian_revolt
+					set_global_flag = no_banat_revolt
+					set_global_flag = no_bosnian_revolt
+					set_global_flag = no_serb_revolt
+					set_global_flag = no_slovak_revolt
+					set_global_flag = no_bukovina_revolt
+					set_global_flag = no_montenegrin_revolt
+					set_variable = {
+						var = AUS.subject_revolt_progress
+						value = 0
+					}
+					clamp_variable = {
+						var = AUS.subject_revolt_progress
+						min = 0
+						max = 0
+					}
+					country_event = {
+						id = constituents.1
+						days = 720
+						random = 360
+					}
+				}
+				
+				15 = {
+					set_global_flag = no_more_collapse
+					set_global_flag = no_majority_revolt
+					set_global_flag = no_hungary_revolt
+					set_global_flag = no_bohemia_revolt
+					set_global_flag = no_illyria_revolt
+					set_global_flag = no_galicia_revolt
+					set_global_flag = no_slovene_revolt
+					set_global_flag = no_slovak_revolt
+					set_global_flag = no_transylvanian_revolt
+					set_global_flag = no_ruthenian_revolt
+					set_global_flag = no_banat_revolt
+					set_global_flag = no_bosnian_revolt
+					set_global_flag = no_serb_revolt
+					set_global_flag = no_slovak_revolt
+					set_global_flag = no_bukovina_revolt
+					set_global_flag = no_montenegrin_revolt
+					set_variable = {
+						var = AUS.subject_revolt_progress
+						value = 0
+					}
+					clamp_variable = {
+						var = AUS.subject_revolt_progress
+						min = 0
+						max = 0
+					}
+					country_event = {
+						id = constituents.1
+						days = 1080
+						random = 360
+					}
+				}
+				
+				15 = {
+					set_global_flag = no_more_collapse
+					set_global_flag = no_majority_revolt
+					set_global_flag = no_hungary_revolt
+					set_global_flag = no_bohemia_revolt
+					set_global_flag = no_illyria_revolt
+					set_global_flag = no_galicia_revolt
+					set_global_flag = no_slovene_revolt
+					set_global_flag = no_slovak_revolt
+					set_global_flag = no_transylvanian_revolt
+					set_global_flag = no_ruthenian_revolt
+					set_global_flag = no_banat_revolt
+					set_global_flag = no_bosnian_revolt
+					set_global_flag = no_serb_revolt
+					set_global_flag = no_slovak_revolt
+					set_global_flag = no_bukovina_revolt
+					set_global_flag = no_montenegrin_revolt
+					set_variable = {
+						var = AUS.subject_revolt_progress
+						value = 0
+					}
+					clamp_variable = {
+						var = AUS.subject_revolt_progress
+						min = 0
+						max = 0
+					}
+					country_event = {
+						id = constituents.1
+						days = 1440
+						random = 360
+					}
+				}
 			}
 		}
+	}
+}
+
+country_event = { #Disable revolts for 2wk
+	id = revolt.2000
+	title = revolt.2000.t
+	desc = revolt.2000.d
+	
+	picture = GFX_report_event_BAN_big_speech2
+
+	fire_only_once = yes
+
+	is_triggered_only = no
+	
+	trigger = {
+		OR = {
+			has_war_with = GER
+			has_war_with = FRA
+		}
+	}
+
+	option = { #bye bye
+		name = revolt.2000.a
+		set_global_flag = no_more_collapse
+		set_global_flag = no_majority_revolt
+		set_global_flag = no_hungary_revolt
+		set_global_flag = no_bohemia_revolt
+		set_global_flag = no_illyria_revolt
+		set_global_flag = no_galicia_revolt
+		set_global_flag = no_slovene_revolt
+		set_global_flag = no_slovak_revolt
+		set_global_flag = no_transylvanian_revolt
+		set_global_flag = no_ruthenian_revolt
+		set_global_flag = no_banat_revolt
+		set_global_flag = no_bosnian_revolt
+		set_global_flag = no_serb_revolt
+		set_global_flag = no_slovak_revolt
+		set_global_flag = no_bukovina_revolt
+		set_global_flag = no_montenegrin_revolt
 	}
 }
 

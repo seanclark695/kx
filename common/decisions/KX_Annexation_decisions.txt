@@ -1,0 +1,264 @@
+annexation_decisions = {
+	# Hungary
+	annexation_HUN_CONQ = {
+		icon = generic_form_nation
+		allowed = {
+			NOT = {
+				tag = HUN
+			}
+		}
+		activation = {
+			43 = {
+				is_owned_and_controlled_by = ROOT
+				is_claim_or_core_of_ROOT = no
+			}
+			# Do Austrian release first
+			OR = {
+				NOT = { owns_state = 4 } #Vienna
+				has_country_flag = AUS_CONQ
+			}
+			is_subject = no
+			NOT = {
+				has_country_flag = HUN_CONQ
+				country_exists = HUN
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = {
+				43 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_HUN_CONQ"
+			country_event = annex.12
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_HUN_CONQ"
+			set_country_flag = HUN_CONQ
+			occupy_medium_country = yes
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	annexation_CRO_CONQ = {
+		icon = generic_form_nation
+		allowed = {
+			NOT = {
+				tag = CRO
+				tag = HUN
+				tag = SER
+			}
+		}
+		activation = {
+			109 = {
+				is_owned_and_controlled_by = ROOT
+				is_claim_or_core_of_ROOT = no
+			}
+			is_subject = no
+			# Do Austrian release first
+			OR = {
+				NOT = { owns_state = 4 } #Vienna
+				has_country_flag = AUS_CONQ
+			}
+			# Do South Slavic release first
+			NOT = {
+				AND = {
+					109 = {
+						is_owned_and_controlled_by = ROOT
+						is_claim_or_core_of_ROOT = no
+					}
+					107 = {
+						is_owned_and_controlled_by = ROOT
+						is_claim_or_core_of_ROOT = no
+					}
+					104 = {
+						is_owned_and_controlled_by = ROOT
+						is_claim_or_core_of_ROOT = no
+					}
+					105 = {
+						is_owned_and_controlled_by = ROOT
+						is_claim_or_core_of_ROOT = no
+					}
+				}
+			}
+			NOT = {
+				has_country_flag = BALKANS_CONQ
+				has_country_flag = CRO_CONQ
+				country_exists = CRO
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			OR = {
+				NOT = {
+					109 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				AND = {
+					109 = {
+						is_owned_and_controlled_by = ROOT
+					}
+					107 = {
+						is_owned_and_controlled_by = ROOT
+					}
+					104 = {
+						is_owned_and_controlled_by = ROOT
+					}
+					105 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_CRO_CONQ"
+			country_event = annex.20
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_CRO_CONQ"
+			set_country_flag = CRO_CONQ
+			occupy_medium_country = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# Galicia and Lodomeria
+	annexation_GAL_CONQ = {
+		icon = generic_form_nation
+		allowed = {
+			NOT = {
+				tag = GAL
+				tag = POL
+				tag = UKR
+			}
+		}
+		activation = {
+			OR = {
+				91 = { #Lemberg
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+				88 = { #Krakow
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
+			# Do Austrian release first
+			OR = {
+				NOT = { owns_state = 4 } #Vienna
+				has_country_flag = AUS_CONQ
+			}
+			# Do Polish release first
+			OR = {
+				NOT = { owns_state = 10 } #Warsaw
+				has_country_flag = POL_CONQ
+			}
+			# Do Ukrainian release first
+			OR = {
+				NOT = { owns_state = 202 } #Kiev
+				has_country_flag = UKR_CONQ
+			}
+			is_subject = no
+			NOT = {
+				has_country_flag = GAL_CONQ
+				country_exists = GAL
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			OR = {
+				NOT = {
+					91 = { #Lemberg
+						is_owned_and_controlled_by = ROOT
+					}
+					88 = { #Krakow
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_GAL_CONQ"
+			country_event = annex.146
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_GAL_CONQ"
+			set_country_flag = GAL_CONQ
+			occupy_medium_country = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# Bohemia
+	annexation_CZE_CONQ = {
+		icon = generic_form_nation
+		allowed = {
+			NOT = {
+				tag = CZE
+				tag = SVK
+			}
+		}
+		activation = {
+			9 = {
+				is_owned_and_controlled_by = ROOT
+				is_claim_or_core_of_ROOT = no
+			}
+			# Do Austrian release first
+			OR = {
+				NOT = { owns_state = 4 } #Vienna
+				has_country_flag = AUS_CONQ
+			}
+			is_subject = no
+			NOT = {
+				has_country_flag = CZE_CONQ
+				country_exists = CZE
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = {
+				9 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_CZE_CONQ"
+			country_event = annex.122
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout annexation_CZE_CONQ"
+			set_country_flag = CZE_CONQ
+			occupy_medium_country = yes
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

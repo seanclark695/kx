@@ -383,12 +383,7 @@ focus_tree = {
 							picture = "gfx/leaders/CSA/Portrait_CSA_burnham_supreme.dds"
 							expire = "1965.1.1"
 							ideology = totalist_subtype
-							traits = {
-								the_marxist
-								the_machevellian
-								the_patriot
-								managerialist
-							}
+							traits = { }
 						}
 					}
 				}
@@ -1486,15 +1481,6 @@ focus_tree = {
 							remove_idea = USA_civil_war_depression_idea
 							add_idea = CSA_burnhams_economic_policy_idea1
 						}
-						if = {
-							limit = {
-								has_country_leader = {
-									name = "James Burnham"
-									ruling_only = yes
-								}
-							}
-							add_country_leader_trait = the_marxist
-						}
 				}
 
 	}
@@ -1587,15 +1573,6 @@ focus_tree = {
 				}
 			completion_reward = {
 					add_political_power = 30
-					if = {
-						limit = {
-							has_country_leader = {
-								name = "James Burnham"
-								ruling_only = yes
-							}
-						}
-						add_country_leader_trait = the_machevellian
-					}
 				}
 
 	}
@@ -1798,15 +1775,6 @@ focus_tree = {
 				}
 			completion_reward = {
 					add_war_support = 0.10
-					if = {
-						limit = {
-							has_country_leader = {
-								name = "James Burnham"
-								ruling_only = yes
-							}
-						}
-						add_country_leader_trait = the_patriot
-					}
 				}
 
 	}

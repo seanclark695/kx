@@ -38,6 +38,7 @@ guiTypes = {
 		moveable = yes
 		show_sound = menu_open_window
 		click_to_front = yes
+		clipping = no
 
 		orientation = center
 		
@@ -60,7 +61,7 @@ guiTypes = {
 
         buttonType = {
             name = "austria_close"
-            position = {x = 0 y = 0	 }
+            position = {x = -28 y = 0	 }
             spriteType = "GFX_NV_btn_close"
             clicksound = click_close
 			shortcut = "ESCAPE"

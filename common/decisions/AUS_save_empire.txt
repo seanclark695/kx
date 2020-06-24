@@ -135,7 +135,7 @@ save_austria = {
 		days_re_enable = 1
 		visible = {
 			NOT = {
-				has_global_flag = AUS_fireside_chats
+				has_idea = AUS_fireside_chats_idea
 			}
 			tag = AUS
 		}
@@ -150,12 +150,12 @@ save_austria = {
 		complete_effect = {
 			custom_effect_tooltip = AUS_begins_broadcasts
 			set_global_flag = AUS_fireside_chats
-			add_ideas = AUS_fireside_chats
+			add_ideas = AUS_fireside_chats_idea
 			add_to_variable = {
 				var = AUS.subject_revolt_progress
-				value = -0.03
+				value = -0.1
 			}
-			custom_effect_tooltip = collapse_three_minus
+			custom_effect_tooltip = collapse_ten_minus
 		}
 		ai_will_do = {
 			factor = 5
@@ -175,20 +175,20 @@ save_austria = {
 		icon = GFX_decision_generic_nationalism
 		days_re_enable = 1
 		visible = {
-			has_global_flag = AUS_fireside_chats
-			has_idea = AUS_fireside_chats
+			has_idea = AUS_fireside_chats_idea
+			tag = AUS
 		}
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = AUS_currently_fireside_chats
 				has_global_flag = AUS_fireside_chats
 			}
-			has_idea = AUS_fireside_chats
+			has_idea = AUS_fireside_chats_idea
 		}
 		complete_effect = {
 			custom_effect_tooltip = AUS_ceases_broadcasts
 			clr_global_flag = AUS_fireside_chats
-			remove_ideas = AUS_fireside_chats
+			remove_ideas = AUS_fireside_chats_idea
 		}
 		ai_will_do = {
 			factor = 5
@@ -204,7 +204,7 @@ save_austria = {
 	}
 	
 	AUS_appease_hungarians = {
-		cost = 20
+		cost = 15
 		icon = GFX_decision_generic_nationalism
 		days_re_enable = 7
 		visible = {
@@ -238,7 +238,7 @@ save_austria = {
 	}
 	
 	AUS_appease_illyrians = {
-		cost = 20
+		cost = 15
 		icon = GFX_decision_generic_nationalism
 		days_re_enable = 7
 		visible = {
@@ -284,7 +284,7 @@ save_austria = {
 	}
 	
 	AUS_appease_bohemians = {
-		cost = 20
+		cost = 15
 		icon = GFX_decision_generic_nationalism
 		days_re_enable = 7
 		visible = {
@@ -318,7 +318,7 @@ save_austria = {
 	}
 	
 	AUS_appease_galicians = {
-		cost = 20
+		cost = 15
 		icon = GFX_decision_generic_nationalism
 		days_re_enable = 7
 		visible = {

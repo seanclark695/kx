@@ -7939,6 +7939,7 @@ country_event = { # Peace With Scotland
 		name = uob.508.a
 		
 		SCT = {
+			white_peace_with_ROOT = yes
 			transfer_state = 120
 			transfer_state = 121
 			transfer_state = 133
@@ -7947,9 +7948,8 @@ country_event = { # Peace With Scotland
 		}
 		add_stability = -0.30
 		
-		white_peace = {
-			tag = SCT
-			message = "Scotland has won it's Independence"
+		SCT = {
+			white_peace_with_ROOT = yes
 		}
 		
 		
@@ -7999,9 +7999,8 @@ country_event = { # Peace With Wales
 		hidden_effect = {
 			set_country_flag = wales_lost
 		}
-		white_peace = {
-			tag = WAL
-			message = "Wales has won it's Independence"
+		WAL = {
+			white_peace_with_ROOT = yes
 		}
 		
 		WAL = { 
@@ -8266,7 +8265,7 @@ country_event = {
 		add_ideas = GBR_Clement_Attlee_hog_sde
 		add_ideas = ENG_Ishbel_MacDonald_for_sde
 		add_ideas = ENG_Malcom_MacDonald_eco_sde
-		add_ideas = GBR_James_Chuter_Ede_sec_sde
+		add_ideas = ENG_James_Chuter_Ede_sec_sli
 	}
 }
 

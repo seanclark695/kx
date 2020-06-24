@@ -683,7 +683,7 @@ country_event = { #Slovenia Revolts!
 				add_state_core = 102
 				
 				declare_war_on = {
-					tag = AUS
+					target = AUS
 					type = annex_everything
 				}
 			}
@@ -699,7 +699,7 @@ country_event = { #Slovenia Revolts!
 			end_puppet = SLO
 			SLO = {
 				declare_war_on = {
-					tag = AUS
+					target = AUS
 					type = annex_everything
 				}
 			}
@@ -941,22 +941,7 @@ country_event = { #Collapse of the Austrian Empire - AUS
 		
 		hidden_effect = {
 		
-			HUN = {
-				leave_faction = yes
-				add_ideas = AUS_fighting_for_the_people
-			}
-			CZE = {
-				leave_faction = yes
-				add_ideas = AUS_fighting_for_the_people
-			}
-			CRO = {
-				leave_faction = yes
-				add_ideas = AUS_fighting_for_the_people
-			}
-			GAL = {
-				leave_faction = yes
-				add_ideas = AUS_fighting_for_the_people
-			}
+			
 				
 			IF = {
 				limit = {
@@ -971,7 +956,7 @@ country_event = { #Collapse of the Austrian Empire - AUS
 				}
 				country_event = {
 					id = constituents.14 #Austrian Natpops go insane
-					days = 4
+					days = 5
 					random = 24
 				}
 			}
@@ -986,7 +971,7 @@ country_event = { #Collapse of the Austrian Empire - AUS
 				}
 				country_event = {
 					id = constituents.6 #Austrian Natpops go insane
-					days = 4
+					days = 6
 					random = 24
 				}
 			}
@@ -1010,7 +995,7 @@ country_event = { #Collapse of the Austrian Empire - AUS
 				}
 				country_event = {
 					id = constituents.7 #Slovenia Secession
-					days = 1
+					days = 3
 					random = 12
 				}
 			}
@@ -1018,26 +1003,21 @@ country_event = { #Collapse of the Austrian Empire - AUS
 				limit = {
 					HUN = {
 						is_in_faction_with = AUS
-						check_variable = {
-							HUN.AUS_subject_status
-							value = 0
-							compare = greater_than_or_equals
-						}
 					}
 				}
 				HUN = {
 					country_event = constituents.2
 					leave_faction = yes
 				}
-			}
-			else_if = {
-				limit = {
-					owns_state = 43
-					NOT = {
-						country_exists = HUN
+				else_if = {
+					limit = {
+						owns_state = 43
+						NOT = {
+							country_exists = HUN
+						}
 					}
+					country_event = constituents.47 #Hungarian Revolution! Triggers all Hungarian collapse states.
 				}
-				country_event = constituents.47 #Hungarian Revolution! Triggers all Hungarian collapse states.
 			}
 			IF = {
 				limit = {
@@ -1049,15 +1029,15 @@ country_event = { #Collapse of the Austrian Empire - AUS
 					country_event = constituents.3
 					leave_faction = yes
 				}
-			}
-			else_if = {
-				limit = {
-					owns_state = 109
-					NOT = {
-						country_exists = CRO
+				else_if = {
+					limit = {
+						owns_state = 109
+						NOT = {
+							country_exists = CRO
+						}
 					}
+					country_event = constituents.48 #Illyrian Revolution! Triggers all Illyrian collapse states.
 				}
-				country_event = constituents.48 #Illyrian Revolution! Triggers all Illyrian collapse states.
 			}
 			IF = {
 				limit = {
@@ -1070,25 +1050,21 @@ country_event = { #Collapse of the Austrian Empire - AUS
 					country_event = constituents.4
 					leave_faction = yes
 				}
-			}
-			else_if = {
-				limit = {
-					owns_state = 1129
-					NOT = {
-						country_exists = CZE
+				else_if = {
+					limit = {
+						owns_state = 1129
+						NOT = {
+							country_exists = CZE
+						}
 					}
+					country_event = constituents.49 #Bohemian Revolution! Triggers just Bohemia rising up.
 				}
-				country_event = constituents.49 #Bohemian Revolution! Triggers just Bohemia rising up.
 			}
+			
 			IF = {
 				limit = {
 					GAL = {
 						is_in_faction_with = AUS
-						check_variable = {
-							GAL.AUS_subject_status
-							value = 0
-							compare = greater_than_or_equals
-						}
 					}
 				}
 				end_puppet = GAL
@@ -1096,15 +1072,15 @@ country_event = { #Collapse of the Austrian Empire - AUS
 					country_event = constituents.5
 					leave_faction = yes
 				}
-			}
-			else_if = {
-				limit = {
-					owns_state = 91
-					NOT = {
-						country_exists = GAL
+				else_if = {
+					limit = {
+						owns_state = 91
+						NOT = {
+							country_exists = GAL
+						}
 					}
+					country_event = constituents.50 #Galician Revolution! Triggers all Galician collapse states.
 				}
-				country_event = constituents.50 #Galician Revolution! Triggers all Galician collapse states.
 			}
 			
 			IF = {
@@ -1125,6 +1101,35 @@ country_event = { #Collapse of the Austrian Empire - AUS
 					days = 5
 					random = 24
 				}
+			}
+			
+			HUN = {
+				AUS = {
+					end_puppet = HUN
+				}
+				leave_faction = yes
+				add_ideas = AUS_fighting_for_the_people
+			}
+			CZE = {
+				AUS = {
+					end_puppet = CZE
+				}
+				leave_faction = yes
+				add_ideas = AUS_fighting_for_the_people
+			}
+			CRO = {
+				AUS = {
+					end_puppet = CRO
+				}
+				leave_faction = yes
+				add_ideas = AUS_fighting_for_the_people
+			}
+			GAL = {
+				AUS = {
+					end_puppet = GAL
+				}
+				leave_faction = yes
+				add_ideas = AUS_fighting_for_the_people
 			}
 			
 			every_country = {
@@ -1514,6 +1519,10 @@ country_event = { #Collapse of the Austrian Empire - CZE
 
 	option = { #Gott erhalte, gott beschutze...
 		name = constituents.4.a
+		AUS = {
+			end_puppet = CZE
+		}
+		leave_faction = yes
 		add_stability = -1
 		add_political_power = -500
 		
@@ -1552,6 +1561,10 @@ country_event = { #Collapse of the Austrian Empire - GAL
 		name = constituents.5.a
 		add_stability = -1
 		add_political_power = -500
+		AUS = {
+			end_puppet = GAL
+		}
+		leave_faction = yes
 		
 		hidden_effect = {
 			IF = {
@@ -5373,9 +5386,14 @@ country_event = { #Tick up collapse meter
 			}
 		}
 		
-		add_to_variable = {
-			var = AUS.subject_revolt_progress
-			value = 0.01
+		if = {
+			limit = {
+				has_stability < 0.85
+			}
+			add_to_variable = {
+				var = AUS.subject_revolt_progress
+				value = 0.01
+			}
 		}
 		
 		hidden_effect = {

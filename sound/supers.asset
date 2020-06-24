@@ -256,6 +256,15 @@ sound = {
 	always_load = yes
 }
 
+sound = {
+	name = "super_napoleon"
+	file = "menu/napoleon.wav"
+	volume = 0.95
+	always_load = yes
+}
+
+
+
 
 
 

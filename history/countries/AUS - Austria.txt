@@ -198,7 +198,7 @@ add_ideas = {
 	
 	#AUS_ethnic_warfare
 	#AUS_sick_man
-	#AUS_karl_habsburg
+	AUS_karl_habsburg
 	#AUS_lingering_german_influence
 	#AUS_legacy_of_galician_war
 	#AUS_immeasurable_debt
@@ -275,7 +275,7 @@ create_country_leader = {
 
 ### Field Marshal
 create_field_marshal = {
-	name = "Eduard von Bohm-Ermolli"
+	name = "Eduard von Böhm-Ermolli"
 	portrait_path = "gfx/leaders/AUS/Portrait_AUS_Eduard_Bohm_Ermolli.tga"
 	traits = {
 		war_hero
@@ -397,7 +397,7 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "Franz Bohme"
+	name = "Franz Böhme"
 	portrait_path = "gfx/leaders/AUS/Portrait_AUS_Franz_Bohme.tga"
 	traits = {
 		hill_fighter
@@ -480,7 +480,7 @@ create_navy_leader = {
 }
 
 create_navy_leader = {
-	name = "Miklos Horthy"
+	name = "Miklós Horthy"
 	ID = 40000
 	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Miklos_Horthy.tga"
 	traits = {

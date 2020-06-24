@@ -1,0 +1,305 @@
+add_namespace = nfe
+
+country_event = { #Hot or Cold Climate?
+	id = nfe.1
+	title = nfe.1.t
+    desc = nfe.1.d
+	picture = GFX_report_event_IRE_bombing
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #Hot!
+		name = nfe.1.a
+		ai_chance = { factor = 100 }
+		add_ideas = NFE_hot_climate
+	}
+	
+	option = { #Cold!
+		name = nfe.1.b
+		ai_chance = { factor = 100 }
+		add_ideas = NFE_cold_climate
+	}
+}
+
+country_event = { #The War of the Eighth Coalition
+	id = nfe.2
+	title = nfe.2.t
+    desc = nfe.2.d
+	picture = GFX_report_event_IRE_bombing
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #How many times do we have to teach you this lesson?
+		name = nfe.2.a
+		ai_chance = { factor = 100 }
+		declare_war_on = {
+			target = NFA
+			type = annex_everything
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_war_with = GER
+					tag = GER
+				}
+			}
+			give_military_access = GER
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+					has_war_with = RUS
+					tag = RUS
+				}
+			}
+			give_military_access = RUS
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+					has_war_with = AUS
+					tag = AUS
+				}
+			}
+			give_military_access = AUS
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+					has_war_with = CAN
+					tag = CAN
+				}
+			}
+			give_military_access = CAN
+		}
+	}
+	
+	option = { #We cannot do this again
+		name = nfe.2.b
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { #The French Empire Demands Submission!
+	id = nfe.3
+	title = nfe.3.t
+    desc = nfe.3.d
+	picture = GFX_report_event_IRE_bombing
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #Fine.
+		name = nfe.3.a
+		ai_chance = { factor = 100 }
+		NFA = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = no
+			}
+		}
+	}
+	
+	option = { #Never!
+		name = nfe.3.b
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { #Spain tags - The French Empire Seizes Gibraltar!
+	id = nfe.4
+	title = nfe.4.t
+    desc = nfe.4.d
+	picture = GFX_report_event_IRE_bombing
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #After this civil war...
+		name = nfe.4.a
+		ai_chance = { factor = 100 }
+		set_country_flag = spain_attack_france
+	}
+	
+	option = { #Not worth the trouble
+		name = nfe.4.b
+		ai_chance = { factor = 20 }
+	}
+}
+
+country_event = { #Spain tags - The French Empire Seizes the Balearic Islands!
+	id = nfe.5
+	title = nfe.5.t
+    desc = nfe.5.d
+	picture = GFX_report_event_IRE_bombing
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #After this civil war...
+		name = nfe.5.a
+		ai_chance = { factor = 100 }
+		set_country_flag = spain_attack_france
+	}
+	
+	option = { #Not worth the trouble
+		name = nfe.5.b
+		ai_chance = { factor = 20 }
+	}
+}
+
+country_event = { #Controller of French Guiana - Imperial France Demands French Guiana!
+	id = nfe.6
+	title = nfe.6.t
+    desc = nfe.6.d
+	picture = GFX_report_event_IRE_bombing
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #K
+		name = nfe.6.a
+		ai_chance = { factor = 100 }
+		NFA = {
+			transfer_state = 310
+			transfer_state = 1037
+		}
+	}
+	
+	option = { #Not worth the trouble
+		name = nfe.6.b
+		ai_chance = { factor = 20 }
+		NFA = {
+			country_event = nfe.10
+		}
+	}
+}
+
+country_event = { #Controller of French Caribbean - Imperial France Demands the French Caribbean!
+	id = nfe.7
+	title = nfe.7.t
+    desc = nfe.7.d
+	picture = GFX_report_event_IRE_bombing
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #K
+		name = nfe.7.a
+		ai_chance = { factor = 100 }
+		NFA = {
+			transfer_state = 694
+		}
+	}
+	
+	option = { #Not worth the trouble
+		name = nfe.7.b
+		ai_chance = { factor = 20 }
+	}
+}
+
+country_event = { #Spain - Imperial France takes Morocco!
+	id = nfe.8
+	title = nfe.8.t
+    desc = nfe.8.d
+	picture = GFX_report_event_IRE_bombing
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #After this civil war...
+		name = nfe.8.a
+		ai_chance = { factor = 100 }
+		set_country_flag = spain_attack_france
+	}
+	
+	option = { #Not worth the trouble
+		name = nfe.8.b
+		ai_chance = { factor = 20 }
+	}
+}
+
+country_event = { #Controller of Angola - We Surrender!
+	id = nfe.9
+	title = nfe.9.t
+    desc = nfe.9.d
+	picture = GFX_report_event_IRE_bombing
+
+	is_triggered_only = no
+	
+	trigger = {
+		NFA = {
+			controls_state = 540
+		}
+		owns_state = 540
+		has_war_with = NFA
+	}
+
+	fire_only_once = yes
+	
+	option = { #REEEEE
+		name = nfe.9.a
+		ai_chance = { factor = 100 }
+		white_peace = NFA
+		add_stability = -0.1
+		if = {
+			limit = {
+				original_tag = POR
+			}
+			NFA = {
+				transfer_state = 540
+				transfer_state = 296
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					original_tag = POR
+				}
+			}
+			NFA = {
+				transfer_state = 540
+			}
+		}
+	}
+}
+
+country_event = { #Controller of Angola - We Surrender!
+	id = nfe.10
+	title = nfe.10.t
+    desc = nfe.10.d
+	picture = GFX_report_event_IRE_bombing
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #REEEEE
+		name = nfe.10.a
+		ai_chance = { factor = 100 }
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+	
+	option = { #Nah
+		name = nfe.10.b
+		ai_chance = { factor = 100 }
+		add_stability = -0.05
+		add_war_support = -0.1
+	}
+}

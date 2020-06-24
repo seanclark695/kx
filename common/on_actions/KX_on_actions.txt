@@ -62,9 +62,9 @@ on_actions = {
 					modifier = JBS_blessing_of_allah
 				}
 			}
-			AAR = {
+			ANT = {
 				add_dynamic_modifier = {
-					modifier = AAR_penguin_army
+					modifier = ANT_penguin_army
 				}
 			}
 		}

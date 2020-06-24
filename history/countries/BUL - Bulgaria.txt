@@ -94,6 +94,8 @@ add_ideas = {
 	BUL_diplomatic_isolation
 	BUL_restless_minorities
 	BUL_trade_war
+	BUL_vehement_protection
+	
 	BUL_Aleksandar_Malinov_hog_ade
 	BUL_Nikola_Mushanov_for_ade
 	BUL_Todor_Krastev_eco_ade

@@ -172,6 +172,96 @@ country_event = { #Factory workers protest over conditions
 	}
 }
 
+country_event = { #Demobilization!
+	id = bul.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bul.7"}
+	title = bul.7.t
+	desc = bul.7.d
+	picture = x
+
+	is_triggered_only = yes
+
+	option = { #We are victorious!
+		name = bul.7.a
+		remove_ideas = BUL_mobilization
+		add_stability = 0.1
+		random_owned_state = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 2
+		}
+	}
+}
+
+country_event = { #Our Punishment Upon Serbia
+	id = bul.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bul.8"}
+	title = bul.8.t
+	desc = bul.8.d
+	picture = x
+
+	is_triggered_only = yes
+
+	option = { #Demilitarize Serbia and never allow it to rebuild an army as long as we live. Also, force shipments of weapons.
+		name = bul.8.a
+		custom_effect_tooltip = BUL_force_weapons
+		add_war_support = -0.15
+		add_political_power = -80
+		every_state = {
+			limit = {
+				is_owned_by = SER
+			}
+			set_demilitarized_zone = yes
+		}
+		SER = {
+			add_ideas = SER_forbidden_army
+		}
+	}
+	
+	option = { # Allow an army entirely comprised of our soldiers (puppet)
+		name = bul.8.b
+		custom_effect_tooltip = BUL_puppet_SER
+		add_stability = -0.1
+		add_political_power = 50
+		add_manpower = -50000
+		puppet = SER
+		SER = {
+			set_global_flag = SER_bulgarian_protectorate
+			add_manpower = 50000
+			country_event = ser.unfinished
+		}
+	}
+}
+
+country_event = { #GRE - Repurchase of Veria?
+	id = bul.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bul.9"}
+	title = bul.9.t
+	desc = bul.9.d
+	picture = x
+
+	is_triggered_only = yes
+
+	option = { #We accept
+		name = bul.9.a
+		add_stability = 0.1
+		add_political_power = 50
+		transfer_state = 1076
+		add_ideas = BULGRE_payments
+		BUL = {
+			add_ideas = BULGRE_receiving_payments
+		}
+	}
+	
+	option = { # We can't do this
+		name = bul.9.b
+		add_political_power = -50
+	}
+}
+
 
 
 
@@ -381,5 +471,29 @@ country_event = { #The Bulgars Anew
 	option = { #Very based and redpilled
 		name = bul.404.a
 		add_political_power = 30
+	}
+}
+
+country_event = { #Debug event - make funny leader (bulgarist)
+	id = bul.405
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bul.1"}
+	title = bul.405.t
+	desc = bul.405.d
+	picture = x
+
+	is_triggered_only = yes
+
+	option = { #Very based and redpilled
+		name = bul.405.a
+		create_country_leader = {
+			name = "N.S. Derzhavin"
+			desc = "POLITICS_NS_DERZHAVIN_DESC"
+			picture = "BUL_NS_Derzhavin.tga"
+			expire = "1965.1.1"
+			ideology = paternal_autocrat_subtype
+			traits = {
+				
+			}
+		}
 	}
 }

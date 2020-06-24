@@ -89,10 +89,10 @@
   ##### KAISERREDUX SUPER EVENTS #####
   
   
-  GFX_SPEVNT_Illyrian_Collapse:0 "The Illyrian Nation has been Demolished"
+  GFX_SPEVNT_Illyrian_Collapse:0 "The Collapse of the Austro-Hungarian Empire"
   GFX_SPEVNT_Illyrian_Collapse_TEXT:0 "No one questioned who is a Serb, who is a Croat, who is a Muslim. We were all one people, that's how it was back then... \n §Y-Josip Broz Tito-§!"
-  GFX_SPEVNT_Illyrian_Collapse_REMARK:0 "The Powderkeg explodes again"
-  GFX_SPEVNT_Illyrian_Collapse_DESC:0 "The once proud nation of Illyria is no more. Fallen to strife between its vying ethnicities, the Bosnians, Serbs, and Montenegrins have declared wars against each other, namely the Croats, bringing the Illyrian nation its largest crisis. The newly-established Bosnia is itself on the brink of its own civil war, igniting the Balkan Peninsula in war once more. Gunfire rings throughout all of Illyria.\n\nThere shall be no more peacemaking, only incessant warfare..."
+  GFX_SPEVNT_Illyrian_Collapse_REMARK:0 "Another one bites the dust"
+  GFX_SPEVNT_Illyrian_Collapse_DESC:0 "The Austrian Empire has seen tough times recently, from the Napoleonic Wars to the Weltkrieg. Day by day, the Empire bravely and valiantly fought the ethnic tensions that simmered and brewed in the Empire, but their efforts are at last no more. Ethnicites all around the Empire prepare for freedom. Gunfire rings throughout all of the former Empire, and the fires burn...\n\nThere shall be no more peacemaking, only incessant warfare..."
   
   
   

@@ -2619,7 +2619,7 @@ focus = {
 			name = csa.127.t
 			bonus = 2
 			uses = 2
-			category = nuclear
+			category = jet_technology
 		}
 	}
 }
@@ -2647,8 +2647,7 @@ focus = {
 			name = csa.128.t
 			bonus = 2
 			uses = 2
-			category = jet_technology
-			
+			category = nuclear
 		}
 	}
 }
@@ -3379,6 +3378,8 @@ focus = {
 	available_if_capitulated = yes
 	
 	available = {
+		has_country_flag = NEE_REBELLION_READY
+		has_country_flag = NEE_WASHINGTON_MYTH
 		has_government = paternal_autocrat
 	}	
 	

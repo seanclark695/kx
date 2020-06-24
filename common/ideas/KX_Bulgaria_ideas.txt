@@ -266,6 +266,17 @@ ideas = {
 		}
 		
 		
+		BUL_vehement_protection = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_be_home_by_christmas"}
+			picture = great_depression
+			modifier = {
+				army_core_defence_factor = 0.1
+				planning_speed = 0.1
+				max_planning = 0.1
+			}
+		}
+		
+		
 		
 		
 		
@@ -469,5 +480,158 @@ ideas = {
 		}
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		BUL_bulgarisation_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_bulgarian_destiny"}
+			picture = great_depression
+			modifier = {
+				political_power_gain = -0.15
+				stability_weekly = 0.005
+			}
+		}
+		
+		BUL_bulgarisation_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_bulgarian_destiny"}
+			picture = great_depression
+			modifier = {
+				political_power_gain = -0.15
+				stability_weekly = 0.01
+				
+				compliance_gain = 0.1
+			}
+		}
+		
+		BUL_mosques = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_bulgarian_destiny"}
+			picture = great_depression
+			modifier = {
+				political_power_gain = 0.1
+				conscription_factor = 0.015
+				resistance_target = -0.1
+			}
+		}
+		
+		BUL_muslim_regiments = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_bulgarian_destiny"}
+			picture = great_depression
+			modifier = {
+				political_power_gain = 0.1
+				conscription_factor = 0.015
+				resistance_target = -0.1
+				
+				army_attack_factor = 0.05
+				recon_factor = 0.05
+				army_org_factor = 0.05
+				non_core_manpower = 0.01
+			}
+		}	
+		
+		BUL_gods_blessing = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_bulgarian_destiny"}
+			picture = great_depression
+			modifier = {
+				political_power_gain = 0.1
+				conscription_factor = 0.015
+				resistance_target = -0.1
+				
+				army_attack_factor = 0.05
+				army_speed_factor = 0.075
+			}
+		}
+		
+		
+		BUL_balkan_pensions = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_bulgarian_destiny"}
+			picture = great_depression
+			modifier = {
+				consumer_goods_factor = 0.03
+				stability_factor = 0.03
+			}
+		}
+		
+		
+		BUL_receiving_war_reparations = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_bulgarian_destiny"}
+			picture = great_depression
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		BUL_receiving_war_reparations_harsh = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_bulgarian_destiny"}
+			picture = great_depression
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		
+		BUL_undefeated = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_bulgarian_destiny"}
+			picture = great_depression
+			modifier = {
+				war_support_factor = -0.1
+				political_power_factor = 0.1
+				conscription = 0.01
+				industrial_capacity_factory = 0.05
+			}
+			research_bonus = {
+				land_doctrine = 0.1
+			}
+		}
+		
+		BULGRE_payments = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_bulgarian_destiny"}
+			picture = great_depression
+			modifier = {
+				consumer_goods_factor = 0.03
+			}
+		}
+		
+		BULGRE_receiving_payments = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_bulgarian_destiny"}
+			picture = great_depression
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		#### TEMP SERBIA IDEAS ####
+		
+		SER_forbidden_army = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_bulgarian_destiny"}
+			picture = great_depression
+			modifier = {
+				conscription = -1
+			}
+		}
 	}
 }

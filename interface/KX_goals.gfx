@@ -3487,16 +3487,242 @@ SpriteTypes = {
 	    name = "GFX_goal_SOV_totalist_propaganda"
 	    texturefile= "gfx/interface/goals/SOV_totalist_propaganda.dds"
 	}
-	spriteType = {
-		name = "GFX_goal_ALB_King_Cult"
-		texturefile = "gfx/interface/goals/goal_ALB_King_Cult.dds"
+	
+	
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_arsenal_ad"
+	    texturefile= "gfx/interface/goals/BUL_arsenal_ad.dds"
 	}
-	spriteType = {
-		name = "GFX_goal_ALB_Expanding_Albania"
-		texturefile = "gfx/interface/goals/goal_ALB_Expanding_Albania.dds"
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_automobile_industry"
+	    texturefile= "gfx/interface/goals/BUL_automobile_industry.dds"
 	}
-	spriteType = {
-		name = "GFX_goal_ALB_Kingdom"
-		texturefile = "gfx/interface/goals/goal_ALB_Kingdom.dds"
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_citizen_rifles"
+	    texturefile= "gfx/interface/goals/BUL_citizen_rifles.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_industrial_programs"
+	    texturefile= "gfx/interface/goals/BUL_industrial_programs.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_insurance"
+	    texturefile= "gfx/interface/goals/BUL_insurance.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_mechanize_farming"
+	    texturefile= "gfx/interface/goals/BUL_mechanize_farming.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_metropolis"
+	    texturefile= "gfx/interface/goals/BUL_metropolis.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_money_printing"
+	    texturefile= "gfx/interface/goals/BUL_money_printing.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_must_industrialize"
+	    texturefile= "gfx/interface/goals/BUL_must_industrialize.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_navibulgar"
+	    texturefile= "gfx/interface/goals/BUL_navibulgar.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_north_forts"
+	    texturefile= "gfx/interface/goals/BUL_north_forts.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_petrol_ad"
+	    texturefile= "gfx/interface/goals/BUL_petrol_ad.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_rectify_economic_mistakes"
+	    texturefile= "gfx/interface/goals/BUL_rectify_economic_mistakes.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_reopen_industry"
+	    texturefile= "gfx/interface/goals/BUL_reopen_industry.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_reorganize_pensions"
+	    texturefile= "gfx/interface/goals/BUL_reorganize_pensions.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_state_railways"
+	    texturefile= "gfx/interface/goals/BUL_state_railways.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_tackle_unemployment"
+	    texturefile= "gfx/interface/goals/BUL_tackle_unemployment.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_tech_institutes"
+	    texturefile= "gfx/interface/goals/BUL_tech_institutes.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_university_sofia"
+	    texturefile= "gfx/interface/goals/BUL_university_sofia.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_war_industry"
+	    texturefile= "gfx/interface/goals/BUL_war_industry.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_wildlife"
+	    texturefile= "gfx/interface/goals/BUL_wildlife.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_wisen_banking"
+	    texturefile= "gfx/interface/goals/BUL_wisen_banking.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_end_trade_war"
+	    texturefile= "gfx/interface/goals/BUL_end_trade_war.dds"
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	#### Bulgarist ####
+	
+	
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_atheism"
+	    texturefile= "gfx/interface/goals/BUL_atheism.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_bulgar_cossacks"
+	    texturefile= "gfx/interface/goals/BUL_bulgar_cossacks.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_bulgar_history"
+	    texturefile= "gfx/interface/goals/BUL_bulgar_history.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_bulgar_hordes"
+	    texturefile= "gfx/interface/goals/BUL_bulgar_hordes.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_bulgar_identity"
+	    texturefile= "gfx/interface/goals/BUL_bulgar_identity.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_bulgarist_ideas"
+	    texturefile= "gfx/interface/goals/BUL_bulgarist_ideas.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_claim_old_land"
+	    texturefile= "gfx/interface/goals/BUL_claim_old_land.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_eliminate_orthodoxy"
+	    texturefile= "gfx/interface/goals/BUL_eliminate_orthodoxy.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_european_tengri"
+	    texturefile= "gfx/interface/goals/BUL_european_tengri.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_field_medicine"
+	    texturefile= "gfx/interface/goals/BUL_field_medicine.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_first_khan"
+	    texturefile= "gfx/interface/goals/BUL_first_khan.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_great_bulgaria_land"
+	    texturefile= "gfx/interface/goals/BUL_great_bulgaria_land.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_incendiary_warfare"
+	    texturefile= "gfx/interface/goals/BUL_incendiary_warfare.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_intentions_of_restoration"
+	    texturefile= "gfx/interface/goals/BUL_intentions_of_restoration.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_kubrat_rebirth"
+	    texturefile= "gfx/interface/goals/BUL_kubrat_rebirth.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_modern_feudalism"
+	    texturefile= "gfx/interface/goals/BUL_modern_feudalism.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_raze_russia"
+	    texturefile= "gfx/interface/goals/BUL_raze_russia.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_restore_volga_bulgaria"
+	    texturefile= "gfx/interface/goals/BUL_restore_volga_bulgaria.dds"
+	}
+	SpriteType = {
+	    name = "GFX_goal_BUL_return_to_old_lands"
+	    texturefile= "gfx/interface/goals/BUL_return_to_old_lands.dds"
+	}
+	SpriteType = {
+	    name = "GFX_goal_BUL_slash_and_burn"
+	    texturefile= "gfx/interface/goals/BUL_slash_and_burn.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_valor_and_honor"
+	    texturefile= "gfx/interface/goals/BUL_valor_and_honor.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_goal_BUL_wrath_don_kuban"
+	    texturefile= "gfx/interface/goals/BUL_wrath_don_kuban.dds"
 	}
 }
