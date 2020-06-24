@@ -214,12 +214,7 @@ country_event = { # Yen Bai Mutiny
 	desc = Ostasien.6.d
 	picture = GFX_report_event_INC_vietunit
 
-	fire_only_once = yes
-
-	trigger = {
-		tag = GEA
-		date > 1936.6.10
-	}
+	is_triggered_only = yes
 
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event Ostasien.6"
@@ -229,13 +224,13 @@ country_event = { # Yen Bai Mutiny
 					id = Ostasien.7
 					days = 3
 				}
-				} # FRA ver.
+			} # FRA ver.
 			BHC = {
 				country_event = {
 					id = Ostasien.8
 					days = 3
 				}
-				} # BHC ver.
+			} # BHC ver.
 		}
 	}
 
@@ -261,12 +256,14 @@ country_event = { # Yen Bai Mutiny (FRA)
 	desc = Ostasien.7.d
 	picture = GFX_report_event_INC_vietunit
 
+	fire_only_once = yes
+	
 	is_triggered_only = yes
 
 	option = { # Bon voyage, Indochinese comrades!
 		name = Ostasien.7.a
 		ai_chance = {
-			factor = 100
+			factor = 80
 		}
 		add_political_power = -30
 		set_global_flag = INC_FRA_Help
@@ -274,7 +271,7 @@ country_event = { # Yen Bai Mutiny (FRA)
 	option = { # We are not modern Pigneau de Behaine.
 		name = Ostasien.7.b
 		ai_chance = {
-			factor = 0
+			factor = 20
 		}
 	}
 }
@@ -284,6 +281,8 @@ country_event = { # Yen Bai Mutiny (BHC)
 	title = Ostasien.8.t
 	desc = Ostasien.8.d
 	picture = GFX_report_event_INC_vietunit
+	
+	fire_only_once = yes
 
 	is_triggered_only = yes
 
@@ -392,12 +391,7 @@ country_event = { # Instability in Cochinchina
 	desc = Ostasien.12.d
 	picture = GFX_Siam_German_Economical_Dominance
 
-	fire_only_once = yes
-
-	trigger = {
-		tag = GEA
-		date > 1936.7.4
-	}
+	is_triggered_only = yes
 
 	option = { # I sense the calm before the storm
 		name = Ostasien.12.a

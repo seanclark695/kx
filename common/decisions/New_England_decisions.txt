@@ -362,7 +362,7 @@ NEE_reclaiming_america = {
 			NOT = { country_exists = CAL }
 			OR = {
 				NOT = { country_exists = USA }
-				USA = { not_has_elected_government = yes }
+				USA = { NOT = { has_elected_government = yes } }
 			}
 			NOT = {
 				has_country_flag = NEE_NOT_CLAIMED_TO_BE_AMERICA
@@ -1583,7 +1583,7 @@ NEE_Civil_War = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision NEE_secure_new_york"
-			remoce_ideas = NEE_civil_war_2
+			remove_ideas = NEE_civil_war_2
 		}
 	}
 }

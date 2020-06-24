@@ -1822,7 +1822,7 @@ LEC_influence_category = {
 			}
 			has_country_flag = AST_hong_kong
 			is_subject = no
-			not_has_socialist_government = yes
+			NOT = { has_socialist_government = yes }
 			NOT = { has_global_flag = AST_cannot_retake_hong_kong }
 			NOT = {
 				LEC = {
@@ -1868,7 +1868,7 @@ LEC_influence_category = {
 			}
 			has_country_flag = AST_hong_kong
 			is_subject = no
-			not_has_socialist_government = yes
+			NOT = { has_socialist_government = yes }
 			NOT = { has_global_flag = AST_cannot_retake_hong_kong }
 			NOT = {
 				LEC = {
@@ -1930,7 +1930,7 @@ LEC_influence_category = {
 				}
 			}
 			is_subject = no
-			not_has_socialist_government = yes
+			NOT = { has_socialist_government = yes }
 			NOT = { has_global_flag = AST_cannot_retake_hong_kong }
 		}
 		fire_only_once = yes
@@ -1980,7 +1980,7 @@ LEC_influence_category = {
 			}
 			has_country_flag = AST_hong_kong
 			is_subject = no
-			not_has_socialist_government = yes
+			NOT = { has_socialist_government = yes }
 			NOT = { has_global_flag = AST_cannot_retake_hong_kong }
 			NOT = {
 				LEC = {
@@ -2064,7 +2064,7 @@ LEC_influence_category = {
 				}
 			}
 			is_subject = no
-			not_has_socialist_government = yes
+			NOT = { has_socialist_government = yes }
 			event_target:LEC_has_british_vote = { tag = ROOT }
 			NOT = { has_global_flag = AST_cannot_retake_hong_kong }
 		}
@@ -2128,7 +2128,7 @@ LEC_influence_category = {
 			has_country_flag = legation_council_member
 			NOT = { has_country_flag = legation_council_vote }
 			is_subject = no
-			not_has_socialist_government = yes
+			NOT = { has_socialist_government = yes }
 			NOT = { has_global_flag = AST_cannot_retake_hong_kong }
 		}
 		fire_only_once = yes
@@ -4647,9 +4647,10 @@ LEC_france_fate_of_lec_category = {
 			remove_effect = {
 				log = "[GetDateText]: [Root.GetName]: Decision LEC_france_macao"
 				custom_effect_tooltip = LEC_decrease_opium_profit_2
-					add_to_variable = {
+				add_to_variable = {
 					var = LEC_Opium_Profit
 					value = -2
+					
 					}
 				random_owned_state = {
 					add_extra_state_shared_building_slots = 1

@@ -581,8 +581,10 @@ NEE_WASHINGTON_KINGDOM = {
 	color = rgb { 20 133 237 }
 	color_ui = rgb { 87 160 255 }
 }
-
-BUL_volga_bulgaria = {
-	color = rgb { 116  107  140}
-	color_ui = rgb { 116  107  140}
+SOV_tukhachevsky = {
+	color = rgb { 175 13 0 }
+	color_ui = rgb { 175 13 0 }
 }
+
+
+
