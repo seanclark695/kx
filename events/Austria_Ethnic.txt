@@ -3560,7 +3560,7 @@ country_event = { #Slovak revolt
 			SVK = {
 				load_oob = SVK_collapse_oob
 			}
-			set_country_flag = recent_slovak_revolt
+			set_global_flag = recent_slovak_revolt
 		}
 	}
 }
@@ -3847,7 +3847,7 @@ country_event = { #Transylvanian revolt
 			TRS = {
 				load_oob = TRS_collapse_oob
 			}
-			set_country_flag = recent_transylvanian_revolt
+			set_global_flag = recent_transylvanian_revolt
 		}
 	}
 }
@@ -3965,7 +3965,7 @@ country_event = { #Banatian revolt
 				id = revolt.203
 				days = 720
 			}
-			set_country_flag = recent_banat_revolt
+			set_global_flag = recent_banat_revolt
 		}
 	}
 }
@@ -4124,7 +4124,7 @@ country_event = { #Bosnian revolt
 				id = revolt.204
 				days = 720
 			}
-			set_country_flag = recent_bosnian_revolt
+			set_global_flag = recent_bosnian_revolt
 		}
 	}
 }
@@ -4249,7 +4249,7 @@ country_event = { #Srpska revolt
 				id = revolt.205
 				days = 720
 			}
-			set_country_flag = recent_serb_revolt
+			set_global_flag = recent_serb_revolt
 		}
 	}
 }
@@ -4346,7 +4346,7 @@ country_event = { #Montenegro revolt
 				id = revolt.206
 				days = 720
 			}
-			set_country_flag = recent_montenegrin_revolt
+			set_global_flag = recent_montenegrin_revolt
 		}
 	}
 }
@@ -4443,7 +4443,7 @@ country_event = { #Bukovina revolt
 				id = revolt.207
 				days = 720
 			}
-			set_country_flag = recent_bukovina_revolt
+			set_global_flag = recent_bukovina_revolt
 		}
 	}
 }
@@ -4540,7 +4540,7 @@ country_event = { #Carpatho-Ukraine revolt
 				id = revolt.208
 				days = 720
 			}
-			set_country_flag = recent_ruthenian_revolt
+			set_global_flag = recent_ruthenian_revolt
 		}
 	}
 }
@@ -7901,18 +7901,6 @@ country_event = { #Tick up Slovene counter by 0.1
 					has_global_flag = no_slovene_revolt
 					has_global_flag = no_more_collapse
 				}
-				OR = {
-					SLO = {
-						has_country_flag = wants_to_revolt
-						OR = {
-							is_puppet_of = AUS
-							is_puppet_of = HUN
-						}
-					}
-					NOT = {
-						country_exists = SLO
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -8011,18 +7999,6 @@ country_event = { #Tick up Slovak counter by 0.1
 					has_global_flag = recent_slovak_revolt
 					has_global_flag = no_slovak_revolt
 					has_global_flag = no_more_collapse
-				}
-				OR = {
-					SVK = {
-						has_country_flag = wants_to_revolt
-						OR = {
-							is_puppet_of = AUS
-							is_puppet_of = HUN
-						}
-					}
-					NOT = {
-						country_exists = SVK
-					}
 				}
 			}
 			if = {
@@ -8127,14 +8103,6 @@ country_event = { #Tick up Transylvanian counter by 0.1
 					has_global_flag = no_transylvanian_revolt
 					has_global_flag = no_more_collapse
 				}
-				OR = {
-					TRS = {
-						has_country_flag = wants_to_revolt
-					}
-					NOT = {
-						country_exists = TRS
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -8233,18 +8201,6 @@ country_event = { #Tick up Banatian counter by 0.1
 					has_global_flag = no_banat_revolt
 					has_global_flag = no_more_collapse
 				}
-				OR = {
-					BAN = {
-						has_country_flag = wants_to_revolt
-						OR = {
-							is_puppet_of = AUS
-							is_puppet_of = HUN
-						}
-					}
-					NOT = {
-						country_exists = BAN
-					}
-				}
 			}
 			country_event = revolt.13 #Banat Revolt
 			else_if = {
@@ -8327,18 +8283,6 @@ country_event = { #Tick up Bosnian counter by 0.1
 					has_global_flag = recent_bosnian_revolt
 					has_global_flag = no_bosnian_revolt
 					has_global_flag = no_more_collapse
-				}
-				OR = {
-					BOS = {
-						has_country_flag = wants_to_revolt
-						OR = {
-							is_puppet_of = AUS
-							is_puppet_of = CRO
-						}
-					}
-					NOT = {
-						country_exists = BOS
-					}
 				}
 			}
 			country_event = revolt.14 #Bosnian Revolt
@@ -8424,18 +8368,8 @@ country_event = { #Tick up Serb counter by 0.1
 					has_global_flag = no_serb_revolt
 					has_global_flag = no_more_collapse
 				}
-				OR = {
-					SKS = {
-						has_country_flag = wants_to_revolt
-						OR = {
-							is_puppet_of = AUS
-							is_puppet_of = CRO
-						}
-					}
-					NOT = {
-						country_exists = SKS
-					}
-					
+				NOT = {
+					country_exists = SKS
 				}
 			}
 			country_event = revolt.15 #Srpska Revolt
@@ -8520,18 +8454,6 @@ country_event = { #Tick up Montenegrin counter by 0.1
 					has_global_flag = no_montenegrin_revolt
 					has_global_flag = no_more_collapse
 				}
-				OR = {
-					MNT = {
-						has_country_flag = wants_to_revolt
-						OR = {
-							is_puppet_of = AUS
-							is_puppet_of = CRO
-						}
-					}
-					NOT = {
-						country_exists = MNT
-					}
-				}
 			}
 			country_event = revolt.16 #Montenegrin Revolt
 			else_if = {
@@ -8614,14 +8536,6 @@ country_event = { #Tick up Bukovina counter by 0.1
 					has_global_flag = recent_bukovina_revolt
 					has_global_flag = no_bukovina_revolt
 					has_global_flag = no_more_collapse
-				}
-				OR = {
-					BUK = {
-						has_country_flag = wants_to_revolt
-					}
-					NOT = {
-						country_exists = BUK
-					}
 				}
 			}
 			country_event = revolt.17 #Bukovina Revolt
