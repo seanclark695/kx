@@ -14,7 +14,11 @@ focus_tree = {
 		}
 	}
 	default = no
+<<<<<<< HEAD
 	continuous_focus_position = { x = 1100 y = 900 }
+=======
+	continuous_focus_position = { x = 4500 y = 1000 }
+>>>>>>> master
 
 	### Army Section ###
 	focus = {# Form the Western Defense Command
@@ -568,7 +572,11 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
+<<<<<<< HEAD
 				set_technology = { improved_recon_units_tech = 1 }
+=======
+				set_technology = { improved_recon_units_tech = 1 popup = no }
+>>>>>>> master
 			}
 			custom_effect_tooltip = improved_recon_units_tech_effect
 		}
@@ -818,7 +826,11 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
+<<<<<<< HEAD
 				set_technology = { expanded_engineer_corps_tech = 1 }
+=======
+				set_technology = { expanded_engineer_corps_tech = 1 popup = no }
+>>>>>>> master
 			}
 			custom_effect_tooltip = expanded_engineer_corps_tech_effect
 		}
@@ -1055,9 +1067,13 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_crossing_the_rockies"
 			custom_effect_tooltip = mountain_training_tech_effect
 			hidden_effect = {
+<<<<<<< HEAD
 				set_technology = {
 					mountain_training_tech = 1
 				}
+=======
+				set_technology = { mountain_training_tech = 1 popup = no }
+>>>>>>> master
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1085,7 +1101,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_gi_bill"
+<<<<<<< HEAD
 			add_research_slot = 1
+=======
+			CAL_add_research_slot = yes
+>>>>>>> master
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -1353,6 +1373,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_battle_ships"
+<<<<<<< HEAD
 			add_tech_bonus = {
 				name = CAL_battle_ships
 				bonus = 1
@@ -1361,6 +1382,26 @@ focus_tree = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
+=======
+			navy_experience = 30
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				add_tech_bonus = {
+					name = CAL_battle_ships
+					bonus = 0.75
+					uses = 2
+					category = cat_gunnery
+				}
+			}
+			add_tech_bonus = {
+				name = CAL_battle_ships
+				bonus = 1
+				uses = 1
+				category = bb_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_BONUS }
+>>>>>>> master
 	}
 
 	focus = {# Battle cruisers
@@ -1390,6 +1431,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_battle_cruisers"
+<<<<<<< HEAD
 			add_tech_bonus = {
 				name = CAL_battle_cruisers
 				bonus = 1
@@ -1398,6 +1440,35 @@ focus_tree = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
+=======
+			navy_experience = 25
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				add_tech_bonus = {
+					name = CAL_battle_cruisers
+					bonus = 0.75
+					uses = 2
+					category = cat_gunnery
+					category = cat_targeting
+				}
+				add_tech_bonus = {
+					name = CAL_battle_cruisers
+					bonus = 1
+					uses = 1
+					category = cr_tech
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = CAL_battle_cruisers
+					bonus = 1.25
+					uses = 1
+					category = acr_tech
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_BONUS }
+>>>>>>> master
 	}
 
 	focus = {# Coast Guard
@@ -1425,6 +1496,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_coast_guard"
+<<<<<<< HEAD
 			add_tech_bonus = {
 				name = CAL_coast_guard
 				bonus = 1
@@ -1433,6 +1505,27 @@ focus_tree = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
+=======
+			navy_experience = 10
+			if = {
+				add_tech_bonus = {
+					name = CAL_coast_guard
+					bonus = 1
+					uses = 2
+					category = dd_tech
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = CAL_coast_guard
+					bonus = 1.5
+					uses = 1
+					category = dd_tech
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_BONUS }
+>>>>>>> master
 	}
 
 	focus = {# Light Cruisers
@@ -1462,6 +1555,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_light_cruisers"
+<<<<<<< HEAD
 			add_tech_bonus = {
 				name = CAL_light_cruisers
 				bonus = 1
@@ -1470,6 +1564,35 @@ focus_tree = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
+=======
+			navy_experience = 25
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				add_tech_bonus = {
+					name = CAL_light_cruisers
+					bonus = 0.75
+					uses = 2
+					category = asw_tech
+					category = cat_anti_air
+				}
+				add_tech_bonus = {
+					name = CAL_light_cruisers
+					bonus = 1
+					uses = 1
+					category = cr_tech
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = CAL_light_cruisers
+					bonus = 1.25
+					uses = 1
+					category = cl_tech
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_BONUS }
+>>>>>>> master
 	}
 
 	focus = {# Naval Aviation
@@ -1497,14 +1620,24 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_naval_aviation"
+<<<<<<< HEAD
 			add_tech_bonus = {
 				name = CAL_naval_aviation
+=======
+			navy_experience = 20
+			add_tech_bonus = {
+				name = USA_naval_aviation
+>>>>>>> master
 				bonus = 1
 				uses = 2
 				category = naval_air
 			}
 		}
+<<<<<<< HEAD
 		search_filters = { FOCUS_FILTER_RESEARCH }
+=======
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_BONUS }
+>>>>>>> master
 	}
 
 	focus = {# Expand Dockyards
@@ -1540,7 +1673,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_expand_dockyards"
+<<<<<<< HEAD
 			navy_experience = 10
+=======
+>>>>>>> master
 			797 = {
 				if = {
 					limit = { is_owned_and_controlled_by = CAL }
@@ -1592,6 +1728,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_submarines"
+<<<<<<< HEAD
 			add_tech_bonus = {
 				name = CAL_submarines
 				bonus = 1
@@ -1600,6 +1737,34 @@ focus_tree = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
+=======
+			navy_experience = 10
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				add_tech_bonus = {
+					name = USA_submarines
+					bonus = 0.75
+					uses = 2
+					category = cat_torpedo
+				}
+				add_tech_bonus = {
+					name = USA_submarines
+					bonus = 1
+					uses = 1
+					category = ss_tech
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = USA_submarines
+					bonus = 1.5
+					uses = 1
+					category = ss_tech
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_BONUS }
+>>>>>>> master
 	}
 
 	focus = {# Liberty ships
@@ -1629,6 +1794,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_liberty_ships"
 			add_ideas = USA_liberty_ships_idea
 		}
+<<<<<<< HEAD
+=======
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_BONUS }
+>>>>>>> master
 	}
 
 	focus = {# Maritime Industry
@@ -1691,6 +1860,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_new_admirals"
+<<<<<<< HEAD
 			navy_experience = 10
 			add_tech_bonus = {
 				name = CAL_new_admirals
@@ -1700,11 +1870,78 @@ focus_tree = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_RESEARCH }
+=======
+			navy_experience = -10
+
+			create_navy_leader = {# Harry W. Hill
+				name = "Harry W. Hill"
+				desc = "CAL_HARRY_HILL_NAVY_DESC"
+				portrait_path = "gfx/leaders/CAL/Portrait_CAL_harry_hill.tga"
+				traits = {ironside chief_engineer}
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				maneuvering_skill = 3
+				coordination_skill = 3
+			}
+
+			create_navy_leader = {# Felix Stump
+				name = "Felix Stump"
+				desc = "CAL_FELIX_STUMP_NAVY_DESC"
+				portrait_path = "gfx/leaders/CAL/Portrait_CAL_felix_stump.tga"
+				traits = { air_controller }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 1
+				maneuvering_skill = 1
+				coordination_skill = 2
+			}
+
+			create_navy_leader = {# Harvey Overesch
+				name = "Harvey Overesch"
+				desc = "CAL_HARVEY_OVERESCH_NAVY_DESC"
+				portrait_path = "gfx/leaders/CAL/Portrait_CAL_harvey_overesch.tga"
+				traits = { bold }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 2
+				maneuvering_skill = 1
+				coordination_skill = 2
+			}
+
+			create_navy_leader = {# James H. Doyle
+				name = "James H. Doyle"
+				desc = "CAL_JAMES_DOYLE_NAVY_DESC"
+				portrait_path = "gfx/leaders/CAL/Portrait_CAL_james_doyle.tga"
+				traits = { }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 1
+				maneuvering_skill = 2
+				coordination_skill = 2
+			}
+			create_navy_leader = {# Lloyd M. Mustin - need to be deleted later, he is too young.
+				name = "Lloyd M. Mustin"
+				portrait_path = "gfx/leaders/CAL/Portrait_CAL_lloyd_mustin.tga"
+				traits = {}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				maneuvering_skill = 1
+				coordination_skill = 1
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+>>>>>>> master
 	}
 
 	focus = {# Expand the WAVEs
 		id = CAL_expand_the_waves
+<<<<<<< HEAD
 		icon = GFX_ITA_female_soldiers
+=======
+		icon = GFX_focus_generic_female_soldiers
+>>>>>>> master
 		cost = 8.00
 		prerequisite = {
 			focus = CAL_new_admirals
@@ -1727,6 +1964,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_expand_the_waves"
+<<<<<<< HEAD
 			navy_experience = 10
 			add_tech_bonus = {
 				name = CAL_expand_the_waves
@@ -1736,11 +1974,22 @@ focus_tree = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_RESEARCH }
+=======
+			add_ideas = USA_waves_idea
+			add_manpower = 60000
+			add_stability = -0.03
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_MANPOWER }
+>>>>>>> master
 	}
 
 	focus = {# Expand the Marine Corps
 		id = CAL_expand_marine_corps
+<<<<<<< HEAD
 		icon = GFX_goal_USA_usmc
+=======
+		icon = GFX_goal_generic_amphibious_assault
+>>>>>>> master
 		cost = 8.00
 		prerequisite = {
 			focus = CAL_naval_aviation
@@ -1803,13 +2052,27 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_naval_training"
+<<<<<<< HEAD
 			add_ideas = USA_naval_training_idea
 		}
+=======
+			add_ideas = USA_USMC_1
+			custom_effect_tooltip = tech_marine_bonus_effect
+			hidden_effect = {
+				set_technology = { tech_marine_bonus = 1 popup = no }
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+>>>>>>> master
 	}
 
 	focus = {# Urban Warfare
 		id = CAL_urban_warfare
+<<<<<<< HEAD
 		icon = GFX_SIA_Urban_Warfare_NF
+=======
+		icon = GFX_goal_conscription
+>>>>>>> master
 		cost = 8.00
 		prerequisite = {
 			focus = CAL_expand_marine_corps
@@ -1835,8 +2098,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_urban_warfare"
+<<<<<<< HEAD
 			add_ideas = USA_large_marine_corps
 		}
+=======
+			add_ideas = USA_USMC_2
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+>>>>>>> master
 	}
 
 	focus = {# Sempre Fi
@@ -1865,6 +2134,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_sempre_fi"
+<<<<<<< HEAD
 			add_tech_bonus = {
 				name = CAL_sempre_fi
 				bonus = 1
@@ -1873,6 +2143,38 @@ focus_tree = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
+=======
+			if = {
+				limit = { has_completed_focus = USA_urban_warfare }
+				swap_ideas = {
+					remove_idea = USA_USMC_2
+					add_idea = USA_USMC_3
+				}
+			}
+			else_if = {
+				limit = { has_completed_focus = USA_naval_training }
+				custom_effect_tooltip = USA_tech_marine_bonus_2_effect
+				hidden_effect = {
+					set_technology = { tech_marine_bonus_2 = 1 popup = no }
+				}
+			}
+			else = {
+				custom_effect_tooltip = USA_semper_fi_expand_marine_corps
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = USA_USMC_2
+						add_idea = USA_USMC_3
+					}
+				}
+				custom_effect_tooltip = USA_semper_fi_naval_training
+				custom_effect_tooltip = USA_tech_marine_bonus_2_effect
+			}
+			hidden_effect = {
+				country_event = { id = ustates.611 days = 15 }
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+>>>>>>> master
 	}
 
 	focus = {# Columbia, Gem of the Ocean
@@ -1889,6 +2191,15 @@ focus_tree = {
 			focus = CAL_sempre_fi
 		}
 		available = {
+<<<<<<< HEAD
+=======
+			has_navy_size = {
+				type = capital_ship
+				size > 99
+			}
+		}
+		available = {
+>>>>>>> master
 			any_owned_state = {
 				is_coastal = yes
 				is_controlled_by = ROOT
@@ -1906,6 +2217,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_columbia_gem_of_the_ocean"
+<<<<<<< HEAD
 			navy_experience = 10
 			add_tech_bonus = {
 				name = CAL_columbia_gem_of_the_ocean
@@ -1913,6 +2225,10 @@ focus_tree = {
 				uses = 1
 				category = naval_doctrine
 			}
+=======
+			navy_experience = 50
+			add_ideas = USA_Rules_the_waves_idea
+>>>>>>> master
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_RESEARCH }
 	}
@@ -2240,7 +2556,11 @@ focus_tree = {
 
 	focus = {# Expand the WASPs
 		id = CAL_expand_wasps
+<<<<<<< HEAD
 		icon = GFX_ITA_female_soldiers
+=======
+		icon = GFX_focus_generic_female_pilots
+>>>>>>> master
 		cost = 8.00
 		prerequisite = {
 			focus = CAL_bombers
@@ -2399,7 +2719,10 @@ focus_tree = {
 			factor = 5
 		}
 		available_if_capitulated = yes
+<<<<<<< HEAD
 		cancel_if_invalid = yes
+=======
+>>>>>>> master
 		relative_position_id = CAL_last_bastion
 		x = -11
 		y = 1
@@ -2607,6 +2930,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_public_schooling"
+<<<<<<< HEAD
 			if = {
 				limit = {
 					NOT = { has_country_flag = CAL_gained_last_tech_slot }
@@ -2614,6 +2938,9 @@ focus_tree = {
 				set_country_flag = CAL_gained_last_tech_slot
 				add_research_slot = 1
 			}
+=======
+			CAL_add_research_slot = yes
+>>>>>>> master
 			custom_effect_tooltip = USA_political_recovery_tooltip
 			USA_increase_recovery = yes
 		}
@@ -3295,6 +3622,7 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_education_philanthropy"
+<<<<<<< HEAD
 			if = {
 				limit = {
 					NOT = { has_country_flag = CAL_gained_last_tech_slot }
@@ -3302,6 +3630,9 @@ focus_tree = {
 				set_country_flag = CAL_gained_last_tech_slot
 				add_research_slot = 1
 			}
+=======
+			CAL_add_research_slot = yes
+>>>>>>> master
 			add_ideas = CAL_education_philanthropy_idea
 			custom_effect_tooltip = USA_political_recovery_tooltip
 			USA_increase_recovery = yes
@@ -3664,6 +3995,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_chautauqua"
 			add_ideas = CAL_chautauqua_idea
+<<<<<<< HEAD
 			if = {
 				limit = {
 					NOT = { has_country_flag = CAL_gained_last_tech_slot }
@@ -3671,6 +4003,9 @@ focus_tree = {
 				set_country_flag = CAL_gained_last_tech_slot
 				add_research_slot = 1
 			}
+=======
+			CAL_add_research_slot = yes
+>>>>>>> master
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 	}
@@ -4022,6 +4357,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_national_youth_adminstration"
+<<<<<<< HEAD
 			if = {
 				limit = {
 					NOT = { has_country_flag = CAL_gained_last_tech_slot }
@@ -4029,6 +4365,9 @@ focus_tree = {
 				set_country_flag = CAL_gained_last_tech_slot
 				add_research_slot = 1
 			}
+=======
+			CAL_add_research_slot = yes
+>>>>>>> master
 			custom_effect_tooltip = USA_political_recovery_tooltip
 			USA_increase_recovery = yes
 		}
@@ -4469,9 +4808,12 @@ focus_tree = {
 			}
 		}
 
+<<<<<<< HEAD
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 
+=======
+>>>>>>> master
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_back_in_business"
 			add_political_power = 100
@@ -4519,9 +4861,12 @@ focus_tree = {
 			}
 		}
 
+<<<<<<< HEAD
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 
+=======
+>>>>>>> master
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_enter_the_fray"
 			add_political_power = 100
@@ -4548,6 +4893,7 @@ focus_tree = {
 			factor = 1
 		}
 
+<<<<<<< HEAD
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 
@@ -4559,6 +4905,13 @@ focus_tree = {
 			add_ideas = USA_arsenal_of_democracy_idea
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_AIRFORCE_BONUS }
+=======
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_arsenal_of_democracy"
+			add_ideas = USA_arsenal_of_democracy_idea
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_AIRFORCE_BONUS FOCUS_FILTER_INDUSTRY}
+>>>>>>> master
 	}
 
 	focus = {
@@ -4585,6 +4938,7 @@ focus_tree = {
 			factor = 1
 		}
 
+<<<<<<< HEAD
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 
@@ -4596,6 +4950,31 @@ focus_tree = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_NAVY_BONUS }
+=======
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_longer_reach"
+			hidden_effect = {
+			if = {
+				limit = { has_completed_focus = CAL_on_the_beach }
+				swap_ideas = {
+					remove_idea = USA_arsenal_of_democracy_idea_3
+					add_idea = USA_arsenal_of_democracy_idea_4
+				}
+			}
+			else_if = {
+				limit = {
+				NOT = { has_completed_focus = CAL_on_the_beach }
+				}
+				swap_ideas = {
+					remove_idea = USA_arsenal_of_democracy_idea
+					add_idea = USA_arsenal_of_democracy_idea_2
+				}
+			}
+		}
+			custom_effect_tooltip = USA_arsenal_of_democracy_effect_1_tooltip
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+>>>>>>> master
 	}
 
 	focus = {
@@ -4622,12 +5001,42 @@ focus_tree = {
 			factor = 1
 		}
 
+<<<<<<< HEAD
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_on_the_beach"
 			add_ideas = USA_on_the_beach_idea
+=======
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_on_the_beach"
+			hidden_effect = {
+			if = {
+				limit = { has_completed_focus = CAL_longer_reach }
+				swap_ideas = {
+					remove_idea = USA_arsenal_of_democracy_idea_2
+					add_idea = USA_arsenal_of_democracy_idea_4
+				}
+			}
+			else_if = {
+				limit = {
+				NOT = { has_completed_focus = CAL_longer_reach }
+				}
+				swap_ideas = {
+					remove_idea = USA_arsenal_of_democracy_idea
+					add_idea = USA_arsenal_of_democracy_idea_3
+				}
+			}
+		}
+			custom_effect_tooltip = USA_arsenal_of_democracy_effect_2_tooltip
+			add_tech_bonus = {
+				name = CAL_on_the_beach
+				bonus = 0.5
+				uses = 1
+				category = tp_tech
+			}
+>>>>>>> master
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_ARMY_BONUS }
 	}
@@ -4653,9 +5062,12 @@ focus_tree = {
 			factor = 1
 		}
 
+<<<<<<< HEAD
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 
+=======
+>>>>>>> master
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_working_with_allies"
 			custom_effect_tooltip = USA_may_send_advisors
@@ -4681,9 +5093,12 @@ focus_tree = {
 			factor = 10
 		}
 
+<<<<<<< HEAD
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 
+=======
+>>>>>>> master
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_american_century"
 			add_political_power = 200
@@ -4724,9 +5139,12 @@ focus_tree = {
 			}
 		}
 
+<<<<<<< HEAD
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 
+=======
+>>>>>>> master
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_fortress_america"
 			add_war_support = -0.10
@@ -4753,9 +5171,12 @@ focus_tree = {
 			factor = 1
 		}
 
+<<<<<<< HEAD
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 
+=======
+>>>>>>> master
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_man_the_walls"
 			swap_ideas = {
@@ -4785,9 +5206,12 @@ focus_tree = {
 			factor = 1
 		}
 
+<<<<<<< HEAD
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 
+=======
+>>>>>>> master
 		bypass = {
 			is_in_faction = yes
 		}
@@ -4817,9 +5241,12 @@ focus_tree = {
 			factor = 1
 		}
 
+<<<<<<< HEAD
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 
+=======
+>>>>>>> master
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_look_inward"
 			add_stability = 0.10
@@ -4849,9 +5276,12 @@ focus_tree = {
 			factor = 1
 		}
 
+<<<<<<< HEAD
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 
+=======
+>>>>>>> master
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_leap_forward"
 			swap_ideas = {
@@ -4881,9 +5311,12 @@ focus_tree = {
 			factor = 1
 		}
 
+<<<<<<< HEAD
 		available_if_capitulated = no
 		cancel_if_invalid = yes
 
+=======
+>>>>>>> master
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_peace_at_last"
 			add_political_power = 200
@@ -4891,4 +5324,1415 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 }
+<<<<<<< HEAD
+=======
+focus_tree = {
+	id = PSA_KX
+	country = {
+		factor = 0
+		modifier = {
+			add = 0
+			tag = CAL
+		}
+	}
+	focus = {
+		id = CAL_nation_of_visionaries
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		available = {	
+			always = no
+		}
+		
+		x = 6
+		y = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+	focus = {
+		id = CAL_the_house_always_wins
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_nation_of_visionaries
+		prerequisite = {
+			focus = CAL_nation_of_visionaries
+		}
+		available = {
+			has_country_leader = {
+				name = "Howard Hughes"
+				ruling_only = yes
+			}
+		}
+		bypass = {
+			has_country_leader = {
+				name = "Howard Hughes"
+				ruling_only = yes
+			}
+		}
+		mutually_exclusive = {
+			focus = CAL_benevolence_and_progress
+		}
+		x = -7
+		y = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_the_house_always_wins"
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = CAL_securing_the_strip
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_the_house_always_wins
+		prerequisite = {
+			focus = CAL_the_house_always_wins
+		}
+		x = -2
+		y = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+			add_state_core = 379
+			country_event = KX_california.13
+		}
+	}
+	focus = {
+		id = CAL_council_of_buisnessmen
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_the_house_always_wins
+		prerequisite = {
+			focus = CAL_the_house_always_wins
+		}
+		x = 2
+		y = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_acheiving_prosperity
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_the_house_always_wins
+		prerequisite = {
+			focus = CAL_the_house_always_wins
+		}
+		x = 0
+		y = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_money_money_money
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_the_house_always_wins
+		prerequisite = {
+			focus = CAL_acheiving_prosperity
+		}
+		x = -1
+		y = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_take_to_the_skies
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_the_house_always_wins
+		prerequisite = {
+			focus = CAL_acheiving_prosperity
+		}
+		x = 1
+		y = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_prosperity_at_all_costs
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_the_house_always_wins
+		prerequisite = {
+			focus = CAL_money_money_money
+		}
+		prerequisite = {
+			focus = CAL_take_to_the_skies
+		}
+		x = 0
+		y = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_a_brand_new_vegas
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_the_house_always_wins
+		prerequisite = {
+			focus = CAL_securing_the_strip
+		}
+		x = -2
+		y = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_new_propaganda_machine
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_the_house_always_wins
+		prerequisite = {
+			focus = CAL_council_of_buisnessmen
+		}
+		x = 2
+		y = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_a_dictarorship_of_wealth
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_the_house_always_wins
+		prerequisite = {
+			focus = CAL_new_propaganda_machine
+		}
+		prerequisite = {
+			focus = CAL_a_brand_new_vegas
+		}
+		prerequisite = {
+			focus = CAL_prosperity_at_all_costs
+		}
+		x = 0
+		y = 4
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_benevolence_and_progress
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_nation_of_visionaries
+		prerequisite = {
+			focus = CAL_nation_of_visionaries
+		}
+		available = {
+			has_country_leader = {
+				name = "Walt Disney"
+				ruling_only = yes
+			}
+		}
+		bypass = {
+			has_country_leader = {
+				name = "Walt Disney"
+				ruling_only = yes
+			}
+		}
+		mutually_exclusive = {
+			focus = CAL_the_house_always_wins
+		}
+		x = 7
+		y = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_california_dreaming
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_benevolence_and_progress
+		prerequisite = {
+			focus = CAL_benevolence_and_progress
+		}
+		x = 0
+		y = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_connecting_the_pacific
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_benevolence_and_progress
+		prerequisite = {
+			focus = CAL_benevolence_and_progress
+		}
+		x = -2
+		y = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_disney_paramilitary
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_benevolence_and_progress
+		prerequisite = {
+			focus = CAL_benevolence_and_progress
+		}
+		x = 2
+		y = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_pacific_vineyards
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_benevolence_and_progress
+		prerequisite = {
+			focus = CAL_california_dreaming
+		}
+		x = -1
+		y = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_atomic_age
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_benevolence_and_progress
+		prerequisite = {
+			focus = CAL_california_dreaming
+		}
+		x = 1
+		y = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_mass_public_works
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_benevolence_and_progress
+		prerequisite = {
+			focus = CAL_connecting_the_pacific
+		}
+		x = -2
+		y = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_art_of_propaganda
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_benevolence_and_progress
+		prerequisite = {
+			focus = CAL_disney_paramilitary
+		}
+		x = 2
+		y = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_epcot_progect
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_benevolence_and_progress
+		prerequisite = {
+			focus = CAL_atomic_age
+		}
+		prerequisite = {
+			focus = CAL_pacific_vineyards
+		}
+		x = 0
+		y = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_disney_a_man_of_myth_and_legend
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_benevolence_and_progress
+		prerequisite = {
+			focus = CAL_art_of_propaganda
+		}
+		prerequisite = {
+			focus = CAL_epcot_progect
+		}
+		prerequisite = {
+			focus = CAL_mass_public_works
+		}
+		x = 0
+		y = 4
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_limit_the_executives_power
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_nation_of_visionaries
+		prerequisite = {
+			focus = CAL_benevolence_and_progress
+			focus = CAL_the_house_always_wins
+		}
+		available = {
+			has_country_leader = {
+				name = "Howard Hughes"
+				ruling_only = yes
+			}
+		}
+		mutually_exclusive = {
+			focus = CAL_break_the_executives_chains
+		}
+		x = -2
+		y = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_keep_him_in_vegas
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		available = {
+			has_completed_focus = CAL_a_brand_new_vegas
+		}
+		relative_position_id = CAL_limit_the_executives_power
+		prerequisite = {
+			focus = CAL_limit_the_executives_power
+		}
+		x = -1
+		y = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_delegate_authority
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_limit_the_executives_power
+		prerequisite = {
+			focus = CAL_limit_the_executives_power
+		}
+		x = 1
+		y = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_empower_the_council
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_limit_the_executives_power
+		prerequisite = {
+			focus = CAL_delegate_authority
+		}
+		prerequisite = {
+			focus = CAL_keep_him_in_vegas
+		}
+		available = {
+			has_completed_focus = CAL_council_of_buisnessmen
+		}
+		x = 0
+		y = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_the_shadow_president
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_limit_the_executives_power
+		prerequisite = {
+			focus = CAL_empower_the_council
+		}
+		x = 0
+		y = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+			country_event = { 
+				id = KX_california.16
+				days = 21
+			}
+		}
+	}
+	focus = {
+		id = CAL_break_the_executives_chains
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_nation_of_visionaries
+		prerequisite = {
+			focus = CAL_benevolence_and_progress
+			focus = CAL_the_house_always_wins
+		}
+		mutually_exclusive = {
+			focus = CAL_limit_the_executives_power
+		}
+		x = 2
+		y = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_scapegoat_reds
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_break_the_executives_chains
+		prerequisite = {
+			focus = CAL_break_the_executives_chains
+		}
+		x = -1
+		y = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_empower_the_executive_office
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_break_the_executives_chains
+		prerequisite = {
+			focus = CAL_break_the_executives_chains
+		}
+		x = 1
+		y = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_sideline_the_senate
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_break_the_executives_chains
+		prerequisite = {
+			focus = CAL_scapegoat_reds
+		}
+		prerequisite = {
+			focus = CAL_empower_the_executive_office
+		}
+		x = 0
+		y = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	focus = {
+		id = CAL_rule_by_drcree
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 8.00
+		
+		relative_position_id = CAL_break_the_executives_chains
+		prerequisite = {
+			focus = CAL_sideline_the_senate
+		}
+		x = 0
+		y = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_nation_of_visionaries"
+		
+		}
+	}
+	#Focus for Pacific Prosperity!
+	focus = {
+		id = CAL_pacific_prosperity
+		icon = GFX_goal_generic_political_pressure
+		x = 20
+		y = 7
+		available = {
+			has_country_leader = {
+				name = "John F. Aiso"
+				ruling_only = yes
+			}
+		}
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Working With The Japanese Market
+	focus = {
+		id = CAL_working_with_the_japanese_market
+		icon = GFX_focus_jap_pacific_guardian
+		relative_position_id = CAL_pacific_prosperity
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = CAL_pacific_prosperity
+		}
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Cultural Exchange
+	focus = {
+		id = CAL_cultural_exchange
+		icon = GFX_focus_smiling_buddha
+		relative_position_id = CAL_pacific_prosperity
+		x = -2
+		y = 2
+		prerequisite = {
+			focus = CAL_working_with_the_japanese_market
+		}
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Cultural Collaboration
+	focus = {
+		id = CAL_cultural_collaboration
+		icon = GFX_goal_generic_radar
+		relative_position_id = CAL_pacific_prosperity
+		x = 2
+		y = 2
+		prerequisite = {
+			focus = CAL_working_with_the_japanese_market
+		}
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Pacific Trade Fleet
+	focus = {
+		id = CAL_pacific_trade_fleet
+		icon = GFX_goal_generic_construct_naval_dockyard
+		relative_position_id = CAL_pacific_prosperity
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = CAL_working_with_the_japanese_market
+		}
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Reverse the Ozawa Case Ruling
+	focus = {
+		id = CAL_reverse_the_ozawa_case_ruling
+		icon = GFX_goal_unknown
+		relative_position_id = CAL_pacific_prosperity
+		prerequisite = {
+			focus = CAL_pacific_trade_fleet
+		}
+		prerequisite = {
+			focus = CAL_cultural_collaboration
+		}
+		prerequisite = {
+			focus = CAL_cultural_exchange
+		}
+		x = -2
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Removing Asian Immigration Quotas
+	focus = {
+		id = CAL_removing_asian_immigration_quotas
+		icon = GFX_goal_unknown
+		relative_position_id = CAL_pacific_prosperity
+		prerequisite = {
+			focus = CAL_pacific_trade_fleet
+		}
+		prerequisite = {
+			focus = CAL_cultural_collaboration
+		}
+		prerequisite = {
+			focus = CAL_cultural_exchange
+		}
+		x = 0
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Crush the Asiatic Exclusion League
+	focus = {
+		id = CAL_crush_the_asiatic_exclusion_league
+		icon = GFX_goal_unknown
+		relative_position_id = CAL_pacific_prosperity
+		prerequisite = {
+			focus = CAL_pacific_trade_fleet
+		}
+		prerequisite = {
+			focus = CAL_cultural_collaboration
+		}
+		prerequisite = {
+			focus = CAL_cultural_exchange
+		}
+		x = 2
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Aiso the American
+	focus = {
+		id = CAL_aiso_the_american
+		icon = GFX_goal_unknown
+		relative_position_id = CAL_pacific_prosperity
+		prerequisite = {
+			focus = CAL_crush_the_asiatic_exclusion_league
+		}
+		prerequisite = {
+			focus = CAL_removing_asian_immigration_quotas
+		}
+		prerequisite = {
+			focus = CAL_reverse_the_ozawa_case_ruling
+		}
+		x = 2
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = CAL_stranger_in_a_strange_land }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for The Yamagatan Candidate
+	focus = {
+		id = CAL_the_yamagatan_candidate
+		icon = GFX_goal_unknown
+		relative_position_id = CAL_pacific_prosperity
+		prerequisite = {
+			focus = CAL_crush_the_asiatic_exclusion_league
+		}
+		prerequisite = {
+			focus = CAL_removing_asian_immigration_quotas
+		}
+		prerequisite = {
+			focus = CAL_reverse_the_ozawa_case_ruling
+		}
+		x = -2
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = CAL_stranger_in_a_strange_land }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Stranger in a Strange Land
+	focus = {
+		id = CAL_stranger_in_a_strange_land
+		icon = GFX_goal_unknown
+		relative_position_id = CAL_pacific_prosperity
+		prerequisite = {
+			focus = CAL_crush_the_asiatic_exclusion_league
+		}
+		prerequisite = {
+			focus = CAL_removing_asian_immigration_quotas
+		}
+		prerequisite = {
+			focus = CAL_reverse_the_ozawa_case_ruling
+		}
+		x = 0
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		mutually_exclusive = { 
+			focus = CAL_aiso_the_american 
+		}
+		mutually_exclusive = { 
+			focus = CAL_the_yamagatan_candidate 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Expand Japanese Immigration
+	focus = {
+		id = CAL_expand_japanese_immigration
+		icon = GFX_focus_generic_military_academy
+		prerequisite = {
+			focus = CAL_the_yamagatan_candidate
+			focus = CAL_stranger_in_a_strange_land
+			focus = CAL_aiso_the_american
+		}
+		relative_position_id = CAL_pacific_prosperity
+		x = 0
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for An Imperial Satellite
+	focus = {
+		id = CAL_an_imperial_satellite
+		icon = GFX_focus_jap_showa_restoration
+		relative_position_id = CAL_pacific_prosperity
+		x = 0
+		y = 6
+		prerequisite = {
+			focus = CAL_expand_japanese_immigration
+		}
+		cost = 10
+		available_if_capitulated = yes
+		mutually_exclusive = { 
+			focus = CAL_begin_integration 
+		}
+		mutually_exclusive = { 
+			focus = CAL_partners_in_prosperity 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Begin Integration
+	focus = {
+		id = CAL_begin_integration
+		icon = GFX_focus_jap_spiritual_mobilization
+		relative_position_id = CAL_pacific_prosperity
+		x = -2
+		y = 6
+		prerequisite = {
+			focus = CAL_expand_japanese_immigration
+		}
+		cost = 10
+		available_if_capitulated = yes
+		mutually_exclusive = { 
+			focus = CAL_an_imperial_satellite 
+		}
+		mutually_exclusive = { 
+			focus = CAL_partners_in_prosperity
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Partners in Prosperity
+	focus = {
+		id = CAL_partners_in_prosperity
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		relative_position_id = CAL_pacific_prosperity
+		x = 2
+		y = 6
+		prerequisite = {
+			focus = CAL_expand_japanese_immigration
+		}
+		cost = 10
+		available_if_capitulated = yes
+		mutually_exclusive = { 
+			focus = CAL_an_imperial_satellite 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = CAL_Norton_Restoration
+		icon = GFX_goal_ideology_authoritarian_democrat
+		x = 27
+		y = 7
+		available = {
+			always = no
+		}
+		bypass = {
+			has_country_flag = CAL_Empire
+		}
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = CAL_Remove_Naysayers
+		icon = GFX_goal_ideology_authoritarian_democrat
+		relative_position_id = CAL_Norton_Restoration
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = CAL_Norton_Restoration
+		}
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.15
+			}
+		}
+	}
+	focus = {
+		id = CAL_Discard_Republicanism
+		icon = GFX_goal_ideology_authoritarian_democrat
+		relative_position_id = CAL_Norton_Restoration
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = CAL_Norton_Restoration
+		}
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = market_liberal
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = -0.15
+			}
+		}
+	}
+	focus = {
+		id = CAL_Crown_Norton_II
+		icon = GFX_goal_ideology_authoritarian_democrat
+		relative_position_id = CAL_Norton_Restoration
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = CAL_Discard_Republicanism
+		}
+		prerequisite = {
+			focus = CAL_Remove_Naysayers
+		}
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = CAL_Norton_will_be_Crowned
+			hidden_effect = {
+				create_country_leader = {
+					name = "Norton II"
+					desc = "POLITICS_CAL_NORTON_II_DESC"
+					picture = "Portrait_CAL_Norton_II.tga"
+					expire = "1965.1.1"
+					ideology = social_democrat_subtype
+					traits = {
+					}
+				}
+				create_country_leader = {
+					name = "Norton II"
+					desc = "POLITICS_CAL_NORTON_II_DESC"
+					picture = "Portrait_CAL_Norton_II.tga"
+					expire = "1965.1.1"
+					ideology = social_liberal_subtype
+					traits = {
+					}
+				}
+				create_country_leader = {
+					name = "Norton II"
+					desc = "POLITICS_CAL_NORTON_II_DESC"
+					picture = "Portrait_CAL_Norton_II.tga"
+					expire = "1965.1.1"
+					ideology = market_liberal_subtype
+					traits = {
+					}
+				}
+				create_country_leader = {
+					name = "Norton II"
+					desc = "POLITICS_CAL_NORTON_II_DESC"
+					picture = "Portrait_CAL_Norton_II.tga"
+					expire = "1965.1.1"
+					ideology = social_conservative_subtype
+					traits = {
+					}
+				}
+				create_country_leader = {
+					name = "Norton II"
+					desc = "POLITICS_CAL_NORTON_II_DESC"
+					picture = "Portrait_CAL_Norton_II.tga"
+					expire = "1965.1.1"
+					ideology = authoritarian_democrat_subtype
+					traits = {
+					}
+				}
+				create_country_leader = {
+					name = "Norton II"
+					desc = "POLITICS_CAL_NORTON_II_DESC"
+					picture = "Portrait_CAL_Norton_II.tga"
+					expire = "1965.1.1"
+					ideology = paternal_autocrat_subtype
+					traits = {
+					}
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					long_name = "Royalist Party"
+					name = "Royalist Party"
+				}
+			}
+		}
+	}
+	focus = {
+		id = CAL_Restructure_Govt
+		icon = GFX_goal_ideology_authoritarian_democrat
+		relative_position_id = CAL_Norton_Restoration
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = CAL_Crown_Norton_II
+		}
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = CAL_Constitutional_Monarchy
+		icon = GFX_goal_ideology_authoritarian_democrat
+		relative_position_id = CAL_Norton_Restoration
+		x = -1
+		y = 4
+		prerequisite = {
+			focus = CAL_Restructure_Govt
+		}
+		mutually_exclusive = {
+			focus = CAL_Absolutism
+		}
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = KX_california.14
+		}
+	}
+	focus = {
+		id = CAL_Absolutism
+		icon = GFX_goal_ideology_authoritarian_democrat
+		relative_position_id = CAL_Norton_Restoration
+		x = 1
+		y = 4
+		prerequisite = {
+			focus = CAL_Restructure_Govt
+		}
+		mutually_exclusive = {
+			focus = CAL_Constitutional_Monarchy
+		}
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = KX_california.15
+		}
+	}
+	focus = {
+		id = CAL_True_Pacific_Empire
+		icon = GFX_goal_ideology_authoritarian_democrat
+		relative_position_id = CAL_Norton_Restoration
+		x = 0
+		y = 5
+		prerequisite = {
+			focus = CAL_Absolutism
+			focus = CAL_Constitutional_Monarchy
+		}
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_cosmetic_tag = CAL_EMPIRE
+		}
+	}
+	focus = {
+		id = CAL_Honor_Norton_I
+		icon = GFX_goal_ideology_authoritarian_democrat
+		relative_position_id = CAL_Norton_Restoration
+		x = -2
+		y = 3
+		prerequisite = {
+			focus = CAL_Crown_Norton_II
+		}
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = CAL_All_For_The_King
+		icon = GFX_goal_ideology_authoritarian_democrat
+		relative_position_id = CAL_Norton_Restoration
+		x = -2
+		y = 5
+		prerequisite = {
+			focus = CAL_Honor_Norton_I
+		}
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = CAL_Hand_Out_Royal_Titles
+		icon = GFX_goal_ideology_authoritarian_democrat
+		relative_position_id = CAL_Norton_Restoration
+		x = 2
+		y = 3
+		prerequisite = {
+			focus = CAL_Crown_Norton_II
+		}
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = CAL_Protect_Mexico
+		icon = GFX_goal_ideology_authoritarian_democrat
+		relative_position_id = CAL_Norton_Restoration
+		x = 2
+		y = 5
+		prerequisite = {
+			focus = CAL_Hand_Out_Royal_Titles
+		}
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = CAL_Greater_California
+		icon = GFX_goal_ideology_authoritarian_democrat
+		relative_position_id = CAL_Norton_Restoration
+		x = 1
+		y = 6
+		prerequisite = {
+			focus = CAL_Protect_Mexico
+		}
+		prerequisite = {
+			focus = CAL_All_For_The_King
+		}
+		prerequisite = {
+			focus = CAL_True_Pacific_Empire
+		}
+		prerequisite = {
+			focus = CAL_Absolutism
+		}
+		mutually_exclusive = {
+			focus = CAL_Retake_America
+		}
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = CAL_Retake_America
+		icon = GFX_goal_ideology_authoritarian_democrat
+		relative_position_id = CAL_Norton_Restoration
+		x = -1
+		y = 6
+		prerequisite = {
+			focus = CAL_Constitutional_Monarchy
+		}
+		prerequisite = {
+			focus = CAL_Protect_Mexico
+		}
+		prerequisite = {
+			focus = CAL_All_For_The_King
+		}
+		prerequisite = {
+			focus = CAL_True_Pacific_Empire
+		}
+		
+		mutually_exclusive = {
+			focus = CAL_Greater_California
+		}
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		
+		}
+	}
+}
+
+>>>>>>> master
 

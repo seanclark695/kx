@@ -40,6 +40,17 @@ set_technology = {
 	heavy_fighter1 = 1
 
 }
+<<<<<<< HEAD
+=======
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+>>>>>>> master
 
 ### Navy - MtG ###
 
@@ -131,6 +142,7 @@ TRM = {
 		elections_allowed = no
 	}
 	set_popularities = {
+<<<<<<< HEAD
 		totalist = 0
 		radical_socialist = 0
 		syndicalist = 0
@@ -141,12 +153,28 @@ TRM = {
 		authoritarian_democrat = 20
 		paternal_autocrat = 47
 		national_populist = 2
+=======
+		totalist = 15
+		radical_socialist = 0
+		syndicalist = 0
+		social_democrat = 0
+		social_liberal = 5
+		market_liberal = 5
+		social_conservative = 8
+		authoritarian_democrat = 12
+		paternal_autocrat = 40
+		national_populist = 15
+>>>>>>> master
 	}
 }
 
 country_event = { id = japdom.1 days = 1 } #Recovering from the Lost Decade
 country_event = { id = japfor.1 days = 7 } #Mantetsu Declares Record Earnings
 country_event = { id = japdom.6 days = 135 } #The May 15 Incident
+<<<<<<< HEAD
+=======
+country_event = { id = japdom.8 days = 153 } #The NSA debate begins
+>>>>>>> master
 country_event = { id = japdom.56 days = 658 random = 360 } #The Emperor has been shot!
 country_event = { id = japdom.45 days = 714 } #The Popular Front Incident
 country_event = { id = japdom.53 days = 1247 } #The Great Drought of 1939
@@ -173,7 +201,11 @@ add_dynamic_modifier = {
 	scope = FNG
 }
 
+<<<<<<< HEAD
 add_opinion_modifier = { target = SQI modifier = embargo }
+=======
+add_opinion_modifier = { target = QIE modifier = embargo }
+>>>>>>> master
 add_opinion_modifier = { target = LEC modifier = LEC_member }
 LEC = { give_military_access = JAP }
 give_guarantee = LEC
@@ -201,7 +233,10 @@ set_popularities = {
 
 create_faction = co_prosperity_sphere
 add_to_faction = TRM
+<<<<<<< HEAD
 add_to_faction = FNG
+=======
+>>>>>>> master
 
 if = {
 	limit = {
@@ -220,70 +255,110 @@ if = {
 create_country_leader = {
 	name = "Kanson Arahata"
 	desc = "POLITICS_KANSON_ARAHATA_DESC"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Kanson_Arahata.tga"
+=======
+	picture = "Portrait_JAP_Kanson_Arahata.tga"
+>>>>>>> master
 	expire = "1981.3.6"
 	ideology = totalist_subtype
 }
 create_country_leader = {
 	name = "Kanson Arahata"
 	desc = "POLITICS_KANSON_ARAHATA_DESC"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Kanson_Arahata.tga"
+=======
+	picture = "Portrait_JAP_Kanson_Arahata.tga"
+>>>>>>> master
 	expire = "1981.3.6"
 	ideology = syndicalist_subtype
 }
 create_country_leader = {
 	name = "Kanson Arahata"
 	desc = "POLITICS_KANSON_ARAHATA_DESC"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Kanson_Arahata.tga"
+=======
+	picture = "Portrait_JAP_Kanson_Arahata.tga"
+>>>>>>> master
 	expire = "1981.3.6"
 	ideology = radical_socialist_subtype
 }
 create_country_leader = {
 	name = "Hirohito"
 	desc = "POLITICS_HIROHITO_DESC"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Hirohito_kr.tga"
+=======
+	picture = "Portrait_JAP_Hirohito.tga"
+>>>>>>> master
 	expire = "1965.1.1"
 	ideology = social_democrat_subtype
 }
 create_country_leader = {
 	name = "Hirohito"
 	desc = "POLITICS_HIROHITO_DESC"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Hirohito_kr.tga"
+=======
+	picture = "Portrait_JAP_Hirohito.tga"
+>>>>>>> master
 	expire = "1965.1.1"
 	ideology = social_liberal_subtype
 }
 create_country_leader = {
 	name = "Hirohito"
 	desc = "POLITICS_HIROHITO_DESC"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Hirohito_kr.tga"
+=======
+	picture = "Portrait_JAP_Hirohito.tga"
+>>>>>>> master
 	expire = "1965.1.1"
 	ideology = market_liberal_subtype
 }
 create_country_leader = {
 	name = "Hirohito"
 	desc = "POLITICS_HIROHITO_DESC"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Hirohito_kr.tga"
+=======
+	picture = "Portrait_JAP_Hirohito.tga"
+>>>>>>> master
 	expire = "1965.1.1"
 	ideology = social_conservative_subtype
 }
 create_country_leader = {
 	name = "Hirohito"
 	desc = "POLITICS_HIROHITO_DESC"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Hirohito_kr.tga"
+=======
+	picture = "Portrait_JAP_Hirohito.tga"
+>>>>>>> master
 	expire = "1965.1.1"
 	ideology = authoritarian_democrat_subtype
 }
 create_country_leader = {
 	name = "Hirohito"
 	desc = "POLITICS_HIROHITO_DESC"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Hirohito_kr.tga"
+=======
+	picture = "Portrait_JAP_Hirohito.tga"
+>>>>>>> master
 	expire = "1965.1.1"
 	ideology = paternal_autocrat_subtype
 }
 create_country_leader = {
 	name = "Hirohito"
 	desc = "POLITICS_HIROHITO_DESC"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Hirohito_kr.tga"
+=======
+	picture = "Portrait_JAP_Hirohito.tga"
+>>>>>>> master
 	expire = "1965.1.1"
 	ideology = national_populist_subtype
 }
@@ -295,6 +370,7 @@ if = { #JAP_samurai_lineage GFX doesn't show up without Waking the Tiger, hence 
 
 	create_field_marshal = {
 		name = "Terauchi Hisaichi"
+<<<<<<< HEAD
 		picture = "Portrait_Japan_Hisaichi_Terauchi.dds"
 		traits = {
 			offensive_doctrine
@@ -486,6 +562,8 @@ if = { #JAP_samurai_lineage GFX doesn't show up without Waking the Tiger, hence 
 
 	create_field_marshal = {
 		name = "Terauchi Hisaichi"
+=======
+>>>>>>> master
 		picture = "Portrait_JAP_Hisaichi_Terauchi.tga"
 		traits = {
 			offensive_doctrine
@@ -716,8 +794,13 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
+<<<<<<< HEAD
 	name = "Nishio Toshizo" #Toshizo
 	picture = "Portrait_Japan_Toshizo_Nishio.dds"
+=======
+	name = "Nishio Toshizo"
+	picture = "Portrait_JAP_Toshizo_Nishio.tga"
+>>>>>>> master
 	traits = { brilliant_strategist infantry_officer }
 	skill = 3
 	attack_skill = 3
@@ -739,7 +822,11 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Sakai Takashi"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Takashi_Sakai.dds"
+=======
+	picture = "Portrait_JAP_Takashi_Sakai.tga"
+>>>>>>> master
 	traits = { infantry_officer trait_reckless }
 	skill = 3
 	attack_skill = 2
@@ -750,7 +837,11 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Doihara Kenji"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Kenji_Doihara.dds"
+=======
+	picture = "Portrait_JAP_Kenji_Doihara.tga"
+>>>>>>> master
 	traits = { career_officer substance_abuser }
 	skill = 1
 	attack_skill = 1
@@ -761,7 +852,11 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Ueda Kenkichi"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Kenkichi_Ueda.dds"
+=======
+	picture = "Portrait_JAP_Kenkichi_Ueda.tga"
+>>>>>>> master
 	traits = { old_guard cavalry_officer trait_reckless }
 	skill = 4
 	attack_skill = 3
@@ -783,7 +878,11 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Umezu Yoshijiro"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Yoshijiro_Umezu.dds"
+=======
+	picture = "Portrait_JAP_Yoshijiro_Umezu.tga"
+>>>>>>> master
 	traits = { trait_cautious politically_connected }
 	skill = 3
 	attack_skill = 3
@@ -794,7 +893,11 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Yamada Otozo"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Otozo_Yamada.dds"
+=======
+	picture = "Portrait_JAP_Otozo_Yamada.tga"
+>>>>>>> master
 	traits = { cavalry_officer career_officer }
 	skill = 3
 	attack_skill = 3
@@ -848,7 +951,11 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Hyakutake Harukichi"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Harukichi_Hyakutake.dds"
+=======
+	picture = "Portrait_JAP_Harukichi_Hyakutake.tga"
+>>>>>>> master
 	traits = { infantry_officer  }
 	skill = 3
 	attack_skill = 2
@@ -859,7 +966,11 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Iimura Jo"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Jo_Iimura.dds"
+=======
+	picture = "Portrait_JAP_Jo_Iimura.tga"
+>>>>>>> master
 	traits = { career_officer }
 	skill = 2
 	attack_skill = 1
@@ -879,6 +990,7 @@ create_corps_commander = {
 	logistics_skill = 3
 }
 
+<<<<<<< HEAD
 create_corps_commander = {
 	name = "Kanda Masatane"
 	picture = "Portrait_Japan_Masatane_Kanda.dds"
@@ -890,6 +1002,8 @@ create_corps_commander = {
 	logistics_skill = 2
 }
 
+=======
+>>>>>>> master
 ### Admirals ###
 
 create_navy_leader = {
@@ -905,7 +1019,11 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "Koga Mineichi"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Mineichi_Koga.dds"
+=======
+	picture = "Portrait_JAP_Koga_Mineichi.tga"
+>>>>>>> master
 	traits = { superior_tactician spotter }
 	skill = 4
 	attack_skill = 3
@@ -916,7 +1034,11 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "Hasegawa Kiyoshi"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Hasegawa_Kiyoshi.dds"
+=======
+	picture = "Portrait_JAP_Hasegawa_Kiyoshi.tga"
+>>>>>>> master
 	traits = { }
 	skill = 2
 	attack_skill = 2
@@ -927,7 +1049,11 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "Inoue Shigeyoshi"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Shigeyoshi_Inoue.dds"
+=======
+	picture = "Portrait_JAP_Inoue_Shigeyoshi.tga"
+>>>>>>> master
 	traits = { air_controller }
 	skill = 1
 	attack_skill = 1
@@ -960,7 +1086,11 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "Toyoda Soemu"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Soemu_Toyoda.dds"
+=======
+	picture = "Portrait_JAP_Soemu_Toyoda.tga"
+>>>>>>> master
 	traits = { old_guard_navy }
 	skill = 1
 	attack_skill = 1
@@ -982,7 +1112,11 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "Yoshida Zengo"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Zengo_Yoshida.dds"
+=======
+	picture = "Portrait_JAP_Zengo_Yoshida.tga"
+>>>>>>> master
 	traits = { }
 	skill = 2
 	attack_skill = 2
@@ -992,6 +1126,7 @@ create_navy_leader = {
 }
 
 create_navy_leader = {
+<<<<<<< HEAD
 	name = "Abe Hiroaki"
 	picture = "Portrait_Japan_Hiroaki_Abe.dds"
 	traits = { }
@@ -1005,6 +1140,10 @@ create_navy_leader = {
 create_navy_leader = {
 	name = "Daigo Tadashige"
 	picture = "Portrait_Japan_Tadashige_Daigo.dds"
+=======
+	name = "Daigo Tadashige"
+	picture = "Portrait_JAP_Tadashige_Daigo.tga"
+>>>>>>> master
 	traits = { seawolf }
 	skill = 1
 	attack_skill = 1
@@ -1015,7 +1154,11 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "Hyakutake Gengo"
+<<<<<<< HEAD
 	picture = "Portrait_Japan_Gengo_Hyakutake.dds"
+=======
+	picture = "Portrait_JAP_Gengo_Hyakutake.tga"
+>>>>>>> master
 	traits = { }
 	skill = 3
 	attack_skill = 3

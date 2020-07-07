@@ -3,9 +3,8 @@
 ##################
 
 add_namespace = super
-add_namespace = ultimate
 
-country_event = {	#Second Weltkrieg
+country_event = {	#Secont Weltkrieg
 	id = super.1
 	title = super.1.t
 	desc = super.1.d
@@ -24,11 +23,16 @@ country_event = {	#Second Weltkrieg
 	option = {
 		name = super.1.a
 
-        #set_global_flag = Super_Event_Visible
-        #set_global_flag = GER_Second_Weltkrieg
-		#sound_effect = "superev_weltkrieg"
-		set_global_flag = radio_2wk
-		country_event = ultimate.1
+        set_global_flag = Super_Event_Visible
+        set_global_flag = GER_Second_Weltkrieg
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_weltkrieg"
+		}
 	}
 }
 
@@ -58,7 +62,14 @@ country_event = {		#2ACW
 
         set_global_flag = Super_Event_Visible
         set_global_flag = USA_American_Civil_War
-		sound_effect = "superev_acw"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_acw"
+		}
 	}
 }
 
@@ -79,7 +90,14 @@ country_event = {		#Mittelafrika Collapse
 
         set_global_flag = Super_Event_Visible
         set_global_flag = MAF_Mittelafrika_Collapse
-		sound_effect = "superev_collapse"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_collapse"
+		}
 	}
 }
 
@@ -106,7 +124,14 @@ country_event = {		#Balkan War
 
         set_global_flag = Super_Event_Visible
         set_global_flag = BUL_Balkan_War
-		sound_effect = "superev_balkan"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_balkan"
+		}
 	}
 }
 
@@ -133,7 +158,14 @@ country_event = {		#Middle Eastern War
 
         set_global_flag = Super_Event_Visible
         set_global_flag = OTT_Ottoman_War
-		sound_effect = "superev_ottoman"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_ottoman"
+		}
 	}
 }
 
@@ -158,7 +190,14 @@ country_event = {		#2RCW
 
         set_global_flag = Super_Event_Visible
         set_global_flag = RUS_civil_war
-		sound_effect = "superev_rcw"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_rcw"
+		}
 	}
 }
 
@@ -186,7 +225,14 @@ country_event = {		#Russia Declares War
 
         set_global_flag = Super_Event_Visible
         set_global_flag = RUS_entry
-		sound_effect = "superev_russia"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_russia"
+		}
 	}
 }
 
@@ -211,7 +257,14 @@ country_event = {		#Austria Declares War
 
         set_global_flag = Super_Event_Visible
         set_global_flag = AUS_entry
-		sound_effect = "superev_austria"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_austria"
+		}
 	}
 }
 
@@ -238,11 +291,18 @@ country_event = {		#Entente Declares War
 
         set_global_flag = Super_Event_Visible
         set_global_flag = CAN_entry
-		sound_effect = "superev_canada"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_canada"
+		}
 	}
 }
 
-country_event = {		#Spanish Civil War
+country_event = {		#Super Event Test
 	id = super.10
 	title = super.10.t
 	desc = super.10.d
@@ -268,7 +328,14 @@ country_event = {		#Spanish Civil War
 
         set_global_flag = Super_Event_Visible
         set_global_flag = SPR_civil_war
-		sound_effect = "superev_scw"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_scw"
+		}
 	}
 }
 
@@ -293,7 +360,14 @@ country_event = {		#Super Event Test
 
         set_global_flag = Super_Event_Visible
         set_global_flag = GER_black_monday_super
-		sound_effect = "superev_black"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_black"
+		}
 	}
 }
 
@@ -318,7 +392,14 @@ country_event = {		#Restoration of the UK
 
         set_global_flag = Super_Event_Visible
         set_global_flag = GBR_restoration_super
-		sound_effect = "superev_restoration"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_restoration"
+		}
 	}
 }
 
@@ -346,11 +427,18 @@ country_event = {		#Russo-Japanese War
 
         set_global_flag = Super_Event_Visible
         set_global_flag = JAP_Russo_Japanese_War
-		sound_effect = "superev_rusjap"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_rusjap"
+		}
 	}
 }
 
-country_event = {		#German-Japanese War
+country_event = {		#Super Event Test
 	id = super.14
 	title = super.14.t
 	desc = super.14.d
@@ -371,7 +459,14 @@ country_event = {		#German-Japanese War
 
         set_global_flag = Super_Event_Visible
         set_global_flag = JAP_German_Japanese_War
-		sound_effect = "superev_gerjap"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_gerjap"
+		}
 	}
 }
 
@@ -398,7 +493,14 @@ country_event = {		#Super Event Test
 
         set_global_flag = Super_Event_Visible
         set_global_flag = GER_conquest_of_germany
-		sound_effect = "superev_fall"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_fall"
+		}
 	}
 }
 
@@ -436,7 +538,14 @@ country_event = {		#Super Event Test
 
         set_global_flag = Super_Event_Visible
         set_global_flag = USA_intervention_weltkrieg
-		sound_effect = "superev_america"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_america"
+		}
 	}
 }
 
@@ -498,7 +607,14 @@ country_event = {		#Super Event Test
 
         set_global_flag = Super_Event_Visible
         set_global_flag = ITA_reunification
-		sound_effect = "superev_italy"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_italy"
+		}
 	}
 }
 
@@ -511,8 +627,8 @@ country_event = {		#Illyrian Collapse
 	is_triggered_only = no
 	
 	trigger = {
-		AUS = {
-			has_global_flag = AUS_collapsed
+		CRO = {
+			has_country_flag = CRO_federation_dead
 		}
 	}
 
@@ -525,7 +641,14 @@ country_event = {		#Illyrian Collapse
 
         set_global_flag = Super_Event_Visible
         set_global_flag = CRO_balkan_collapse
-		sound_effect = "superev_illyria"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_illyria"
+		}
 	}
 }
 
@@ -561,7 +684,14 @@ country_event = {		#Death of Valois
 
 		set_global_flag = Super_Event_Visible
         set_global_flag = FRA_valois_dead
-		sound_effect = "superev_valois"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_valois"
+		}
 	}
 }
 
@@ -588,7 +718,14 @@ country_event = {		#Gamelin Coup
 
 		set_global_flag = Super_Event_Visible
         set_global_flag = FRA_gamelin_did_coup
-		sound_effect = "superev_gamelin"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_gamelin"
+		}
 	}
 }
 
@@ -615,7 +752,14 @@ country_event = {		#Anarchist France
 
 		set_global_flag = Super_Event_Visible
         set_global_flag = FRA_anarchist_takeover
-		sound_effect = "superev_anarchist"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_anarchist"
+		}
 	}
 }
 
@@ -642,7 +786,14 @@ country_event = {		#Caucasus Chaos
 
 		set_global_flag = Super_Event_Visible
         set_global_flag = GEO_chaos_in_caucasus
-		sound_effect = "superev_caucasus"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_caucasus"
+		}
 	}
 }
 
@@ -669,7 +820,14 @@ country_event = {		#The Mob Seizes the States
 
 		set_global_flag = Super_Event_Visible
         set_global_flag = CSA_capone_csa
-		sound_effect = "superev_mob"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_mob"
+		}
 	}
 }
 
@@ -696,7 +854,14 @@ country_event = {		#Romanian Restoration
 
 		set_global_flag = Super_Event_Visible
         set_global_flag = BAN_took_homeland
-		sound_effect = "superev_romania"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_romania"
+		}
 	}
 }
 
@@ -723,7 +888,14 @@ country_event = {		#Korean Revolt
 
 		set_global_flag = Super_Event_Visible
         set_global_flag = KOR_revolution_occurred
-		sound_effect = "superev_korea"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_korea"
+		}
 	}
 }
 
@@ -750,7 +922,14 @@ country_event = {		#Collapse of the UOB
 
 		set_global_flag = Super_Event_Visible
         set_global_flag = ENG_secession_occurred
-		sound_effect = "superev_breakoff"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_breakoff"
+		}
 	}
 }
 
@@ -777,7 +956,14 @@ country_event = {		#Formation of the South Slavic Union
 
 		set_global_flag = Super_Event_Visible
         set_global_flag = CRO_slavic_union
-		sound_effect = "superev_union"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_union"
+		}
 	}
 }
 
@@ -804,7 +990,14 @@ country_event = {		#Texas Reborn
 
 		set_global_flag = Super_Event_Visible
         set_global_flag = TXS_reborn
-		sound_effect = "superev_texas"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_texas"
+		}
 	}
 }
 
@@ -839,7 +1032,14 @@ country_event = {		#Celtic Unification
 
 		set_global_flag = Super_Event_Visible
         set_global_flag = SCTWAL_celtic_union
-		sound_effect = "superev_celtic"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_celtic"
+		}
 	}
 }
 
@@ -866,7 +1066,14 @@ country_event = {		#Mayans Recreated
 
 		set_global_flag = Super_Event_Visible
         set_global_flag = YUC_mayas_reborn
-		sound_effect = "superev_maya"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_maya"
+		}
 	}
 }
 
@@ -893,7 +1100,14 @@ country_event = {		#Byzantium Formed
 
 		set_global_flag = Super_Event_Visible
         set_global_flag = BYZ_formed
-		sound_effect = "superev_byzantium"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_byzantium"
+		}
 	}
 }
 
@@ -920,7 +1134,14 @@ country_event = {		#Byzantium Formed
 
 		set_global_flag = Super_Event_Visible
         set_global_flag = ALA_alaska_seceded
-		sound_effect = "superev_alaska"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_alaska"
+		}
 	}
 }
 
@@ -947,7 +1168,14 @@ country_event = {		#Byzantium Formed
 
 		set_global_flag = Super_Event_Visible
         set_global_flag = WAL_independence
-		sound_effect = "superev_wales"
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			sound_effect = "superev_wales"
+		}
 	}
 }
 
@@ -972,179 +1200,37 @@ country_event = {		#The American Civil War is Avoided
 
 		set_global_flag = Super_Event_Visible
         set_global_flag = USA_ACW_Avoided
-		sound_effect = "superev_avoid"
-	}
-}
-
-
-
-
-
-country_event = {	#Fire stuff off
-	id = ultimate.1
-	title = ultimate.1.t
-	desc = ultimate.1.d
-	picture = GFX_report_event_diplomatic_message
-
-	is_triggered_only = yes
-	
-	hidden = yes
-
-	fire_only_once = no
-
-	option = {
-		name = ultimate.1.a
-		set_global_flag = ULT_radio_slide
-		country_event = {
-			id = ultimate.2
-			hours = 6
-		}
-		sound_effect = superev_fire
-	}
-}
-
-country_event = {	#Fire stuff off
-	id = ultimate.2
-	title = ultimate.2.t
-	desc = ultimate.2.d
-	picture = GFX_report_event_diplomatic_message
-
-	is_triggered_only = yes
-	
-	hidden = yes
-
-	fire_only_once = no
-
-	option = {
-		name = ultimate.2.a
-		country_event = {
-			id = ultimate.3
-			hours = 32
-		}
-		set_global_flag = ULT_transmission_named
 		if = {
 			limit = {
-				has_global_flag = radio_2wk
+				NOT = {
+					has_global_flag = KX_superevent_sounds_off
+				}
 			}
-			sound_effect = superev_weltkrieg
+			sound_effect = "superev_avoid"
 		}
 	}
 }
 
-country_event = {	#Fire stuff off
-	id = ultimate.3
-	title = ultimate.3.t
-	desc = ultimate.3.d
+
+
+
+
+country_event = {		#Super Event Others
+	id = super.700
+	title = super.700.t
+	desc = super.700.d
 	picture = GFX_report_event_diplomatic_message
 
 	is_triggered_only = yes
-	
-	hidden = yes
-
-	fire_only_once = no
-
-	option = {
-		name = ultimate.3.a
-		country_event = {
-			id = ultimate.4
-			hours = 32
-		}
-		set_global_flag = ULT_text1
-		sound_effect = superev_text
-	}
-}
-
-country_event = {	#Fire stuff off
-	id = ultimate.4
-	title = ultimate.4.t
-	desc = ultimate.4.d
-	picture = GFX_report_event_diplomatic_message
-
-	is_triggered_only = yes
-	
-	hidden = yes
-
-	fire_only_once = no
-
-	option = {
-		name = ultimate.4.a
-		country_event = {
-			id = ultimate.5
-			hours = 32
-		}
-		clr_global_flag = ULT_text1
-		set_global_flag = ULT_text2
-		sound_effect = superev_text
-	}
-}
-
-country_event = {	#Fire stuff off
-	id = ultimate.5
-	title = ultimate.5.t
-	desc = ultimate.5.d
-	picture = GFX_report_event_diplomatic_message
-
-	is_triggered_only = yes
-	
-	hidden = yes
-
-	fire_only_once = no
-
-	option = {
-		name = ultimate.5.a
-		country_event = {
-			id = ultimate.6
-			hours = 18
-		}
-		clr_global_flag = ULT_text2
-		set_global_flag = ULT_text3
-		sound_effect = superev_text
-	}
-}
-
-country_event = {	#Fire stuff off
-	id = ultimate.6
-	title = ultimate.6.t
-	desc = ultimate.6.d
-	picture = GFX_report_event_diplomatic_message
-
-	is_triggered_only = yes
-	
-	hidden = yes
-
-	fire_only_once = no
-
-	option = {
-		name = ultimate.6.a
-		country_event = {
-			id = ultimate.7
-			hours = 8
-		}
-		set_global_flag = ULT_part2_text
-		sound_effect = superev_text
-	}
-}
-
-country_event = {	#Clear flag
-	id = ultimate.100
-	title = ultimate.100.t
-	desc = ultimate.100.d
-	picture = GFX_report_event_diplomatic_message
-
-	is_triggered_only = yes
-	
-	hidden = yes
 
 	fire_only_once = yes
 
 	option = {
-		name = ultimate.100.a
-		clr_global_flag = ULT_radio_slide
-		clr_global_flag = ULT_transmission_named
-		clr_global_flag = ULT_text1
-		clr_global_flag = ULT_text2
-		clr_global_flag = ULT_text3
-		clr_global_flag = ULT_part2_text
+		name = super.700.a
+
+        SPR = {
+			country_event = super.9
+		}
 	}
 }
 

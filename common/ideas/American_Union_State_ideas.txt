@@ -6,7 +6,10 @@ ideas = {
 		### Army Tree ###
 		TEX_Moseley_plan1 = { #Moseley Plan
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_Moseley_plan1"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = big_entente_idea
 			modifier = {
 				max_planning = 0.10
@@ -16,7 +19,10 @@ ideas = {
 		}
 		TEX_Moseley_plan2 = { #Logistics and Management Expertise
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_Moseley_plan2"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = big_entente_idea
 			modifier = {
 				max_planning = 0.10
@@ -27,7 +33,10 @@ ideas = {
 		}
 		TEX_Moseley_plan3 = { #Expand Fort Benning
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_Moseley_plan3"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = big_entente_idea
 			modifier = {
 				max_planning = 0.10
@@ -39,7 +48,10 @@ ideas = {
 		}
 		TEX_Moseley_plan4 = { #Draw a New War Plan White
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_Moseley_plan4"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = big_entente_idea
 			modifier = {
 				max_planning = 0.10
@@ -52,7 +64,10 @@ ideas = {
 		}
 		TEX_Moseley_plan5 = { #Focus on Command
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_Moseley_plan5"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = big_entente_idea
 			modifier = {
 				max_planning = 0.20
@@ -65,7 +80,10 @@ ideas = {
 		}
 		TEX_Devers_plan1 = { #Devers Plan
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_Devers_plan1"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = generic_artillery_regiments
 			modifier = {
 				army_core_defence_factor = 0.05
@@ -75,7 +93,10 @@ ideas = {
 		}
 		TEX_Devers_plan2 = { #Improve Artillery
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_Devers_plan2"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = generic_artillery_regiments
 			modifier = {
 				army_core_defence_factor = 0.05
@@ -92,7 +113,10 @@ ideas = {
 		}
 		TEX_Devers_plan3 = { #Assembly Line Modifications
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_Devers_plan3"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = generic_artillery_regiments
 			modifier = {
 				army_core_defence_factor = 0.05
@@ -110,7 +134,10 @@ ideas = {
 		}
 		TEX_Devers_plan4 = { #Coordinated fire
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_Devers_plan4"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = generic_artillery_regiments
 			modifier = {
 				army_core_defence_factor = 0.05
@@ -130,7 +157,10 @@ ideas = {
 		}
 		TEX_Devers_plan5 = { #Focus on Concentration
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_Devers_plan5"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = generic_artillery_regiments
 			modifier = {
 				army_defence_factor = 0.05
@@ -150,7 +180,10 @@ ideas = {
 		}
 		TEX_Patton_plan1 = { #Patton Plan
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_Patton_plan1"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = generic_acquire_tanks
 			modifier = {
 				army_core_attack_factor = 0.1
@@ -160,7 +193,10 @@ ideas = {
 		}
 		TEX_Patton_plan2 = { #Tank Commission
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_Patton_plan2"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = generic_acquire_tanks
 			modifier = {
 				army_core_attack_factor = 0.1
@@ -180,7 +216,10 @@ ideas = {
 		}
 		TEX_Patton_plan3 = { #The Cavalry of Tomorrow
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_Patton_plan3"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = generic_acquire_tanks
 			modifier = {
 				army_core_attack_factor = 0.1
@@ -202,7 +241,10 @@ ideas = {
 		}
 		TEX_Patton_plan4 = { #Streamline Tank Production
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_Patton_plan4"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = generic_acquire_tanks
 			modifier = {
 				army_core_attack_factor = 0.1
@@ -224,7 +266,10 @@ ideas = {
 		}
 		TEX_Patton_plan5 = { #Focus on Swiftness
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_Patton_plan5"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = generic_acquire_tanks
 			modifier = {
 				army_attack_factor = 0.1
@@ -246,7 +291,10 @@ ideas = {
 		}
 		TEX_american_auto_industry = { #American Auto Industry
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_american_auto_industry"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = FRA_motorized_focus
 			equipment_bonus = {
 				motorized_equipment = {
@@ -257,7 +305,10 @@ ideas = {
 		}
 		TEX_american_auto_industry2 = { #PATTON PATH ONLY
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_american_auto_industry2"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = FRA_motorized_focus
 			equipment_bonus = {
 				motorized_equipment = {
@@ -269,7 +320,10 @@ ideas = {
 		}
 		TEX_weapons_manufacturers_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_weapons_manufacturers_idea"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = generic_war_preparation
 			equipment_bonus = {
 				infantry_equipment = {
@@ -281,7 +335,10 @@ ideas = {
 
 		TEX_increased_military_spending = { #Increased Military Spending
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_increased_military_spending"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = NOR_syndicalist_industry_idea
 			modifier = {
 				political_power_gain = -0.25
@@ -290,7 +347,10 @@ ideas = {
 		}
 		TEX_increased_military_spending2 = { #New Arms Factories
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_increased_military_spending2"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = NOR_syndicalist_industry_idea
 			modifier = {
 				political_power_gain = -0.25
@@ -301,7 +361,10 @@ ideas = {
 		## Air Force Ideas###
 		TEX_Weyland_reform_plan1 = { #Weyland Plan
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_Weyland_reform_plan1"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = generic_fighter_production_diverted
 			modifier = {
 				air_air_superiority_attack_factor = 0.05
@@ -325,7 +388,10 @@ ideas = {
 		}
 		TEX_Weyland_reform_plan2 = { #Combined Arms Offensive
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_Weyland_reform_plan2"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = generic_fighter_production_diverted
 			modifier = {
 				air_air_superiority_defence_factor = 0.10
@@ -349,7 +415,10 @@ ideas = {
 		}
 		TEX_Le_May_reform_plan1 = { #Chennault Reform
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_Le_May_reform_plan1"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = generic_air_research
 			modifier = {
 				air_air_superiority_attack_factor = 0.05
@@ -369,7 +438,10 @@ ideas = {
 		}
 		TEX_Le_May_reform_plan2 = { #Cult to Aviation
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_Le_May_reform_plan2"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = generic_air_research
 			modifier = {
 				air_air_superiority_attack_factor = 0.10
@@ -389,7 +461,10 @@ ideas = {
 		}
 		TEX_ACTS = { #ACTS
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_ACTS"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = generic_air_payment
 			modifier = {
 				air_ace_generation_chance_factor = 0.15
@@ -398,7 +473,10 @@ ideas = {
 		}
 		TEX_airborne_experiments = { #Screaming Eagles
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_airborne_experiments"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = usa_airborne_divisions
 			modifier = {
 				air_paradrop_attack_factor = 0.10
@@ -409,7 +487,10 @@ ideas = {
 		### Civil war stuff ###
 		TEX_righteous_nation = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_righteous_nation"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = FRA_national_mobilization_focus
 			modifier = {
 				army_morale_factor = 0.20
@@ -417,6 +498,7 @@ ideas = {
 				army_speed_factor = 0.20
 			}
 		}
+<<<<<<< HEAD
 		TEX_industries_support = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_industries_support"}
 			allowed = { always = no }
@@ -434,6 +516,10 @@ ideas = {
 		TEX_industries_no_support = { #no war industries support
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_industries_no_support"}
 			allowed = { always = no }
+=======
+		TEX_industries_no_support = { #no war industries support
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_industries_no_support"}
+>>>>>>> master
 			picture = capital_outflow
 			modifier = {
 				production_speed_buildings_factor = -0.1
@@ -442,7 +528,10 @@ ideas = {
 		}
 		TEX_no_silver_legion = { #no silver legion support
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_no_silver_legion"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = tfv_can_conscription_crisis
 			modifier = {
 				conscription = -0.01
@@ -451,7 +540,10 @@ ideas = {
 		}
 		TEX_prohibition_bill = { #Veteran and Prohibition bill
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_prohibition_bill"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = generic_constitutional_guarantees
 			modifier = {
 				political_power_cost = 0.10
@@ -462,7 +554,10 @@ ideas = {
 		### Huey Long Ideas ###
 		TEX_minutemen_idea = { #Minutmen
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_minutemen_idea"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			available = { has_government = authoritarian_democrat }
 			picture = generic_secret_police
 			modifier = {
@@ -472,7 +567,10 @@ ideas = {
 		}
 		TEX_populist_education_idea = { #Populist Education
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_populist_education_idea"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			available = { has_government = authoritarian_democrat }
 			picture = generic_secret_police
 			modifier = {
@@ -481,7 +579,10 @@ ideas = {
 		}
 		TEX_national_political_machine_idea = { #National Political machine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_national_political_machine_idea"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			available = { has_government = authoritarian_democrat }
 			picture = generic_pp_unity_bonus
 			modifier = {
@@ -491,7 +592,10 @@ ideas = {
 		}
 		TEX_share_the_wealth_idea = { #Share the Wealth
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_share_the_wealth_idea"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			available = { has_government = authoritarian_democrat }
 			picture = generic_pp_unity_bonus
 			modifier = {
@@ -501,7 +605,10 @@ ideas = {
 		}
 		TEX_national_youth_adminstration_idea = { #National Recovery Administration
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_national_youth_adminstration_idea"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			available = { has_government = authoritarian_democrat }
 			picture = generic_army_war_college
 			modifier = { war_support_factor = 0.15 }
@@ -509,7 +616,10 @@ ideas = {
 		### Business Plot Ideas ###
 		TEX_cointelpro_idea = { #COINTELPRO
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_cointelpro_idea"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			available = { has_government = paternal_autocrat }
 			picture = generic_secret_police
 			modifier = {
@@ -519,7 +629,10 @@ ideas = {
 		}
 		TEX_the_american_legion_idea = { #National Recovery Administration
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_the_american_legion_idea"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			available = { has_government = paternal_autocrat }
 			picture = FRA_national_mobilization_focus
 			modifier = {
@@ -529,14 +642,20 @@ ideas = {
 		}
 		USA_boy_scouts_idea = { #National Recovery Administration
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_boy_scouts_idea"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			available = { has_government = paternal_autocrat }
 			picture = generic_army_war_college
 			modifier = { war_support_factor = 0.15 }
 		}
 		TEX_capitalist_education_idea = { #Populist Education
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_capitalist_education_idea"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			available = { has_government = paternal_autocrat }
 			picture = generic_secret_police
 			modifier = {
@@ -545,7 +664,10 @@ ideas = {
 		}
 		TEX_industrial_security_act_idea = { #Share the Wealth
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_industrial_security_act_idea"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			available = { has_government = paternal_autocrat }
 			picture = generic_pp_unity_bonus
 			modifier = {
@@ -556,7 +678,10 @@ ideas = {
 		### Pelley Ideas ###
 		TEX_the_silver_legion_idea = { #The Silver Legion
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_the_silver_legion_idea"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			available = { has_government = national_populist }
 			picture = generic_victors_of_ww1
 			modifier = {
@@ -566,7 +691,10 @@ ideas = {
 		}
 		TEX_work_camps_idea = { #Work Camps
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_work_camps_idea"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			available = { has_government = national_populist }
 			picture = generic_production_bonus
 			modifier = {
@@ -575,17 +703,27 @@ ideas = {
 		}
 		TEX_jim_crows_america_idea = { #Jim Crows America
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_jim_crows_america_idea"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			available = { has_government = national_populist }
 			picture = saf_history_of_segregation
 			modifier = {
 				production_speed_buildings_factor = 0.1
+<<<<<<< HEAD
 				MONTHLY_POPULATION = -0.01
+=======
+				monthly_population = -0.01
+>>>>>>> master
 			}
 		}
 		TEX_white_welfare_idea = { #White Welfare
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_white_welfare_idea"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			available = { has_government = national_populist }
 			picture = generic_goods_red_bonus
 			modifier = {
@@ -595,17 +733,118 @@ ideas = {
 		}
 		TEX_christian_education_idea = { #Christian Education
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_christian_education_idea"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			available = { has_government = national_populist }
 			picture = neutrality_idea
 			modifier = {
 				research_speed_factor = 0.05
 			}
 		}
+<<<<<<< HEAD
 		### National Recovery Act ###
 		TEX_national_recovery_idea1 = { #National Recovery Administration
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_national_recovery_idea1"}
 			allowed = { always = no }
+=======
+               ### pHILIP Ideas ###
+	        TEX_unpopular_government_idea = { #Orange Menace
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea  TEX_unpopular_government_idea"}
+			available = { has_government = national_populist }
+			picture = saf_history_of_segregation
+			modifier = {
+				industrial_capacity_factory = -0.15
+                                stability_factor = -0.15
+                                political_power_factor = -0.10
+	                }
+                }
+	        TEX_orange_menace_idea = { #Orange Menace
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_orange_menace_idea"}
+			available = { has_government = national_populist }
+			picture = saf_history_of_segregation
+			modifier = {
+				conscription_factor = -0.05
+				consumer_goods_factor = 0.05
+				war_support_factor = -0.10
+				stability_factor = -0.10
+		                army_org_Factor = -0.10
+	                }
+                }
+	        TEX_foreign_lifeline_idea = { #Foreign Lifeline
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea  TEX_foreign_lifeline_idea"}
+			available = { has_government = national_populist }
+			picture = saf_history_of_segregation
+			modifier = {
+				industrial_capacity_factory = -0.05
+				war_support_factor = -0.10
+				political_power_factor = -0.05
+		                stability_factor = -0.05
+	                }
+                }
+		TEX_koc_idea = { #Minutmen
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_koc_idea"}
+			available = { has_government = national_populist }
+			picture = generic_secret_police
+			modifier = {
+				conscription_factor = 0.10
+				army_attack_factor = 0.10
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+		TEX_catholic_education_idea = { #Populist Education
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_catholic_education_idea"}
+			available = { has_government = national_populist }
+			picture = generic_secret_police
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		TEX_catholic_america_idea = { #National Political machine
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_catholic_america_idea"}
+			available = { has_government = national_populist }
+			picture = generic_pp_unity_bonus
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.05
+			}
+		}
+		TEX_catholic_unions_idea = { #Share the Wealth
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_catholic_unions_idea"}
+			available = { has_government = national_populist }
+			picture = generic_pp_unity_bonus
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.10
+			}
+		}
+		TEX_distributism_idea = { #economic Things
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_distributism_idea"}
+			available = { has_government = national_populist }
+			picture = generic_army_war_college
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		TEX_christ_the_king_idea = { #CHRISTUS REX
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_distributism_idea"}
+			available = { has_government = national_populist }
+			picture = TEX_christ_the_king
+			modifier = {
+				defence = 0.10
+				army_attack_factor = 0.15
+				army_org_factor = 0.10
+			}
+		}
+		### National Recovery Act ###
+		TEX_national_recovery_idea1 = { #National Recovery Administration
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_national_recovery_idea1"}
+>>>>>>> master
 			picture = state_economy
 			modifier = {
 				production_factory_max_efficiency_factor = -0.10
@@ -615,7 +854,10 @@ ideas = {
 		}
 		TEX_national_recovery_idea2 = { #National Recovery Administration
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_national_recovery_idea2"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = state_economy
 			modifier = {
 				production_factory_max_efficiency_factor = -0.05
@@ -625,7 +867,10 @@ ideas = {
 		}
 		TEX_national_recovery_idea3 = { #National Recovery Administration
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_national_recovery_idea3"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = state_economy
 			modifier = {
 				consumer_goods_factor = -0.03
@@ -633,7 +878,10 @@ ideas = {
 		}
 		TEX_national_recovery_idea4 = { #National Recovery Administration
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_national_recovery_idea4"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = state_economy
 			modifier = {
 				consumer_goods_factor = -0.03
@@ -642,7 +890,10 @@ ideas = {
 		}
 		TEX_national_recovery_idea5 = { #National Recovery Administration
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_national_recovery_idea5"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = state_economy
 			modifier = {
 				consumer_goods_factor = -0.03
@@ -653,7 +904,10 @@ ideas = {
 		### Military Industrial Complex ###
 		TEX_military_industrial_complex_idea1 = { #Military Industrial Complex
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_military_industrial_complex_idea1"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
 				production_factory_max_efficiency_factor = -0.10
@@ -663,7 +917,10 @@ ideas = {
 		}
 		TEX_military_industrial_complex_idea2 = { #Military Industrial Complex
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_military_industrial_complex_idea2"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
 				production_factory_max_efficiency_factor = -0.05
@@ -673,7 +930,10 @@ ideas = {
 		}
 		TEX_military_industrial_complex_idea3 = { #Military Industrial Complex
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_military_industrial_complex_idea3"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
 				consumer_goods_factor = -0.03
@@ -681,7 +941,10 @@ ideas = {
 		}
 		TEX_military_industrial_complex_idea4 = { #Military Industrial Complex
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_military_industrial_complex_idea4"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
 				consumer_goods_factor = -0.03
@@ -690,7 +953,10 @@ ideas = {
 		}
 		TEX_military_industrial_complex_idea5 = { #Military Industrial Complex
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_military_industrial_complex_idea5"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
 				consumer_goods_factor = -0.03
@@ -701,7 +967,10 @@ ideas = {
 		### Foreign Policy ideas
 		TEX_manifest_destiny_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_manifest_destiny_idea"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			picture = TEX_fighting_for_america
 			modifier = {
 				ai_focus_aggressive_factor = 0.25
@@ -712,7 +981,10 @@ ideas = {
 		}
 		TEX_american_advisors_1 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_american_advisors_1"}
+<<<<<<< HEAD
 			allowed = { always = no }
+=======
+>>>>>>> master
 			available = {
 				OR = {
 					is_in_faction_with = TEX
@@ -728,25 +1000,98 @@ ideas = {
 		}
 		TEX_arsenal_of_democracy_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_arsenal_of_democracy_idea"}
+<<<<<<< HEAD
 			allowed = { always = no }
 			picture = generic_victors_of_ww1
 			modifier = {
 				war_support_factor = 0.10
 				mobilization_speed = 0.10
-			}
-		}
-		TEX_arsenal_of_democracy_idea_2 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_arsenal_of_democracy_idea_2"}
-			allowed = { always = no }
+=======
 			picture = generic_victors_of_ww1
 			equipment_bonus = {
-				convoy = {
-					build_cost_ic = -0.1
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				artillery = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				motorized = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mechanized = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				fighter = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				tactical_bomber = {
+					build_cost_ic = -0.05
 					instant = yes
 				}
 			}
 			modifier = {
 				war_support_factor = 0.10
+				production_speed_arms_factory_factor = 0.1	
+>>>>>>> master
+			}
+		}
+		TEX_arsenal_of_democracy_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_arsenal_of_democracy_idea_2"}
+<<<<<<< HEAD
+			allowed = { always = no }
+			picture = generic_victors_of_ww1
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.1
+=======
+			picture = generic_victors_of_ww1
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				artillery = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				motorized = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mechanized = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				fighter = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				tactical_bomber = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				destroyer = {
+					sub_detection = 0.05
+>>>>>>> master
+					instant = yes
+				}
+			}
+			modifier = {
+				war_support_factor = 0.10
+<<<<<<< HEAD
 				mobilization_speed = 0.10
 				navy_max_range_factor = 0.20
 			}
@@ -2187,4 +2532,96 @@ ideas = {
 
 	}
 
+=======
+				production_speed_arms_factory_factor = 0.1
+				convoy_escort_efficiency = 0.1	
+			}
+		}
+		TEX_arsenal_of_democracy_idea_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_arsenal_of_democracy_idea_3"}
+			picture = generic_victors_of_ww1
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				artillery = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				motorized = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mechanized = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				fighter = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				tactical_bomber = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			modifier = {
+				war_support_factor = 0.10
+				production_speed_arms_factory_factor = 0.1
+				transport_capacity = -0.1
+				naval_invasion_capacity = 10
+			}
+		}
+		TEX_arsenal_of_democracy_idea_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TEX_arsenal_of_democracy_idea_4"}
+			picture = generic_victors_of_ww1
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				artillery = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				motorized = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mechanized = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				fighter = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				tactical_bomber = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				destroyer = {
+					sub_detection = 0.05
+					instant = yes
+				}
+			}
+			modifier = {
+				war_support_factor = 0.10
+				production_speed_arms_factory_factor = 0.1
+				convoy_escort_efficiency = 0.1
+				transport_capacity = -0.1
+				naval_invasion_capacity = 10	
+			}
+		}
+	}
+>>>>>>> master
 }

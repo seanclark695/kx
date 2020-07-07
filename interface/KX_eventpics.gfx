@@ -264,6 +264,18 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/Europe/Two Sicilies/SIC_terror.dds"
 	}	
 	spriteType  = {
+		name = "GFX_report_event_ALB_Zog_1"
+		texturefile = "gfx/event_pictures/Europe/Albania/report_event_ALB_Zog_1.dds"
+	}
+	spriteType  = {
+		name = "GFX_report_event_ALB_Zog_2"
+		texturefile = "gfx/event_pictures/Europe/Albania/report_event_ALB_Zog_2.dds"
+	}
+	spriteType  = {
+		name = "GFX_report_event_ALB_Zog_3"
+		texturefile = "gfx/event_pictures/Europe/Albania/report_event_ALB_Zog_3.dds"
+	}
+	spriteType  = {
 		name = "GFX_SIC_victor_emmanuel_funeral"
 		texturefile = "gfx/event_pictures/Europe/Two Sicilies/SIC_victor_emmanuel_funeral.dds"
 	}
@@ -362,6 +374,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_LEC_jinrong"
 		texturefile = "gfx/event_pictures/Asia/Legation_Cities/LEC_jinrong.dds"
+	}
+	spriteType = {
+		name = "LEC_Flag_event"
+		texturefile = "gfx/event_pictures/Asia/Legation_Cities/LEC_Flag_event.dds"
 	}
 	spriteType = {
 		name = "GFX_report_event_LEC_modern_times"
@@ -1320,4 +1336,138 @@ spriteTypes = {
 		name = "GFX_report_event_SOV_world_revolution"
 		texturefile = "gfx/event_pictures/SOV/SOV_world_revolution.dds"
 	}
+	spriteType = {
+		name = "GFX_news_event_spanish_empire"
+		texturefile = "gfx/event_pictures/News Events/news_event_spanish_empire.dds"
+	}
+	# Transamur
+	
+	spriteType  = {
+		name = "GFX_news_event_TRM_young_russia"
+		texturefile = "gfx/event_pictures/Asia/Transamur/TRM_young_russia.dds"
+	}
+
+	spriteType  = {
+		name = "GFX_news_event_TRM_nationalist_movement"
+		texturefile = "gfx/event_pictures/Asia/Transamur/TRM_nationalist_movement.dds"
+	}
+
+	spriteType  = {
+		name = "GFX_news_event_TRM_kolchak_coup"
+		texturefile = "gfx/event_pictures/Asia/Transamur/TRM_kolchak_coup.dds"
+	}
+
+	spriteType  = {
+		name = "GFX_news_event_TRM_mlad_victory"
+		texturefile = "gfx/event_pictures/Asia/Transamur/TRM_mlad_victory.dds"
+	}
+
+	spriteType  = {
+		name = "GFX_news_event_TRM_mlad_union"
+		texturefile = "gfx/event_pictures/Asia/Transamur/TRM_mlad_union.dds"
+	}
+
+	spriteType  = {
+		name = "GFX_news_event_TRM_tsar_alex"
+		texturefile = "gfx/event_pictures/Asia/Transamur/TRM_tsar_alex.dds"
+	}
+
+	spriteType  = {
+		name = "GFX_news_event_TRM_tsar_kir"
+		texturefile = "gfx/event_pictures/Asia/Transamur/TRM_tsar_kir.dds"
+	}
+
+	spriteType  = {
+		name = "GFX_news_event_TRM_tsar_vlad"
+		texturefile = "gfx/event_pictures/Asia/Transamur/TRM_tsar_vlad.dds"
+	}
+
+	spriteType  = {
+		name = "GFX_news_event_TRM_eurasia"
+		texturefile = "gfx/event_pictures/Asia/Transamur/TRM_eurasia.dds"
+	}
+
+	spriteType  = {
+		name = "GFX_news_event_TRM_smen"
+		texturefile = "gfx/event_pictures/Asia/Transamur/TRM_smen.dds"
+	}
+
+	spriteType  = {
+		name = "GFX_news_event_TRM_nationalists"
+		texturefile = "gfx/event_pictures/Asia/Transamur/TRM_nationalists.dds"
+	}
+	
+	spriteType  = {
+		name = "GFX_news_event_TRM_tsar_alexander"
+		texturefile = "gfx/event_pictures/Asia/Transamur/TRM_tsar_alexander.dds"
+	}
+	
+	spriteType  = {
+		name = "GFX_news_event_TRM_tsar_andrei"
+		texturefile = "gfx/event_pictures/Asia/Transamur/TRM_tsar_andrei.dds"
+	}
+	
+	spriteType  = {
+		name = "GFX_news_event_TRM_lenin"
+		texturefile = "gfx/event_pictures/Asia/Transamur/TRM_lenin.dds"
+	}
+	
+	spriteType  = {
+		name = "GFX_news_event_TRM_nick"
+		texturefile = "gfx/event_pictures/Asia/Transamur/TRM_nick.dds"
+	}
+	
+	spriteType  = {
+		name = "GFX_news_event_TRM_RCW"
+		texturefile = "gfx/event_pictures/Asia/Transamur/TRM_RCW.dds"
+	}
+		###CATHAUS###
+	spriteType = {
+		name = "GFX_TEX_philip_carroll"
+		texturefile = "gfx/event_pictures/North_America/United_States/TEX_philip_carroll.tga"
+	}	
+	spriteType = {
+		name = "GFX_TEX_holy_league"
+		texturefile = "gfx/event_pictures/North_America/United_States/TEX_holy_league.tga"
+	}
+	spriteType = {
+		name = "GFX_TEX_stonks"
+		texturefile = "gfx/event_pictures/North_America/United_States/TEX_stonks.tga"
+	}	
+	spriteType = {
+		name = "GFX_TEX_gsmith"
+		texturefile = "gfx/event_pictures/North_America/United_States/TEX_gsmith.tga"
+	}	
+	spriteType = {
+		name = "GFX_TEX_hueyboom"
+		texturefile = "gfx/event_pictures/North_America/United_States/TEX_hueyboom.tga"
+	}	
+	spriteType = {
+		name = "GFX_TEX_christ_the_king"
+		texturefile = "gfx/event_pictures/North_America/United_States/TEX_christ_the_king.tga"
+	}	
+	spriteType = {
+		name = "GFX_TEX_smc"
+		texturefile = "gfx/event_pictures/North_America/United_States/TEX_smc.tga"
+	}
+	spriteType = {
+		name = "GFX_TEX_knightwatch"
+		texturefile = "gfx/event_pictures/North_America/United_States/TEX_knightwatch.tga"
+	}	
+	spriteType = {
+		name = "GFX_TEX_coughlinomics"
+		texturefile = "gfx/event_pictures/North_America/United_States/TEX_coughlinomics.tga"
+	}	
+	spriteType = {
+		name = "GFX_TEX_bvm"
+		texturefile = "gfx/event_pictures/North_America/United_States/TEX_bvm.tga"
+	}	
+	spriteType = {
+		name = "GFX_TEX_based_hood"
+		texturefile = "gfx/event_pictures/North_America/United_States/TEX_based_hood.tga"
+	}	
+	spriteType = {
+		name = "GFX_TEX_aminq"
+		texturefile = "gfx/event_pictures/North_America/United_States/TEX_aminq.tga"
+	}		
 }

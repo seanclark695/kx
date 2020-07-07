@@ -1609,4 +1609,60 @@ spriteTypes = {
 		name = "GFX_idea_UKR_Nikita_Kruschev_hog_tot"
 		texturefile = "gfx/interface/ministers/UKR/UKR_Nikita_Kruschev.tga"
 	}
+  ################################################################################################################################################################################################
+  ### TRM
+  ################################################################################################################################################################################################
+
+	#Head of Government
+	spriteType = {
+		name = "GFX_idea_TRM_Alexander_Kazembek_hog_tot"
+		texturefile = "gfx/interface/ministers/TRM/TRM_Alexander_Kazembek.tga"
+	}
+
+
+	#Foreign Minister
+	spriteType = {
+		name = "GFX_idea_TRM_Peter_Savinsky_for_tot"
+		texturefile = "gfx/interface/ministers/TRM/TRM_Peter_Savinsky.tga"
+	}
+
+
+	#Economy Minister
+	spriteType = {
+		name = "GFX_idea_TRM_Nikolai_Ustryalov_eco_tot"
+		texturefile = "gfx/interface/ministers/TRM/TRM_Nikolai_Ustryalov.tga"
+	}
+
+
+	#Security Minister
+	spriteType = {
+		name = "GFX_idea_TRM_Vladimir_Krasinskiy_sec_tot"
+		texturefile = "gfx/interface/ministers/TRM/TRM_Vladimir_Krasinskiy.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_RUS_Dmitri_M_Odinets_for_npo"
+		texturefile = "gfx/interface/ministers/RUS/RUS_Dmitri_M_Odinets.tga"
+	}
+	##CATHUSA###
+	spriteType = {
+		name = "GFX_idea_TEX_Charles_Edward_Coughlin_hog_npo"
+		texturefile = "gfx/interface/ministers/TEX/TEX_Charles_Edward_Coughlin.tga"
+	}	
+	spriteType = {
+		name = "GFX_idea_TEX_fulton_sheen_for_npo"
+		texturefile = "gfx/interface/ministers/TEX/TEX_fulton_sheen.tga"
+	}	
+	spriteType = {
+		name = "GFX_idea_TEX_al_smith_eco_npo"
+		texturefile = "gfx/interface/ministers/TEX/TEX_al_smith.tga"
+	}	
+	spriteType = {
+		name = "GFX_idea_TEX_dorothy_day_eco_npo"
+		texturefile = "gfx/interface/ministers/TEX/TEX_dorothy_day.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_TEX_Martin_Carmody_sec_npo"
+		texturefile = "gfx/interface/ministers/TEX/TEX_Martin_Carmody.tga"
+	}
 }
