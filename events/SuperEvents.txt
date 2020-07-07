@@ -1,4 +1,4 @@
-﻿##################
+##################
 # SUPER EVENTS 
 ##################
 
@@ -627,8 +627,8 @@ country_event = {		#Illyrian Collapse
 	is_triggered_only = no
 	
 	trigger = {
-		CRO = {
-			has_country_flag = CRO_federation_dead
+		AUS  = {
+			has_country_flag = AUS_collapsed
 		}
 	}
 

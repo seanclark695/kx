@@ -1,0 +1,152 @@
+division_template = {
+	name = "Hungarian Infantry"
+	division_names_group = HUN_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Hungarian Militia"
+	division_names_group = HUN_INF_01
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 1 y = 2 }
+	}
+}
+units = {
+
+	division = {
+		location = 9660
+		division_template = "Hungarian Infantry"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		location = 9660
+		division_template = "Hungarian Infantry"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		location = 9660
+		division_template = "Hungarian Infantry"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		location = 9660
+		division_template = "Hungarian Infantry"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		location = 9660
+		division_template = "Hungarian Infantry"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		location = 9660
+		division_template = "Hungarian Infantry"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		location = 9660
+		division_template = "Hungarian Infantry"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		location = 9660
+		division_template = "Hungarian Infantry"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		location = 9660
+		division_template = "Hungarian Militia"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		location = 9660
+		division_template = "Hungarian Militia"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		location = 9660
+		division_template = "Hungarian Militia"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		location = 9660
+		division_template = "Hungarian Militia"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		location = 9660
+		division_template = "Hungarian Militia"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		location = 9660
+		division_template = "Hungarian Militia"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		location = 9660
+		division_template = "Hungarian Militia"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		location = 9660
+		division_template = "Hungarian Militia"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		location = 9660
+		division_template = "Hungarian Militia"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		location = 9660
+		division_template = "Hungarian Militia"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		location = 9660
+		division_template = "Hungarian Militia"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		location = 9660
+		division_template = "Hungarian Militia"
+		start_experience_factor = 0.5
+	}
+
+
+}

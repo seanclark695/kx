@@ -10,6 +10,7 @@ add_namespace = constituents
 add_namespace = others
 add_namespace = const_oob
 add_namespace = AUS_DEBUG
+add_namespace = colnews
 
 ### Black Monday, the darkest day
 country_event = { #The Fatherland Front Insults the Government
@@ -1162,6 +1163,13 @@ country_event = { #Collapse of the Austrian Empire - AUS
 				}
 			}
 			
+			if = {
+				limit = {
+					has_global_flag = FIU_horthy_in_illyria
+				}
+				country_event = constituents.300
+			}
+			
 			SWI = {
 				country_event = constituents.100 #Austria collapses, shall we take land?
 			}
@@ -1175,6 +1183,15 @@ country_event = { #Collapse of the Austrian Empire - AUS
 			}
 			
 			set_global_flag = AUS_collapsed
+			
+			hidden_effect = {
+				every_country = {
+					news_event = {
+						id = colnews.1
+						days = 1
+					}
+				}
+			}
 		}
 	}
 }
@@ -1791,9 +1808,11 @@ country_event = { #Slovenia revolt
 	is_triggered_only = yes
 	
 	immediate = {
-		country_event = {
-			id = constituents.48
-			days = 120
+		hidden_effect = {
+			country_event = {
+				id = constituents.48
+				days = 120
+			}
 		}
 	}
 
@@ -3557,25 +3576,27 @@ country_event = { #Austrian Socialists revolt (Spawns AWR tag)
 	is_triggered_only = yes
 	
 	immediate = {
-		AWR = {
-			add_state_core = 783
-			add_state_core = 39
-			add_state_core = 153
-			add_state_core = 942
-			add_state_core = 836
-			add_state_core = 835
-			add_state_core = 775
-			add_state_core = 152
-			add_state_core = 4
-			add_state_core = 1137
-			add_state_core = 784
-			add_state_core = 736
-			add_state_core = 1100
-			add_state_core = 1095
-			add_state_core = 102
-			add_state_core = 1104
-			add_state_core = 1101
-			add_state_core = 1103
+		hidden_effect = {
+			AWR = {
+				add_state_core = 783
+				add_state_core = 39
+				add_state_core = 153
+				add_state_core = 942
+				add_state_core = 836
+				add_state_core = 835
+				add_state_core = 775
+				add_state_core = 152
+				add_state_core = 4
+				add_state_core = 1137
+				add_state_core = 784
+				add_state_core = 736
+				add_state_core = 1100
+				add_state_core = 1095
+				add_state_core = 102
+				add_state_core = 1104
+				add_state_core = 1101
+				add_state_core = 1103
+			}
 		}
 	}
 
@@ -3862,7 +3883,7 @@ country_event = { #Croatian Republicans revolt (Spawns CRR tag)
 	}
 }
 
-country_event = { #Croatian Socialists revolt (Spawns CRR tag)
+country_event = { #Croatian Socialists revolt (Spawns SRC tag)
 	id = constituents.16
 	title = constituents.16.t
 	desc = constituents.16.d
@@ -5887,7 +5908,7 @@ country_event = { #Heizenland revolt
 
 #### Austria
 
-country_event = { #Banat surrender
+country_event = { #Surrender to Banat
 	id = constituents.37
 	title = constituents.37.t
 	desc = constituents.37.d
@@ -5909,7 +5930,7 @@ country_event = { #Banat surrender
 	}
 }
 
-country_event = { #Transylvania surrender
+country_event = { #Surrender to Transylvania
 	id = constituents.38
 	title = constituents.38.t
 	desc = constituents.38.d
@@ -5970,7 +5991,7 @@ country_event = { #Transylvania surrender
 	}
 }
 
-country_event = { #Slovakia surrender
+country_event = { #Surrender to Slovakia
 	id = constituents.39
 	title = constituents.39.t
 	desc = constituents.39.d
@@ -6261,7 +6282,7 @@ country_event = { #Illyrian tags if AUS occupies them
 	}
 }
 
-country_event = { #Illyrian tags if AUS occupies them
+country_event = { #Czech tags if AUS occupies them
 	id = constituents.49
 	title = constituents.49.t
 	desc = constituents.49.d
@@ -6611,6 +6632,93 @@ country_event = { #We've been denied!
 	option = { #It's not worth our time
 		name = constituents.1006.b
 		ai_chance = { factor = 100 }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = { #Miklos Horthy Seizes Fiume
+	id = constituents.300
+	title = constituents.300.t
+	desc = constituents.300.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #And rule the Seven Seas we shall!
+		name = constituents.300.a
+		ai_chance = { factor = 100 }
+		add_political_power = -30
+		FIU = {
+			add_state_core = 1105
+			transfer_state = 1105
+			change_tag_from = AUS
+		}
+		hidden_effect = {
+			country_event = {
+				id = fiu.29
+				days = 7
+			}
+			FIU = {
+				load_oob = FIU_oob
+				load_oob = FIU_naval_oob
+			}
+		}
+		CRO = {
+			remove_unit_leader = 40000
+		}
+	}
+	
+	option = { #Okay.
+		name = constituents.300.b
+		ai_chance = { factor = 100 }
+		add_political_power = -30
+		FIU = {
+			add_state_core = 1105
+			transfer_state = 1105
+		}
+		hidden_effect = {
+			country_event = {
+				id = fiu.29
+				days = 7
+			}
+			FIU = {
+				load_oob = FIU_oob
+				load_oob = FIU_naval_oob
+			}
+		}
+		CRO = {
+			remove_unit_leader = 40000
+		}
 	}
 }
 
@@ -7301,6 +7409,36 @@ country_event = { #Add idea (???)
 	option = { #I have voluntarily killed myself.
 		name = AUS_DEBUG.3.a
 		clr_country_flag = debug_show_radio
+	}
+}
+
+
+
+news_event = { #Add idea (???)
+	id = colnews.1
+	title = colnews.1.t
+	desc = colnews.1.d
+	
+	picture = x
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #
+		name = colnews.1.a
+		trigger = {
+			NOT = {
+				tag = AUS
+			}
+		}
+	}
+	
+	option = { #
+		name = colnews.1.b
+		trigger = {
+			tag = AUS
+		}
 	}
 }
 

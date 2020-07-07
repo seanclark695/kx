@@ -8,10 +8,17 @@ state = {
 	history = {
 		owner = CRO
 		add_core_of = CRO
+		victory_points = {
+			11564 8
+		}
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
+			11564 = {
+				naval_base = 3
+			}
 		}
+		
 	}
 
 	provinces = {

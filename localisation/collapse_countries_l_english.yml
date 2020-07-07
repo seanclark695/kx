@@ -40,13 +40,13 @@ SKS_authoritarian_democrat_ADJ:0 "Serbo-Bosnian"
 
 
 
-SRK_paternal_autocrat:0 "Serbian Krajina"
-SRK_paternal_autocrat_DEF:0 "Serbian Krajina"
-SRK_paternal_autocrat_ADJ:0 "Serbo-Croatian"
+FIU_paternal_autocrat:0 "Fiume"
+FIU_paternal_autocrat_DEF:0 "Fiume"
+FIU_paternal_autocrat_ADJ:0 "Fiumean"
 
-SRK_authoritarian_democrat:0 "Serbian Krajina"
-SRK_authoritarian_democrat_DEF:0 "Serbian Krajina"
-SRK_authoritarian_democrat_ADJ:0 "Serbo-Croatian"
+FIU_authoritarian_democrat:0 "Fiume"
+FIU_authoritarian_democrat_DEF:0 "Fiume"
+FIU_authoritarian_democrat_ADJ:0 "Fiumean"
 
 
 

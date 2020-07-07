@@ -5787,7 +5787,13 @@ focus_tree = {
 			
 			transfer_state = 784
 			transfer_state = 786
-			set_country_flag = no_more_collapse
+			custom_effect_tooltip = disables_collapse
+			custom_effect_tooltip = disables_subject_revolts
+			set_global_flag = no_more_collapse
+			set_global_flag = no_hungary_revolt
+			set_global_flag = no_bohemia_revolt
+			set_global_flag = no_illyria_revolt
+			set_global_flag = no_galicia_revolt
 		}
 	}
 	
@@ -6294,8 +6300,6 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 150
 			add_stability = 0.2
-			custom_effect_tooltip = disables_collapse
-			set_country_flag = no_more_collapse
 		}
 	}
 	

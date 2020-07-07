@@ -7003,15 +7003,15 @@ country_event = { #End of the Bukovina Rebellion
 	}
 }
 
-country_event = { #End of the Bukovina Rebellion
+country_event = { #End of the Ruthenian Rebellion
 	id = revolt_peace.20
 	title = revolt_peace.20.t
 	desc = {
 		text = revolt_peace.20.d.surrender
 		trigger = {
-			country_exists = BUK
-			has_war_with = BUK
-			BUK = {
+			country_exists = CPU
+			has_war_with = CPU
+			CPU = {
 				owns_state = 80
 			}
 		}
@@ -7020,17 +7020,17 @@ country_event = { #End of the Bukovina Rebellion
 		text = revolt_peace.20.d.victory
 		trigger = {
 			NOT = {
-				has_war_with = BUK
+				has_war_with = CPU
 			}
 			OR = {
-				BUK = {
+				CPU = {
 					OR = {
 						is_puppet_of = ROOT
 						is_in_faction_with = ROOT
 					}
 				}
 				NOT = {
-					country_exists = BUK
+					country_exists = CPU
 				}
 			}
 		}
@@ -9614,15 +9614,79 @@ country_event = { #Tick up Ruthenian counter by 0.1
 
 
 
-
-
-
 #Edited Files:
-#Scripted gui.
-#Localization.
+#decisions/categories/SER_ROM_collapse_austria
+#decisions/categories/AUS_save_the_empire
+#decisions/categories/FIU_pirating
+
+#decisions/FIU_pirating
+#decisions/AUS_save_empire
+#decisions/SER_ROM_Destabilize_Austria
+
+#ideas/FIU_ideas
+#ideas/AUS_collapse_ideas
+#ideas/AUS_part_of_the_empire_ideas
+
+#national_focus/Austria (DOLLFUSS TOO! THE FOCUS THAT IS EDITED FOR SURE IS "AUS_one_party_empire")
+#national_focus/Fiume
+
+#on_actions/BOTDE_on_actions_set_variables
+
+#scripted_effects/FIU_naval_variants
+#scripted_gui/Austrian_Subjects
+#scripted_localisation/AUS_subjects_scripted_localisation
+
+#events/Austria_Ethnic
+#events/Austrian_Empire
+#events/Fiume
+
+#gfx/flags/BSE, BUK, SKS, HNR, HSR, CPU, WSU, etc etc
+#Leaders for all tags (SVK, TRS, HNR, HSR, CPU, GAL, WSU etc etc)
+
+#gfx/super_events/Austrian Collapse
+
+#history/units/collapse OOBS (CRO HUN GAL CZE too!)
+#history/units/FIU stuff
+#history/states/4-163, 664, 736, 786, 789, 794, 1097-1145
+
+#map/buildings.txt and similar
+#map/supplyareas/all but 158
+#history/countries/all tags related just to be safe
+#interface/KX_goals.gfx (merge manually, add things myself)
+#interface/KX_goals_shine.gfx
+#interface/KX_ideas.gfx
+#interface/KX_ministers.gfx (probably later, not yet)
+#interface/auscol_austria_subjects.gui
+#interface/PB_super_events.gfx
+#interface/KX_eventpics.gfx (for Fiume rn)
+#localisation/auscol_subjects_text
+#localisation/BOTDE_ethnicities
+#localisation/KX_fiume
+#localisation/collapse_countries
+#localisation/KX_austria_is_fucked
+#localisation/KX_austria_is_fucked_NAZ_AWR
+#Event pictures/News events/Fiume (all 4 files)
+#Fiume goals GFX
+#Fiume ideas GFX
+
+
+
+
+#Todo#
+
+
+#Localization for events and ideas
+#GFX for ideas
 #Austria events.
+#Event pictures.
+#Fix Banat
 #AUS_collapse_ideas implementation
 #History files for Austria.
+#Austria Collapse superevent picture
+#Populate states
+
+####################################################################
+
 #Map files for the states.
 #State files.
 #Super events.
@@ -9630,7 +9694,6 @@ country_event = { #Tick up Ruthenian counter by 0.1
 #Interface - ideas. GUIs.
 #Fate of subjects decisions for Austria.
 
-#Todo#
 
 
 
