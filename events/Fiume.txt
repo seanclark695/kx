@@ -354,7 +354,7 @@ country_event = { #Pirates Blockade Malta
 	}
 	
 	option = { #Continue it!
-		name = fiu.14.a
+		name = fiu.14.b
 		add_political_power = 50
 		add_stability = 0.1
 		custom_effect_tooltip = FIU_only_if_malta_exists

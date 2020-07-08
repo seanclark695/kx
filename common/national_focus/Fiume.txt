@@ -402,6 +402,14 @@ focus_tree = {
 			focus = FIU_austrian_demise
 		}
 		completion_reward = {
+			hidden_effect = {
+				every_country = {
+					limit = {
+						owns_state = 1144
+					}
+					country_event = fiu.7
+				}
+			}
 			transfer_state = 1144
 			random_owned_state = {
 				add_building_construction = {
@@ -413,14 +421,6 @@ focus_tree = {
 			}
 			add_political_power = 80
 			add_stability = -0.05
-			hidden_effect = {
-				every_country = {
-					limit = {
-						owns_state = 1144
-					}
-					country_event = fiu.7
-				}
-			}
 		}
 	}
 	
@@ -633,6 +633,11 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 			}
 			add_ideas = FIU_built_on_others_idea
+			add_resource = {
+				type = steel
+				amount = 25
+				state = 1105
+			}
 		}
 	}
 	

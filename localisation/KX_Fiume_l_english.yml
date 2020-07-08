@@ -49,6 +49,7 @@ FIU_summon_one_superheavy:0 "§GCreates one super-heavy battleship§!"
 FIU_summon_one_carrier:0 "§GCreates one carrier§!"
 FIU_summon_one_battlecruiser:0 "§GCreates one battlecruiser§!"
 FIU_increase_influence_1:0 "§GWe will gain 1 influence in Ragusa§!"
+FIU_increase_influence_greece:0 "§GWe will gain 1 influence in Greece§!"
 FIU_unlocks_bribery:0 "§GUnlocks the ability to bribe random locations to produce for us§!"
 FIU_only_if_malta_exists:0 "§YThis is only a wise idea if the Maltese govern themselves...§!"
 FIU_bribery_successful:0 "§GThe bribe will succeed§!"
@@ -71,8 +72,16 @@ FIU_commission_carrier:0 "Commission a Carrier"
 FIU_commission_superheavy:0 "Commission a Super-Heavy Battleship"
 FIU_new_dockyards:0 "Construct New Dockyards"
 
+FIU_new_italy:0 "The Venetian Risorgimento"
 FIU_king_of_venice:0 "King of Venice"
 FIU_king_of_hungary:0 "King of Hungary"
+
+FIU_steal_steel:0 "Steal Steel"
+FIU_steal_tungsten:0 "Steal Tungsten"
+FIU_steal_oil:0 "Steal Oil"
+FIU_steal_rubber:0 "Steal Rubber"
+FIU_steal_chromium:0 "Steal Chromium"
+FIU_steal_aluminium:0 "Steal Aluminium"
 
 
 FIU_pirate_enemy_nation:0 "Pirates in [FROM.GetNameDef]'s waters"
@@ -102,6 +111,7 @@ FIU_combat_pirates_ragusa:0 "Combat Pirates in Ragusa"
 
 FIU_attacked_HUN:0 "We have attacked Hungary"
 ragusa_check_tooltip:0 "The presence of pirates in what was Ragusa is level 3"
+greece_check_tooltip:0 "The presence of pirates in Greece is level 3"
 
 FIU_pirating_nation:0 "The Nation of Pirates"
 FIU_pirating_nation_desc:0 "The Pirates of the Mediterranean always seek to expand their operations.\n\n[?FIU.ragusa_pirate_level] is the level of pirate influence in the Ragusa area.\n\n[?FIU.greece_pirate_level] is the level of pirate influence in Greece."
@@ -109,6 +119,9 @@ FIU_sabotage_nations:0 "Deliberate Sabotage"
 FIU_privateering:0 "The Privateers of Fiume"
 FIU_shipbuilding:0 "The Grand Armada"
 FIU_combat_pirates:0 "The Pirate Problem"
+
+FIU_going_venice:0 "We want to restore Venice"
+FIU_going_hungary:0 "We want to return to Hungary"
 
 FIU_austrian_demise:0 "The Demise of the Habsburgs!"
 FIU_austrian_demise_desc:0 "The old Habsburg Empire has fallen on hard times - very hard times. Its empire in shambles. The time is now to claim what is ours - to take what we need, and take what we want. It's not like they can resist us anyway, they are in a precarious enough situation..."
@@ -345,6 +358,10 @@ fiunews.5.a:0 "There was treasure there all along!"
 FIU_pirates_tag_paternal_autocrat:0 "United Pirates"
 FIU_pirates_tag_paternal_autocrat_DEF:0 "the United Pirates"
 FIU_pirates_tag_paternal_autocrat_ADJ:0 "Pirate"
+
+FIU_kingdom_italy_paternal_autocrat:0 "Most Serene Empire of Maritime Italy"
+FIU_kingdom_italy_paternal_autocrat_DEF:0 "the Most Serene Empire of Maritime Italy"
+FIU_kingdom_italy_paternal_autocrat_ADJ:0 "Italian"
 
 FIU_kingdom_venice_paternal_autocrat:0 "Maritime Empire of Venice"
 FIU_kingdom_venice_paternal_autocrat_DEF:0 "the Maritime Empire of Venice"

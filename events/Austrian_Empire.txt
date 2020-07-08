@@ -6691,6 +6691,7 @@ country_event = { #Miklos Horthy Seizes Fiume
 			FIU = {
 				load_oob = FIU_oob
 				load_oob = FIU_naval_oob
+				inherit_technology = AUS
 			}
 		}
 		CRO = {
@@ -6714,6 +6715,7 @@ country_event = { #Miklos Horthy Seizes Fiume
 			FIU = {
 				load_oob = FIU_oob
 				load_oob = FIU_naval_oob
+				inherit_technology = AUS
 			}
 		}
 		CRO = {
@@ -7373,10 +7375,7 @@ country_event = { #Set collapse level to start
 
 	option = { #Whew?
 		name = AUS_DEBUG.1.a
-		set_variable = {
-			var = AUS.subject_revolt_progress
-			value = 0.72
-		}
+		load_oob = FIU_oob
 	}
 }
 

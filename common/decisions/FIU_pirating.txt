@@ -53,19 +53,17 @@ FIU_pirating_nation = {
 		fire_only_once = yes
 		visible = {
 			has_completed_focus = FIU_reclaim_dalmatia
+			NOT = {
+				owns_state = 1098
+			}
 		}
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = ragusa_check_tooltip
-				every_country = {
-					limit = {
-						owns_state = 1098
-					}
-					check_variable = {
-						var = FIU.ragusa_pirate_level
-						value = 3
-						compare = greater_than_or_equals
-					}
+				check_variable = {
+					var = ragusa_pirate_level
+					value = 3
+					compare = greater_than_or_equals
 				}
 			}
 		}
@@ -97,9 +95,11 @@ FIU_pirating_nation = {
 		visible = {
 			has_completed_focus = FIU_reclaim_dalmatia
 			NOT = {
-				owns_state = 103
-				owns_state = 163
-				owns_state = 1098
+				AND = {
+					owns_state = 103
+					owns_state = 163
+					owns_state = 1098
+				}
 			}
 		}
 		complete_effect = {
@@ -120,29 +120,27 @@ FIU_pirating_nation = {
 		fire_only_once = yes
 		visible = {
 			has_completed_focus = FIU_reclaim_dalmatia
+			NOT = {
+				owns_state = 163
+			}
 		}
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = ragusa_check_tooltip
-				every_country = {
-					limit = {
-						owns_state = 1098
-					}
-					check_variable = {
-						var = ragusa_pirate_level
-						value = 3
-						compare = greater_than_or_equals
-					}
+				check_variable = {
+					var = ragusa_pirate_level
+					value = 3
+					compare = greater_than_or_equals
 				}
 			}
 		}
 		complete_effect = {
-			transfer_state = 1098
+			transfer_state = 163
 			if = {
 				limit = {
 					has_completed_focus = FIU_integrate_pola
 				}
-				add_state_core = 1098
+				add_state_core = 163
 			}
 			add_political_power = 80
 			add_stability = -0.05
@@ -162,29 +160,27 @@ FIU_pirating_nation = {
 		fire_only_once = yes
 		visible = {
 			has_completed_focus = FIU_reclaim_dalmatia
+			NOT = {
+				owns_state = 103
+			}
 		}
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = ragusa_check_tooltip
-				every_country = {
-					limit = {
-						owns_state = 1098
-					}
-					check_variable = {
-						var = ragusa_pirate_level
-						value = 3
-						compare = greater_than_or_equals
-					}
+				check_variable = {
+					var = ragusa_pirate_level
+					value = 3
+					compare = greater_than_or_equals
 				}
 			}
 		}
 		complete_effect = {
-			transfer_state = 1098
+			transfer_state = 103
 			if = {
 				limit = {
 					has_completed_focus = FIU_integrate_pola
 				}
-				add_state_core = 1098
+				add_state_core = 103
 			}
 			add_political_power = 80
 			add_stability = -0.05
@@ -222,15 +218,17 @@ FIU_pirating_nation = {
 		icon = GFX_decision_generic_naval
 		days_re_enable = 20
 		visible = {
-			has_completed_focus = FIU_reclaim_dalmatia
+			has_completed_focus = FIU_greek_islands
 			NOT = {
-				owns_state = 758
-				owns_state = 939
-				owns_state = 182
+				AND = {
+					owns_state = 758
+					owns_state = 939
+					owns_state = 182
+				}
 			}
 		}
 		complete_effect = {
-			custom_effect_tooltip = FIU_increase_influence_1
+			custom_effect_tooltip = FIU_increase_influence_greece
 			add_to_variable = {
 				var = FIU.greece_pirate_level
 				value = 1
@@ -248,19 +246,17 @@ FIU_pirating_nation = {
 		fire_only_once = yes
 		visible = {
 			has_completed_focus = FIU_greek_islands
+			NOT = {
+				owns_state = 758
+			}
 		}
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = ragusa_check_tooltip
-				every_country = {
-					limit = {
-						owns_state = 758
-					}
-					check_variable = {
-						var = FIU.greece_pirate_level
-						value = 3
-						compare = greater_than_or_equals
-					}
+				tooltip = greece_check_tooltip
+				check_variable = {
+					var = FIU.greece_pirate_level
+					value = 3
+					compare = greater_than_or_equals
 				}
 			}
 		}
@@ -284,25 +280,63 @@ FIU_pirating_nation = {
 		}
 	}
 	
+	FIU_pirate_cyclades = {
+		cost = 30
+		icon = GFX_decision_generic_naval
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = FIU_greek_islands
+			NOT = {
+				owns_state = 939
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = greece_check_tooltip
+				check_variable = {
+					var = FIU.greece_pirate_level
+					value = 3
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		complete_effect = {
+			transfer_state = 939
+			if = {
+				limit = {
+					has_completed_focus = FIU_integrate_pola
+				}
+				add_state_core = 939
+			}
+			add_political_power = 20
+			add_stability = -0.05
+			subtract_from_variable = {
+				var = FIU.greece_pirate_level
+				value = 3
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	
 	FIU_pirate_crete = {
 		cost = 30
 		icon = GFX_decision_generic_naval
 		fire_only_once = yes
 		visible = {
 			has_completed_focus = FIU_greek_islands
+			NOT = {
+				owns_state = 182
+			}
 		}
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = ragusa_check_tooltip
-				every_country = {
-					limit = {
-						owns_state = 182
-					}
-					check_variable = {
-						var = FIU.greece_pirate_level
-						value = 3
-						compare = greater_than_or_equals
-					}
+				tooltip = greece_check_tooltip
+				check_variable = {
+					var = FIU.greece_pirate_level
+					value = 3
+					compare = greater_than_or_equals
 				}
 			}
 		}
@@ -326,47 +360,9 @@ FIU_pirating_nation = {
 		}
 	}
 	
-	FIU_pirate_cyclades = {
-		cost = 30
-		icon = GFX_decision_generic_naval
-		fire_only_once = yes
-		visible = {
-			has_completed_focus = FIU_greek_islands
-		}
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = ragusa_check_tooltip
-				every_country = {
-					limit = {
-						owns_state = 939
-					}
-					check_variable = {
-						var = FIU.greece_pirate_level
-						value = 3
-						compare = greater_than_or_equals
-					}
-				}
-			}
-		}
-		complete_effect = {
-			transfer_state = 939
-			if = {
-				limit = {
-					has_completed_focus = FIU_integrate_pola
-				}
-				add_state_core = 939
-			}
-			add_political_power = 20
-			add_stability = -0.05
-			subtract_from_variable = {
-				var = FIU.greece_pirate_level
-				value = 3
-			}
-		}
-		ai_will_do = {
-			factor = 3
-		}
-	}
+	
+	
+	
 	
 	FIU_take_afyon_chromium = {
 		cost = 80
@@ -587,6 +583,185 @@ FIU_pirating_nation = {
 	
 	
 	
+	FIU_steal_steel = {
+		cost = 50
+		icon = GFX_decision_generic_naval
+		days_re_enable = 60
+		days_remove = 30
+		visible = {
+			has_completed_focus = FIU_step_up_game
+			NOT = {
+				has_country_flag = FIU_stole_recently
+			}
+		}
+		remove_effect = {
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 1105
+			}
+			clr_country_flag = FIU_stole_recently
+		}
+		complete_effect = {
+			set_country_flag = FIU_stole_recently
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	
+	
+	FIU_steal_chromium = {
+		cost = 50
+		icon = GFX_decision_generic_naval
+		days_re_enable = 60
+		days_remove = 30
+		visible = {
+			has_completed_focus = FIU_step_up_game
+			NOT = {
+				has_country_flag = FIU_stole_recently
+			}
+		}
+		remove_effect = {
+			add_resource = {
+				type = chromium
+				amount = 10
+				state = 1105
+			}
+			clr_country_flag = FIU_stole_recently
+		}
+		complete_effect = {
+			set_country_flag = FIU_stole_recently
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	
+	FIU_steal_tungsten = {
+		cost = 50
+		icon = GFX_decision_generic_naval
+		days_re_enable = 60
+		days_remove = 30
+		visible = {
+			has_completed_focus = FIU_step_up_game
+		}
+		visible = {
+			has_completed_focus = FIU_step_up_game
+			NOT = {
+				has_country_flag = FIU_stole_recently
+			}
+		}
+		remove_effect = {
+			add_resource = {
+				type = tungsten
+				amount = 10
+				state = 1105
+			}
+			clr_country_flag = FIU_stole_recently
+		}
+		complete_effect = {
+			set_country_flag = FIU_stole_recently
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	
+	
+	FIU_steal_oil = {
+		cost = 50
+		icon = GFX_decision_generic_naval
+		days_re_enable = 60
+		days_remove = 30
+		visible = {
+			has_completed_focus = FIU_step_up_game
+		}
+		visible = {
+			has_completed_focus = FIU_step_up_game
+			NOT = {
+				has_country_flag = FIU_stole_recently
+			}
+		}
+		remove_effect = {
+			add_resource = {
+				type = oil
+				amount = 10
+				state = 1105
+			}
+			clr_country_flag = FIU_stole_recently
+		}
+		complete_effect = {
+			set_country_flag = FIU_stole_recently
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	
+	
+	FIU_steal_aluminium = {
+		cost = 50
+		icon = GFX_decision_generic_naval
+		days_re_enable = 60
+		days_remove = 30
+		visible = {
+			has_completed_focus = FIU_step_up_game
+		}
+		visible = {
+			has_completed_focus = FIU_step_up_game
+			NOT = {
+				has_country_flag = FIU_stole_recently
+			}
+		}
+		remove_effect = {
+			add_resource = {
+				type = aluminium
+				amount = 10
+				state = 1105
+			}
+			clr_country_flag = FIU_stole_recently
+		}
+		complete_effect = {
+			set_country_flag = FIU_stole_recently
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	
+	FIU_steal_rubber = {
+		cost = 50
+		icon = GFX_decision_generic_naval
+		days_re_enable = 60
+		days_remove = 30
+		visible = {
+			has_completed_focus = FIU_step_up_game
+		}
+		visible = {
+			has_completed_focus = FIU_step_up_game
+			NOT = {
+				has_country_flag = FIU_stole_recently
+			}
+		}
+		remove_effect = {
+			add_resource = {
+				type = rubber
+				amount = 10
+				state = 1105
+			}
+			clr_country_flag = FIU_stole_recently
+		}
+		complete_effect = {
+			set_country_flag = FIU_stole_recently
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	
+	
+	
 }
 
 FIU_shipbuilding = {
@@ -596,13 +771,8 @@ FIU_shipbuilding = {
 		days_re_enable = 35
 		days_remove = 30
 		available = {
-			any_owned_state = {
-				has_built = {
-					type = dockyard
-					value > 2
-				}
-			}
-			#has_completed_focus = FIU_build_interdiction_fleet
+			num_of_available_naval_factories > 1
+			has_completed_focus = FIU_build_interdiction_fleet
 		}
 		remove_effect = {
 			custom_effect_tooltip = FIU_summon_three_subs
@@ -622,12 +792,7 @@ FIU_shipbuilding = {
 		days_re_enable = 45
 		days_remove = 30
 		available = {
-			any_owned_state = {
-				has_built = {
-					type = dockyard
-					value > 3
-				}
-			}
+			num_of_available_naval_factories > 2
 			has_completed_focus = FIU_screening_navy
 		}
 		remove_effect = {
@@ -648,12 +813,7 @@ FIU_shipbuilding = {
 		days_re_enable = 60
 		days_remove = 45
 		available = {
-			any_owned_state = {
-				has_built = {
-					type = dockyard
-					value > 3
-				}
-			}
+			num_of_available_naval_factories > 2
 			has_completed_focus = FIU_screening_navy
 		}
 		remove_effect = {
@@ -674,12 +834,7 @@ FIU_shipbuilding = {
 		days_re_enable = 90
 		days_remove = 60
 		available = {
-			any_owned_state = {
-				has_built = {
-					type = dockyard
-					value > 5
-				}
-			}
+			num_of_available_naval_factories > 5
 			has_completed_focus = FIU_battleship_commission
 		}
 		remove_effect = {
@@ -701,12 +856,7 @@ FIU_shipbuilding = {
 		days_re_enable = 60
 		days_remove = 60
 		available = {
-			any_owned_state = {
-				has_built = {
-					type = dockyard
-					value > 4
-				}
-			}
+			num_of_available_naval_factories > 4
 			has_completed_focus = FIU_battleship_commission
 		}
 		remove_effect = {
@@ -727,12 +877,7 @@ FIU_shipbuilding = {
 		days_re_enable = 90
 		days_remove = 90
 		available = {
-			any_owned_state = {
-				has_built = {
-					type = dockyard
-					value > 7
-				}
-			}
+			num_of_available_naval_factories > 7
 			has_completed_focus = FIU_expand_the_armada
 		}
 		remove_effect = {
@@ -753,12 +898,7 @@ FIU_shipbuilding = {
 		days_re_enable = 60
 		days_remove = 90
 		available = {
-			any_owned_state = {
-				has_built = {
-					type = dockyard
-					value > 6
-				}
-			}
+			num_of_available_naval_factories > 7
 			has_completed_focus = FIU_expand_the_armada
 		}
 		remove_effect = {
@@ -1005,6 +1145,9 @@ FIU_sabotage_nations = {
 					has_idea = FIU_sabotage_industry_no_war
 					has_idea = FIU_sabotage_industry_war_required
 				}
+				any_owned_state = {
+					is_coastal = yes
+				}
 			}
 		}
 		visible = {
@@ -1059,6 +1202,35 @@ FIU_sabotage_nations = {
 		}
 		complete_effect = {
 			set_cosmetic_tag = FIU_kingdom_venice
+			set_capital = 160
+		}
+		ai_will_do = {
+			factor = 0.1
+		}
+	}
+	
+	FIU_new_italy = {
+		fire_only_once = yes
+		icon = GFX_decision_generic_naval
+		visible = {
+			has_country_flag = FIU_going_venice
+			has_cosmetic_tag = FIU_kingdom_venice
+		}
+		available = {
+			owns_state = 160
+			owns_state = 158
+			owns_state = 117
+			owns_state = 114
+			owns_state = 115
+			owns_state = 2
+			has_country_flag = FIU_going_venice
+		}
+		visible = {
+			has_completed_focus = FIU_pirates_life_for_me
+		}
+		complete_effect = {
+			set_cosmetic_tag = FIU_kingdom_italy
+			set_capital = 160
 		}
 		ai_will_do = {
 			factor = 0.1

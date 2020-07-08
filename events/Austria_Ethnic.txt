@@ -9668,6 +9668,9 @@ country_event = { #Tick up Ruthenian counter by 0.1
 #Event pictures/News events/Fiume (all 4 files)
 #Fiume goals GFX
 #Fiume ideas GFX
+#MINISTERS
+#FIUME MINISTERS
+#FIUME EVENT PICS
 
 
 
