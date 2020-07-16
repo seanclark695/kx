@@ -3408,27 +3408,27 @@ country_event = { #
 
 	option = {
 		name = unionstate.302.a
-                        create_corps_commander = { #Auto-Generated
-				name = "Philip Carroll"
-				portrait_path = "gfx/leaders/TEX/Portrait_TEX_Philip_gen.tga"
-				traits = {
-					commando
-				}
-				skill = 2
-				attack_skill = 2
-				defense_skill = 2
-				planning_skill = 1
-				logistics_skill = 1
+		create_corps_commander = { #Auto-Generated
+			name = "Philip Carroll"
+			portrait_path = "gfx/leaders/TEX/Portrait_TEX_Philip_gen.tga"
+			traits = {
+				commando
 			}
-			hidden_effect = {
-				country_event = {
-					id = unionstate.303
-					days = 5
-				}
-				load_oob = TEX_CATHOLIC
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = unionstate.303
+				days = 5
 			}
+			load_oob = "TEX_CATHOLIC"
 		}
 	}
+}
 
 country_event = { # catholic power!!!
 	id = unionstate.303
@@ -3500,12 +3500,9 @@ country_event = { # Catholic Numbers Up BOIS
 
 	is_triggered_only = yes
 
-	}
-
 	option = {
 		name = unionstate.306.a
 		add_political_power = 20
-		}
 	}
 }
 
