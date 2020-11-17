@@ -720,10 +720,8 @@ country_event = {		#Super Event Test
 			AND = {
 				ITA = {
 					NOT = {
-					owns_state = 2
-					owns_state = 158
-					owns_state = 160
-					owns_state = 114
+					owns_state = 117
+					owns_state = 115
 					}
 				}
 				country_exists = ITA

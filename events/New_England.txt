@@ -1016,7 +1016,7 @@ country_event = { # The Provisional Government
 				ideology = market_liberal_subtype
 				traits = {}
 			}
-			create_country_leader = {# Joseph William Martin Jr.
+			create_country_leader = {# James Michael Curley
 				name = "James Michael Curley"
 				desc = "POLITICS_JAMES_CURLEY_DESC"
 				picture = "Portrait_NEE_James_Michael_Curley.tga"
@@ -1100,7 +1100,7 @@ country_event = { # The Provisional Government
 			elections_allowed = yes
 		}
 	}
-	option = { # Joseph William Martin Jr.
+	option = { # James Michael Curley
 		trigger = {
 			NOT = {
 				has_country_flag = radicals_in_power
@@ -1192,8 +1192,8 @@ country_event = { # The Provisional Government
 						captain_of_industry
 		}
 		set_party_name = {
-			name = NEE_social_democrat_party2
-			long_name = NEE_social_democrat_party2_long
+			name = NEE_social_democrat_party_NP
+			long_name = NEE_social_democrat_party_long_NP
 			ideology = social_democrat
 		}
 		}
@@ -1204,7 +1204,7 @@ country_event = { # The Provisional Government
 			elections_allowed = yes
 		}
 	}
-	option = { # George Aiken
+	option = { # Current Leader
 		trigger = {
 			has_country_flag = radicals_in_power
 		}
@@ -6123,6 +6123,12 @@ country_event = { # The Great Strike
 		add_manpower = -1500
 		add_political_power = -50
 		add_stability = -0.1	
+		hidden_effect = {
+		country_event = {
+			id = newengland.122
+			days = 10
+			}
+		}
 	}
 	option = { #Canada Intervnes
 		ai_chance = {
