@@ -71,5 +71,9 @@ tags={
 	"National Focuses"
 }
 supported_version="1.10.*"
+<<<<<<< HEAD
 path="mod/kx"
+=======
+path="C:mod/kx/"
+>>>>>>> c903d7896526359efe86e53c88c9fd8fe77aa7fa
 remote_file_id="2206134307"
