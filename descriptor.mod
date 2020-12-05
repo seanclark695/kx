@@ -60,7 +60,9 @@ replace_path="history/units"
 replace_path="map/strategicregions"
 replace_path="map/supplyareas"
 replace_path="portraits"
-
+dependencies={
+	"Kaiserreich"
+}
 version="0.01"
 tags={
 	"Alternative History"
@@ -69,5 +71,5 @@ tags={
 	"National Focuses"
 }
 supported_version="1.10.*"
-path="C:/Users/User/Documents/Paradox Interactive/Hearts of Iron IV/mod/kx"
+path="mod/kx"
 remote_file_id="2206134307"
